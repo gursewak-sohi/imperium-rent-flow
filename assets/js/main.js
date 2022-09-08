@@ -1,30 +1,4 @@
 (function() {
-    // Deal carouselTicker Init
-    if ($("#dealScroll").length > 0) {
-        $("#dealScroll").carouselTicker({
-            direction: "prev",
-        });
-    }
-
-    // Feedback carouselTicker Init
-    if ($("#feedbackScroll").length > 0) {
-        $("#feedbackScroll").carouselTicker({
-            direction: "prev",
-        });
-    }
-
-    // Open Vip modal when about to close modal
-    let moveOnce = true;
-    const vipModal = document.querySelector("#vipModal");
-    if (vipModal) {
-        document.body.addEventListener("mousemove", function(e) {
-            if (moveOnce && e.pageY < 10) {
-                moveOnce = false;
-                vipModal.classList.add('active');
-            }
-        });
-    }
-
 
     // Animate Floating Header On Scroll
     const header = document.querySelectorAll("header");
@@ -71,59 +45,17 @@
     }
     closeModal('#closeModal', '#vipModal');
 
-    // Tooltip 
-    const tooltipShow = (tooltipbtn, tooltip) => {
-        let tooltipLink = document.querySelector(tooltipbtn),
-            tooltipItem = document.querySelector(tooltip);
-        if (tooltipLink && tooltipItem) {
-            tooltipLink.onclick = (e) => {
-                e.stopPropagation();
-                if (tooltipItem.classList.contains('active')) {
-                    tooltipItem.classList.remove("active");
-                } else {
-                    tooltipItem.classList.add("active");
-                }
-            }
-            document.onclick = () => {
-                tooltipItem.classList.remove("active");
-            }
-            tooltipItem.onclick = (e) => {
-                e.stopPropagation();
-                tooltipItem.classList.remove("active");
-            }
-        }
-    }
-    tooltipShow('[data-btn="tooltip"]', '[data-block="tooltip"]');
 
-
-    // Benefit Swiper
-    const benefitSwiperID = document.getElementById('benefitSwiper');
-    if (benefitSwiperID && window.innerWidth < 992) {
-        const benefitSwiper = new Swiper('#benefitSwiper', {
-            loop: true,
-            autoHeight: true,
+    // Gallery Swiper
+    const gallerySwiperID = document.getElementById('gallerySwiper');
+    if (gallerySwiperID) {
+        const gallerySwiper = new Swiper('#gallerySwiper', {
             pagination: {
-                el: '#benefitSwiper .swiper-pagination',
+                el: '#gallerySwiper .swiper-pagination',
             },
             navigation: {
-                nextEl: '#benefitSwiper .swiper-button-next',
-                prevEl: '#benefitSwiper .swiper-button-prev',
-            },
-        });
-    }
-
-    // Affordable Swiper
-    const affordableSwiperID = document.getElementById('affordableSwiper');
-    if (affordableSwiperID && window.innerWidth < 992) {
-        const affordableSwiper = new Swiper('#affordableSwiper', {
-            loop: true,
-            autoHeight: true,
-            pagination: {
-                el: '#affordableSwiper .swiper-pagination',
-            },
-            navigation: {
-                nextEl: '#affordableSwiper .swiper-button-next',
-                prevEl: '#affordableSwiper .swiper-button-prev',
+                nextEl: '#gallerySwiper .swiper-button-next',
+                prevEl: '#gallerySwiper .swiper-button-prev',
             },
         });
     }
@@ -145,7 +77,7 @@
         }
 
         if (dropDownLink && dropDownContent) {
-            const openTabs = el => {
+            const openDropDown = el => {
                 el.stopPropagation();
                 let selectedLink = el.currentTarget.classList,
                     showId = el.currentTarget.dataset.dropdown,
@@ -166,34 +98,13 @@
                 }
             }
             dropDownLink.forEach(el => {
-                el.addEventListener("click", openTabs);
+                el.addEventListener("click", openDropDown);
             });
         }
     }
     showDropdowns('[data-dropdown]', '.dropdown');
 
-    // Play video in Lightbox
-    var videoGallery = document.querySelectorAll('.video-gallery');
-    if (videoGallery.length) {
-        for (var i = 0; i < videoGallery.length; i++) {
-            lightGallery(videoGallery[i], {
-                plugins: [lgVideo],
-                autoplayVideoOnSlide: true,
-                zoom: true,
-                mobileSettings: {
-                    showCloseIcon: true,
-                },
-            });
-        }
-    }
 
-    // Trigger Video click on Button
-    const playVideoID = document.getElementById('playVideo');
-    if (playVideoID) {
-        playVideoID.onclick = (el) => {
-            el.currentTarget.closest('.video-block').querySelector('.video-gallery img').click();
-        }
-    }
 
     // Light Gallery in Lightbox
     var gallery = document.querySelectorAll('.light-gallery');
@@ -215,130 +126,49 @@
     if (playGallery.length) {
         for (var i = 0; i < playGallery.length; i++) {
             playGallery[i].onclick = (el) => {
-                el.currentTarget.closest('.light-gallery-wrapper').querySelector('a img').click();
+                el.currentTarget.closest('.light-gallery-wrapper').querySelector('a').click();
             }
         }
     }
 
 
-
-
-    // Switch Between Arrival And Depart On Seat Page
-    const switchArivalDepart = (arivalBtnID, departBtnID, arivalID, departID) => {
-        let arivalLink = document.querySelector(arivalBtnID),
-            departLink = document.querySelector(departBtnID),
-            arivalItem = document.querySelector(arivalID),
-            departItem = document.querySelector(departID);
-        if (arivalLink && departLink && arivalItem && departItem && window.innerWidth < 992) {
-            arivalLink.onclick = () => {
-                arivalItem.style.display = "block";
-                departItem.style.display = "none";
+    // Process Flow
+    if ($("#searchTypeBlock").length > 0) {
+        $('#searchTypeBlock input[type="radio"]').on('change', function(e) {
+            $("#chooseJetType").hide();
+            $("#selectedJetType").hide();
+            $("#multiTripBlock").find('.search-box').addClass('mutiple-search-box');
+            $("#searchMultiTrip").show();
+            let selectedVal = this.value;
+            if (selectedVal == 'round-trip') {
+                $("#multiTripBlock").hide();
+                $("#roundTripBlock").fadeIn();
             }
-            departLink.onclick = () => {
-                arivalItem.style.display = "none";
-                departItem.style.display = "block";
-            }
-        }
-    }
-    switchArivalDepart('#arivalBtn', '#departBtn', '#arivalBlock', '#departBlock');
-
-
-    // Slide Booking Footer on Mobile
-    const slideBookingFooter = (bookingFooterID) => {
-        let FooterItem = document.querySelector(bookingFooterID),
-            lastScrollTop = 0;
-        if (FooterItem && window.innerWidth < 992) {
-            window.addEventListener("scroll", function() {
-                let scrollTopPos = window.pageYOffset || document.documentElement.scrollTop;
-                if (scrollTopPos > lastScrollTop) {
-                    FooterItem.classList.add('static');
-                } else {
-                    FooterItem.classList.remove('static');
-                }
-                lastScrollTop = scrollTopPos <= 0 ? 0 : scrollTopPos; // For Mobile or negative scrolling
-            }, false);
-        }
-    }
-    slideBookingFooter('#bookingFooter');
-
-
-
-    // Show hide Pet Block
-    if ($("#petRadio").length > 0 && $("#petBlock").length > 0 && $("#petNote").length > 0) {
-        $('#petRadio input[type="radio"]').on('change', function(e) {
-            let petValue = this.value;
-            if (petValue == 'pet-yes') {
-                $('#petBlock').css('display', 'flex');
-                $('#petNote').css('display', 'flex');
-            } else {
-                $('#petBlock').css('display', 'none');
-                $('#petNote').css('display', 'none');
+            if (selectedVal == 'multi-trip') {
+                $("#roundTripBlock").hide();
+                $("#multiTripBlock").fadeIn();
             }
         });
-    }
-
-    // Hide Custom Select
-    if ($("#app-cover").length > 0) {
-        $('#app-cover #options input[type="radio"]').on('change', function(e) {
-            $('#options-view-button').prop('checked', false);
+        $(document).on('click', '#searchRoundTrip', function(e) {
+            $(this).text('Change');
+            $("#selectedJetType").hide();
+            $("#chooseJetType").fadeIn();
         });
-        $(document).on('click', function(e) {
-            $('#options-view-button').prop('checked', false);
+        $(document).on('click', '#searchMultiTrip', function(e) {
+            $(this).hide();
+            $("#multiTripBlock").find('.search-box').removeClass('mutiple-search-box');
+            $("#selectedJetType").hide();
+            $("#chooseJetType").fadeIn();
         });
-        $('#options-view-button').on('click', function(e) {
-            e.stopPropagation();
+        $(document).on('click', '#chooseJetBtn', function(e) {
+            $("#chooseJetType").hide();
+            $("#selectedJetType").fadeIn();
         });
-    }
-
-
-    // Booking Process
-    if ($("#bookingBlock").length > 0) {
-        setTimeout(() => {
-            $('#loading').hide();
-            $('#bookingBlock').show();
-        }, 3000);
-        $(document).on('click', '[data-btn="details"]', function(e) {
-            $('html, body').animate({ scrollTop: 0 }, 0);
-            $('#bookingSteps ul li:nth-child(1)').removeClass('active').addClass('completed');
-            $('#bookingSteps ul li:nth-child(2)').addClass('active');
-            $('#seatsBlock').hide();
-            $('#seatsBtns').hide();
-            $('#detailsBlock').css('display', 'flex');
-            $('#bookingBtns').empty();
-            $('#bookingBtns').append(`<button data-btn="back-to-seats" class="btn btn-light-outline btn-md">Back</button><button data-btn="confirm" class="btn btn-primary btn-md">Next</button>`);
-        });
-        $(document).on('click', '[data-btn="back-to-seats"]', function(e) {
-            $('html, body').animate({ scrollTop: 0 }, 0);
-            $('#bookingSteps ul li:nth-child(1)').removeClass('completed').addClass('active');
-            $('#bookingSteps ul li:nth-child(2)').removeClass('active');
-            $('#seatsBlock').css('display', 'flex');
-            $('#seatsBtns').css('display', 'flex');
-            $('#detailsBlock').hide();
-            $('#bookingBtns').empty();
-            $('#bookingBtns').append(`<button data-btn="details" class="btn btn-primary btn-md">Next</button>`);
-        });
-        $(document).on('click', '[data-btn="confirm"]', function(e) {
-            $('#bookingSteps ul li:nth-child(2)').removeClass('active').addClass('completed');
-            $('#bookingSteps ul li:nth-child(3)').addClass('active');
-            $('html, body').animate({ scrollTop: 0 }, 0);
-            $('#detailsBlock').hide();
-            $('#detailsBtns').hide();
-            $('#confirmBlock').css('display', 'flex');
-            $('#bookingBtns').empty();
-            $('#bookingBtns').append(`<button data-btn="back-to-details" class="btn btn-light-outline btn-md">Back</button><button data-btn="thanks" class="btn btn-primary btn-md">Confirm and Pay</button>`);
-        });
-        $(document).on('click', '[data-btn="back-to-details"]', function(e) {
-            $('html, body').animate({ scrollTop: 0 }, 0);
-            $('#bookingSteps ul li:nth-child(2)').removeClass('completed').addClass('active');
-            $('#bookingSteps ul li:nth-child(3)').removeClass('active');
-            $('#detailsBlock').css('display', 'flex');
-            $('#detailsBtns').css('display', 'flex');
-            $('#confirmBlock').hide();
-            $('#bookingBtns').empty();
-            $('#bookingBtns').append(`<button data-btn="back-to-seats" class="btn btn-light-outline btn-md">Back</button><button data-btn="confirm" class="btn btn-primary btn-md">Next</button>`);
-        });
-        $(document).on('click', '[data-btn="thanks"]', function(e) {
-            window.location.href = "thank-you.html";
+        $(document).on('click', '#selectedJetBackBtn', function(e) {
+            $("#selectedJetType").hide();
+            $("#chooseJetType").fadeIn();
         });
     }
+
+
 })();

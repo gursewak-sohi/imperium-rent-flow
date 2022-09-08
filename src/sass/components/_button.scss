@@ -23,8 +23,8 @@
 
 .btn-md {
     text-align: center;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 400;
     border-radius: 4px;
     padding: 11px 20px;
     display: inline-block;
@@ -97,9 +97,26 @@
     }
 }
 
+.btn-dark-outline {
+    background-color: transparent;
+    color: $gray-900;
+    border: 1px solid $gray-900;
+    &:hover {
+        background-color: lighten($gray-900, 75%);
+        color: $gray-900;
+    }
+}
+
 .btn-iconed {
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 6px;
+}
+
+.btn-iconed-lg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
 }

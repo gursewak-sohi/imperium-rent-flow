@@ -2,25 +2,21 @@
 .swiper-pagination {
     position: absolute;
     z-index: 10;
-    bottom: 0;
-    column-gap: 8px;
+    top: 22px;
+    column-gap: 12px;
     justify-content: center;
     left: 0;
     right: 0;
-    display: none;
-    @include tablet {
-        display: flex;
-    }
+    display: flex;
     & .swiper-pagination-bullet {
-        background-color: #D9D9D9;
-        height: 5px;
-        width: 25px;
+        background-color: $white;
+        height: 9px;
+        width: 9px;
         display: block;
         border-radius: 5px;
         transition: 0.3s all ease;
         &.swiper-pagination-bullet-active {
-            width: 50px;
-            background-color: #696969;
+            background-color: $primary;
         }
     }
 }

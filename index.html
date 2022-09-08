@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByTheSeat</title>
+    <title>Imperium - Rent Flow</title>
     <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
     <!-- Bundle CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -83,28 +83,84 @@
                             </svg> Call support center
                         </a>
                     </div>
-                    <div class="mega-search">
-                        <div class="radio-options">
-                            <div class="radio-unit">
-                                <input id="oneWay" type="radio" name="flight-type" checked />
-                                <label for="oneWay">
-                                    <span></span>One way
-                                </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="mega-search">
+                    <div id="searchTypeBlock" class="radio-options">
+                        <div class="radio-unit">
+                            <input id="oneWay" type="radio" value="one-way" name="flight-type" checked />
+                            <label for="oneWay">
+                                <span></span>One way
+                            </label>
+                        </div>
+                        <div class="radio-unit">
+                            <input id="roundTrip" type="radio" value="round-trip" name="flight-type" />
+                            <label for="roundTrip">
+                                <span></span>Round trip
+                            </label>
+                        </div>
+                        <div class="radio-unit">
+                            <input id="multiTrip" type="radio" value="multi-trip" name="flight-type" />
+                            <label for="multiTrip">
+                                <span></span>Multi trip
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Round Trip -->
+                    <div id="roundTripBlock" class="search-box">
+                        <div class="search-field">
+                            <div class="field-title">
+                                <img src="assets/images/svg/origin.svg" alt="icon" />Origin
                             </div>
-                            <div class="radio-unit">
-                                <input id="roundTrip" type="radio" name="flight-type" />
-                                <label for="roundTrip">
-                                    <span></span>Round trip
-                                </label>
+                            <input type="text" placeholder="Ben Gurion Intl (TLV)" />
+                        </div>
+                        <div class="field-swap">
+                            <button>
+                            <img src="assets/images/svg/left-right.svg" alt="icon"/>
+                        </button>
+                        </div>
+                        <div class="search-field">
+                            <div class="field-title">
+                                <img src="assets/images/svg/destination.svg" alt="icon" />Destination
                             </div>
-                            <div class="radio-unit">
-                                <input id="multiTrip" type="radio" name="flight-type" />
-                                <label for="multiTrip">
-                                    <span></span>Multi trip
-                                </label>
+                            <input type="text" placeholder="Ben Gurion Intl (TLV)" />
+                        </div>
+                        <div class="search-field">
+                            <div class="field-title">
+                                <img src="assets/images/svg/depart.svg" alt="icon" />Depart - Return
+                            </div>
+                            <input type="text" placeholder="14/07/2022-19/07/2022" />
+                        </div>
+                        <div class="search-field">
+                            <div class="field-title">
+                                <img src="assets/images/svg/travelers.svg" alt="icon" />Travelers
+                            </div>
+                            <div class="dropdown-block">
+                                <button class="btn-dropdown" data-dropdown="travelers">1 Passanger <img src="assets/images/svg/dropdown.svg" alt="icon"></button>
+                                <ul id="travelers" class="dropdown">
+                                    <li>
+                                        <a href="javascipt:;">Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascipt:;">Link 2</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="search-box">
+                        <div class="search-button">
+                            <button id="searchRoundTrip" class="btn btn-primary">
+                             Next <img src="assets/images/svg/next.svg" alt="icon"/>
+                        </button>
+                        </div>
+                    </div>
+                    <!-- Multi Trip -->
+                    <div id="multiTripBlock" class="mutiple-search-block" style="display:none">
+                        <div class="search-box mutiple-search-box">
                             <div class="search-field">
                                 <div class="field-title">
                                     <img src="assets/images/svg/origin.svg" alt="icon" />Origin
@@ -133,8 +189,8 @@
                                     <img src="assets/images/svg/travelers.svg" alt="icon" />Travelers
                                 </div>
                                 <div class="dropdown-block">
-                                    <button class="btn-dropdown" data-dropdown="account">1 Passanger <img src="assets/images/svg/dropdown.svg" alt="icon"></button>
-                                    <ul id="account" class="dropdown">
+                                    <button class="btn-dropdown" data-dropdown="travelers-0">1 Passanger <img src="assets/images/svg/dropdown.svg" alt="icon"></button>
+                                    <ul id="travelers-0" class="dropdown">
                                         <li>
                                             <a href="javascipt:;">Link 1</a>
                                         </li>
@@ -145,9 +201,282 @@
                                 </div>
                             </div>
                             <div class="search-button">
-                                <button class="btn btn-primary">
-                                 Next <img src="assets/images/svg/next.svg" alt="icon"/>
+                                <button data-btn="changeMultiTrip" class="btn btn-primary">Change</button>
+                            </div>
+
+                        </div>
+                        <div class="search-box mutiple-search-box">
+                            <div class="search-field">
+                                <div class="field-title">
+                                    <img src="assets/images/svg/origin.svg" alt="icon" />Origin
+                                </div>
+                                <input type="text" placeholder="Ben Gurion Intl (TLV)" />
+                            </div>
+                            <div class="field-swap">
+                                <button>
+                                <img src="assets/images/svg/left-right.svg" alt="icon"/>
                             </button>
+                            </div>
+                            <div class="search-field">
+                                <div class="field-title">
+                                    <img src="assets/images/svg/destination.svg" alt="icon" />Destination
+                                </div>
+                                <input type="text" placeholder="Ben Gurion Intl (TLV)" />
+                            </div>
+                            <div class="search-field">
+                                <div class="field-title">
+                                    <img src="assets/images/svg/depart.svg" alt="icon" />Depart - Return
+                                </div>
+                                <input type="text" placeholder="14/07/2022-19/07/2022" />
+                            </div>
+                            <div class="search-field">
+                                <div class="field-title">
+                                    <img src="assets/images/svg/travelers.svg" alt="icon" />Travelers
+                                </div>
+                                <div class="dropdown-block">
+                                    <button class="btn-dropdown" data-dropdown="travelers-1">1 Passanger <img src="assets/images/svg/dropdown.svg" alt="icon"></button>
+                                    <ul id="travelers-1" class="dropdown">
+                                        <li>
+                                            <a href="javascipt:;">Link 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascipt:;">Link 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="search-button">
+                                <button data-btn="changeMultiTrip" class="btn btn-primary">Change</button>
+                            </div>
+                        </div>
+                        <div class="mutiple-search-button">
+                            <button class="btn btn-md btn-dark-outline btn-iconed-lg"><img src="assets/images/svg/plus.svg" alt="icon"> Add trip</button>
+                            <button id="searchMultiTrip" class="btn btn-md btn-primary btn-iconed-lg">Next <img src="assets/images/svg/next.svg" alt="icon"/></button>
+                        </div>
+                    </div>
+
+                    <!-- Jet Type -->
+                    <div id="chooseJetType" class="jet-type-block" style="display: none;">
+                        <h4>Please choose type of jet (You can choose more than 1) </h4>
+                        <div class="jet-type-list">
+                            <div class="jet-type-unit">
+                                <input id="jetType1" type="checkbox" />
+                                <label for="jetType1" class="jet-type-content">
+                                    <div class="checkbox">
+                                        <img src="assets/images/svg/check-sm.svg" alt="check"/>
+                                    </div>
+                                    <div class="jet-type-head light-gallery-wrapper">
+                                        <div class="result-gallery-top light-gallery">
+                                            <a class="result-image" href="assets/images/home/gallery/3.jpg" data-lg-size="1200-857">
+                                                <img alt="Image 1" src="assets/images/home/gallery/3.jpg" />
+                                            </a>
+                                            <a class="result-image" href="assets/images/home/gallery/2.jpg" data-lg-size="1200-857">
+                                                <img alt="Image 2" src="assets/images/home/gallery/2.jpg" />
+                                            </a>
+                                            <a class="result-image" href="assets/images/home/gallery/1.jpg" data-lg-size="1200-857">
+                                                <img alt="Image 3" src="assets/images/home/gallery/1.jpg" />
+                                            </a>
+                                        </div>
+                                        <button class="btn play-gallery">
+                                            <img src="assets/images/svg/gallery-btn.svg" alt="icon" />
+                                        </button>
+                                    </div>
+                                    <div class="jet-type-body">
+                                        <h4>Turbo Prop</h4>
+                                        <ul>
+                                            <li>8 Passengers max</li>
+                                            <li><img src="assets/images/svg/pump.svg" alt="icon"/> Fuel stop</li>
+                                        </ul>
+                                    </div>
+                                    <div class="jet-type-footer">
+                                        <ul class="jet-details">
+                                            <li>Hours Range <span>332 mph</span></li>
+                                            <li>Nautical miles <span>2,075 miles</span></li>
+                                            <li>Max seats <span>332 mph	</span></li>
+                                            <li>Cruising speed <span>332 mph</span></li>
+                                            <li>Altitude <span>2,075 miles</span></li>
+                                        </ul>
+                                        <ul class="jet-animities">
+                                            <li><img src="assets/images/svg/drinks.svg" alt="drinks">Drinks</li>
+                                            <li><img src="assets/images/svg/snaks.svg" alt="drinks">Snacks</li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="jet-type-unit">
+                                <input id="jetType2" type="checkbox" checked />
+                                <label for="jetType2" class="jet-type-content">
+                                    <div class="checkbox">
+                                        <img src="assets/images/svg/check-sm.svg" alt="check"/>
+                                    </div>
+                                    <div class="jet-type-head light-gallery-wrapper">
+                                        <div class="result-gallery-top light-gallery">
+                                            <a class="result-image" href="assets/images/home/gallery/3.jpg" data-lg-size="1200-857">
+                                                <img alt="Image 1" src="assets/images/home/gallery/3.jpg" />
+                                            </a>
+                                            <a class="result-image" href="assets/images/home/gallery/2.jpg" data-lg-size="1200-857">
+                                                <img alt="Image 2" src="assets/images/home/gallery/2.jpg" />
+                                            </a>
+                                            <a class="result-image" href="assets/images/home/gallery/1.jpg" data-lg-size="1200-857">
+                                                <img alt="Image 3" src="assets/images/home/gallery/1.jpg" />
+                                            </a>
+                                        </div>
+                                        <button class="btn play-gallery">
+                                            <img src="assets/images/svg/gallery-btn.svg" alt="icon" />
+                                        </button>
+                                    </div>
+                                    <div class="jet-type-body">
+                                        <h4>Light - Super-midsize jets</h4>
+                                        <ul>
+                                            <li>8 Passengers max</li>
+                                         </ul>
+                                    </div>
+                                    <div class="jet-type-footer">
+                                        <ul class="jet-details">
+                                            <li>Hours Range <span>332 mph</span></li>
+                                            <li>Nautical miles <span>2,075 miles</span></li>
+                                            <li>Max seats <span>332 mph	</span></li>
+                                            <li>Cruising speed <span>332 mph</span></li>
+                                            <li>Altitude <span>2,075 miles</span></li>
+                                        </ul>
+                                        <ul class="jet-animities">
+                                            <li><img src="assets/images/svg/drinks.svg" alt="drinks">Drinks</li>
+                                            <li><img src="assets/images/svg/snaks.svg" alt="drinks">Snacks</li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="jet-type-unit">
+                                <input id="jetType3" type="checkbox" />
+                                <label for="jetType3" class="jet-type-content">
+                                    <div class="checkbox">
+                                        <img src="assets/images/svg/check-sm.svg" alt="check"/>
+                                    </div>
+                                    <div class="jet-type-head light-gallery-wrapper">
+                                        <div class="result-gallery-top light-gallery">
+                                            <a class="result-image" href="assets/images/home/gallery/3.jpg" data-lg-size="1200-857">
+                                                <img alt="Image 1" src="assets/images/home/gallery/3.jpg" />
+                                            </a>
+                                            <a class="result-image" href="assets/images/home/gallery/2.jpg" data-lg-size="1200-857">
+                                                <img alt="Image 2" src="assets/images/home/gallery/2.jpg" />
+                                            </a>
+                                            <a class="result-image" href="assets/images/home/gallery/1.jpg" data-lg-size="1200-857">
+                                                <img alt="Image 3" src="assets/images/home/gallery/1.jpg" />
+                                            </a>
+                                        </div>
+                                        <button class="btn play-gallery">
+                                            <img src="assets/images/svg/gallery-btn.svg" alt="icon" />
+                                        </button>
+                                    </div>
+                                    <div class="jet-type-body">
+                                        <h4>Heavy jets</h4>
+                                        <ul>
+                                            <li>8 Passengers max</li>
+                                            <li><img src="assets/images/svg/pump.svg" alt="icon"/> Fuel stop</li>
+                                        </ul>
+                                    </div>
+                                    <div class="jet-type-footer">
+                                        <ul class="jet-details">
+                                            <li>Hours Range <span>332 mph</span></li>
+                                            <li>Nautical miles <span>2,075 miles</span></li>
+                                            <li>Max seats <span>332 mph	</span></li>
+                                            <li>Cruising speed <span>332 mph</span></li>
+                                            <li>Altitude <span>2,075 miles</span></li>
+                                        </ul>
+                                        <ul class="jet-animities">
+                                            <li><img src="assets/images/svg/drinks.svg" alt="drinks">Drinks</li>
+                                            <li><img src="assets/images/svg/snaks.svg" alt="drinks">Snacks</li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="jet-type-button">
+                            <button id="chooseJetBtn" class="btn btn-primary btn-md btn-iconed-lg">
+                                Next (2) <img src="assets/images/svg/next.svg" alt="icon">
+                           </button>
+                        </div>
+                    </div>
+                    <!-- Selected Jet  -->
+                    <div id="selectedJetType" class="selected-jet-wrapper" style="display: none;">
+                        <div class="selected-jet-block">
+                            <div id="gallerySwiper" class="swiper selected-jet-image light-gallery-wrapper">
+                                <div class="swiper-wrapper result-gallery-top light-gallery">
+                                    <a class="result-image swiper-slide" href="assets/images/home/gallery/3.jpg" data-lg-size="1200-857">
+                                        <img alt="Image 1" src="assets/images/home/gallery/3.jpg" />
+                                    </a>
+                                    <a class="result-image swiper-slide" href="assets/images/home/gallery/2.jpg" data-lg-size="1200-857">
+                                        <img alt="Image 2" src="assets/images/home/gallery/2.jpg" />
+                                    </a>
+                                    <a class="result-image swiper-slide" href="assets/images/home/gallery/1.jpg" data-lg-size="1200-857">
+                                        <img alt="Image 3" src="assets/images/home/gallery/1.jpg" />
+                                    </a>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+                                <button class="btn play-gallery">
+                                    <img src="assets/images/svg/gallery-btn.svg" alt="icon" />
+                                </button>
+                                <div class="gallery-text">
+                                    <h5>PILATUS PC-12/45</h5>
+                                    <p>8 Passengers <span>&bull;</span> Light</p>
+                                </div>
+                            </div>
+                            <div class="selected-jet-content">
+                                <div class="selected-jet-description">
+                                    <ul>
+                                        <li>
+                                            <h5>Departure Airport</h5>
+                                            <h6>Ben Gurion Intl (TLV) </h6>
+                                        </li>
+                                        <li>
+                                            <h5>Arrival Airport</h5>
+                                            <h6>Ben Gurion Intl (TLV) </h6>
+                                        </li>
+                                        <li>
+                                            <h5>Passangers</h5>
+                                            <h6>4 </h6>
+                                        </li>
+                                        <li>
+                                            <h5>Aircraft Type</h5>
+                                            <h6>Light, Heavy </h6>
+                                        </li>
+                                        <li>
+                                            <h5>Est Flight time</h5>
+                                            <h6>4:00 hrs</h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="selected-jet-timing">
+                                    <div class="form-group">
+                                        <label>Departure Time</label>
+                                        <div class="select-unit">
+                                            <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">5:00 PM</option>
+                                                    <option value="">5:00 PM</option>
+                                                    <option value="">5:00 PM</option>
+                                                    <option value="">5:00 PM</option>
+                                                    <option value="">5:00 PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Arrival Time</label>
+                                        <div class="select-unit">
+                                            <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">9:00 PM</option>
+                                                    <option value="">9:00 PM</option>
+                                                    <option value="">9:00 PM</option>
+                                                    <option value="">9:00 PM</option>
+                                                    <option value="">9:00 PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="timing-buttons">
+                                        <button id="selectedJetBackBtn" type="button" class="btn btn-dark-outline btn-md">Back</button>
+                                        <button type="button" class="btn btn-primary btn-iconed-lg btn-md">Get Quote <img src="assets/images/svg/next.svg" alt="icon"></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
