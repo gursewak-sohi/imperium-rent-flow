@@ -112,143 +112,161 @@
                         </div>
                     </div>
                     <!-- Round Trip -->
-                    <div id="roundTripBlock" class="search-box">
-                        <div class="search-field">
-                            <div class="field-title">
-                                <img src="assets/images/svg/origin.svg" alt="icon" />Origin
+                    <div data-trip="round" id="roundTripBlock" class="single-trip step-1">
+                        <div class="search-box">
+                            <div class="search-field">
+                                <div class="field-title">
+                                    <img src="assets/images/svg/origin.svg" alt="icon" />Origin
+                                </div>
+                                <input type="text" placeholder="Ben Gurion Intl (TLV)" />
                             </div>
-                            <input type="text" placeholder="Ben Gurion Intl (TLV)" />
-                        </div>
-                        <div class="field-swap">
-                            <button>
-                            <img src="assets/images/svg/left-right.svg" alt="icon"/>
-                        </button>
-                        </div>
-                        <div class="search-field">
-                            <div class="field-title">
-                                <img src="assets/images/svg/destination.svg" alt="icon" />Destination
+                            <div class="field-swap">
+                                <button>
+                                <img src="assets/images/svg/left-right.svg" alt="icon"/>
+                            </button>
                             </div>
-                            <input type="text" placeholder="Ben Gurion Intl (TLV)" />
-                        </div>
-                        <div class="search-field">
-                            <div class="field-title">
-                                <img src="assets/images/svg/depart.svg" alt="icon" />Depart - Return
+                            <div class="search-field">
+                                <div class="field-title">
+                                    <img src="assets/images/svg/destination.svg" alt="icon" />Destination
+                                </div>
+                                <input type="text" placeholder="Ben Gurion Intl (TLV)" />
                             </div>
-                            <input type="text" placeholder="14/07/2022-19/07/2022" />
-                        </div>
-                        <div class="search-field">
-                            <div class="field-title">
-                                <img src="assets/images/svg/travelers.svg" alt="icon" />Travelers
+                            <div class="search-field">
+                                <div class="field-title">
+                                    <img src="assets/images/svg/depart.svg" alt="icon" />Depart - Return
+                                </div>
+                                <input type="text" placeholder="14/07/2022-19/07/2022" />
                             </div>
-                            <div class="dropdown-block">
-                                <button class="btn-dropdown" data-dropdown="travelers">1 Passanger <img src="assets/images/svg/dropdown.svg" alt="icon"></button>
-                                <ul id="travelers" class="dropdown">
-                                    <li>
-                                        <a href="javascipt:;">Link 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascipt:;">Link 2</a>
-                                    </li>
-                                </ul>
+                            <div class="search-field">
+                                <div class="field-title">
+                                    <img src="assets/images/svg/travelers.svg" alt="icon" />Travelers
+                                </div>
+                                <div class="dropdown-block">
+                                    <button class="btn-dropdown" data-dropdown="travelers">1 Passanger <img src="assets/images/svg/dropdown.svg" alt="icon"></button>
+                                    <ul id="travelers" class="dropdown">
+                                        <li>
+                                            <a href="javascipt:;">Link 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascipt:;">Link 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="search-button">
-                            <button id="searchRoundTrip" class="btn btn-primary">
-                             Next <img src="assets/images/svg/next.svg" alt="icon"/>
-                        </button>
+                            <div data-btn="next" class="search-button">
+                                <button id="searchRoundTrip" class="btn btn-primary">
+                                 Next <img src="assets/images/svg/next.svg" alt="icon"/>
+                                </button>
+                            </div>
+                            <div data-btn="change" class="search-button">
+                                <button id="searchRoundTrip" class="btn btn-primary">Change</button>
+                            </div>
                         </div>
                     </div>
-                    <!-- Multi Trip -->
-                    <div id="multiTripBlock" class="mutiple-search-block" style="display:none">
-                        <div class="search-box mutiple-search-box">
-                            <div class="search-field">
-                                <div class="field-title">
-                                    <img src="assets/images/svg/origin.svg" alt="icon" />Origin
-                                </div>
-                                <input type="text" placeholder="Ben Gurion Intl (TLV)" />
-                            </div>
-                            <div class="field-swap">
-                                <button>
-                                <img src="assets/images/svg/left-right.svg" alt="icon"/>
-                            </button>
-                            </div>
-                            <div class="search-field">
-                                <div class="field-title">
-                                    <img src="assets/images/svg/destination.svg" alt="icon" />Destination
-                                </div>
-                                <input type="text" placeholder="Ben Gurion Intl (TLV)" />
-                            </div>
-                            <div class="search-field">
-                                <div class="field-title">
-                                    <img src="assets/images/svg/depart.svg" alt="icon" />Depart - Return
-                                </div>
-                                <input type="text" placeholder="14/07/2022-19/07/2022" />
-                            </div>
-                            <div class="search-field">
-                                <div class="field-title">
-                                    <img src="assets/images/svg/travelers.svg" alt="icon" />Travelers
-                                </div>
-                                <div class="dropdown-block">
-                                    <button class="btn-dropdown" data-dropdown="travelers-0">1 Passanger <img src="assets/images/svg/dropdown.svg" alt="icon"></button>
-                                    <ul id="travelers-0" class="dropdown">
-                                        <li>
-                                            <a href="javascipt:;">Link 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascipt:;">Link 2</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="search-button">
-                                <button data-btn="changeMultiTrip" class="btn btn-primary">Change</button>
-                            </div>
 
+                    <!-- Multi Trip -->
+                    <div id="multiTripBlock" class="mutiple-search-block hidden">
+                        <div data-trip="multiple" class="mutiple-trips step-1">
+                            <h2>Trip 1</h2>
+                            <div class="search-box">
+                                <div class="search-field">
+                                    <div class="field-title">
+                                        <img src="assets/images/svg/origin.svg" alt="icon" />Origin
+                                    </div>
+                                    <input type="text" placeholder="Ben Gurion Intl (TLV)" />
+                                </div>
+                                <div class="field-swap">
+                                    <button>
+                                    <img src="assets/images/svg/left-right.svg" alt="icon"/>
+                                </button>
+                                </div>
+                                <div class="search-field">
+                                    <div class="field-title">
+                                        <img src="assets/images/svg/destination.svg" alt="icon" />Destination
+                                    </div>
+                                    <input type="text" placeholder="Ben Gurion Intl (TLV)" />
+                                </div>
+                                <div class="search-field">
+                                    <div class="field-title">
+                                        <img src="assets/images/svg/depart.svg" alt="icon" />Depart - Return
+                                    </div>
+                                    <input type="text" placeholder="14/07/2022-19/07/2022" />
+                                </div>
+                                <div class="search-field">
+                                    <div class="field-title">
+                                        <img src="assets/images/svg/travelers.svg" alt="icon" />Travelers
+                                    </div>
+                                    <div class="dropdown-block">
+                                        <button class="btn-dropdown" data-dropdown="travelers-0">1 Passanger <img src="assets/images/svg/dropdown.svg" alt="icon"></button>
+                                        <ul id="travelers-0" class="dropdown">
+                                            <li>
+                                                <a href="javascipt:;">Link 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascipt:;">Link 2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button data-btn="remove" class="btn btn-remove" type="button">
+                                    <img src="assets/images/svg/delete-row.svg" alt="remove"/>
+                                </button>
+                                <div data-btn="change" class="search-button hidden">
+                                    <button class="btn btn-primary">Change</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="search-box mutiple-search-box">
-                            <div class="search-field">
-                                <div class="field-title">
-                                    <img src="assets/images/svg/origin.svg" alt="icon" />Origin
+                        <div data-trip="multiple" class="mutiple-trips step-1">
+                            <h2>Trip 2</h2>
+                            <div class="search-box">
+                                <div class="search-field">
+                                    <div class="field-title">
+                                        <img src="assets/images/svg/origin.svg" alt="icon" />Origin
+                                    </div>
+                                    <input type="text" placeholder="Ben Gurion Intl (TLV)" />
                                 </div>
-                                <input type="text" placeholder="Ben Gurion Intl (TLV)" />
-                            </div>
-                            <div class="field-swap">
-                                <button>
-                                <img src="assets/images/svg/left-right.svg" alt="icon"/>
-                            </button>
-                            </div>
-                            <div class="search-field">
-                                <div class="field-title">
-                                    <img src="assets/images/svg/destination.svg" alt="icon" />Destination
+                                <div class="field-swap">
+                                    <button>
+                                    <img src="assets/images/svg/left-right.svg" alt="icon"/>
+                                </button>
                                 </div>
-                                <input type="text" placeholder="Ben Gurion Intl (TLV)" />
-                            </div>
-                            <div class="search-field">
-                                <div class="field-title">
-                                    <img src="assets/images/svg/depart.svg" alt="icon" />Depart - Return
+                                <div class="search-field">
+                                    <div class="field-title">
+                                        <img src="assets/images/svg/destination.svg" alt="icon" />Destination
+                                    </div>
+                                    <input type="text" placeholder="Ben Gurion Intl (TLV)" />
                                 </div>
-                                <input type="text" placeholder="14/07/2022-19/07/2022" />
-                            </div>
-                            <div class="search-field">
-                                <div class="field-title">
-                                    <img src="assets/images/svg/travelers.svg" alt="icon" />Travelers
+                                <div class="search-field">
+                                    <div class="field-title">
+                                        <img src="assets/images/svg/depart.svg" alt="icon" />Depart - Return
+                                    </div>
+                                    <input type="text" placeholder="14/07/2022-19/07/2022" />
                                 </div>
-                                <div class="dropdown-block">
-                                    <button class="btn-dropdown" data-dropdown="travelers-1">1 Passanger <img src="assets/images/svg/dropdown.svg" alt="icon"></button>
-                                    <ul id="travelers-1" class="dropdown">
-                                        <li>
-                                            <a href="javascipt:;">Link 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascipt:;">Link 2</a>
-                                        </li>
-                                    </ul>
+                                <div class="search-field">
+                                    <div class="field-title">
+                                        <img src="assets/images/svg/travelers.svg" alt="icon" />Travelers
+                                    </div>
+                                    <div class="dropdown-block">
+                                        <button class="btn-dropdown" data-dropdown="travelers-1">1 Passanger <img src="assets/images/svg/dropdown.svg" alt="icon"></button>
+                                        <ul id="travelers-1" class="dropdown">
+                                            <li>
+                                                <a href="javascipt:;">Link 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascipt:;">Link 2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="search-button">
-                                <button data-btn="changeMultiTrip" class="btn btn-primary">Change</button>
+                                <button data-btn="remove" class="btn btn-remove" type="button">
+                                    <img src="assets/images/svg/delete-row.svg" alt="remove"/>
+                                </button>
+                                <div data-btn="change" class="search-button hidden">
+                                    <button class="btn btn-primary">Change</button>
+                                </div>
                             </div>
                         </div>
+
                         <div class="mutiple-search-button">
                             <button class="btn btn-md btn-dark-outline btn-iconed-lg"><img src="assets/images/svg/plus.svg" alt="icon"> Add trip</button>
                             <button id="searchMultiTrip" class="btn btn-md btn-primary btn-iconed-lg">Next <img src="assets/images/svg/next.svg" alt="icon"/></button>

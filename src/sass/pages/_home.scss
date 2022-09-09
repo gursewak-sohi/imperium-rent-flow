@@ -92,30 +92,11 @@
 }
 
 .search-box {
-    margin-top: 32px;
     display: grid;
     grid-template-columns: 1fr 48px 1fr 1fr 146px 130px;
     align-items: flex-end;
     @include tablet {
         grid-template-columns: 1fr;
-        margin-top: 24px;
-    }
-    &.mutiple-search-box {
-        grid-template-columns: 1fr 48px 1fr 1fr 146px;
-        @include tablet {
-            grid-template-columns: 1fr;
-            margin-top: 24px;
-        }
-        &.search-box .search-field .dropdown-block .btn-dropdown {
-            border-right: 1px solid $gray-200;
-            border-radius: 0 4px 4px 0;
-            @include tablet {
-                border-radius: 4px;
-            }
-        }
-        & .search-button {
-            display: none;
-        }
     }
     & .search-field {
         display: flex;
@@ -239,6 +220,126 @@
                 margin-left: 8px;
             }
         }
+    }
+}
+
+.single-trip {
+    margin-top: 32px;
+    @include tablet {
+        margin-top: 24px;
+    }
+}
+
+.mutiple-trips {
+    margin-top: 32px;
+    @include tablet {
+        margin-top: 24px;
+    }
+    &.step-1 {
+        & .search-box {
+            grid-template-columns: 1fr 48px 1fr 1fr 146px 48px;
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+        }
+        & [data-btn="remove"] {
+            display: flex;
+        }
+        & [data-btn="change"] {
+            display: none;
+        }
+    }
+    &.step-2 {
+        & [data-btn="remove"] {
+            display: none;
+        }
+        & [data-btn="change"] {
+            display: flex;
+        }
+    }
+    &.step-3 {
+        & .search-box {
+            grid-template-columns: 1fr 48px 1fr 1fr 146px;
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+            & .search-field .dropdown-block .btn-dropdown {
+                border-right: 1px solid $gray-200;
+                border-radius: 0 4px 4px 0;
+                @include tablet {
+                    border-radius: 4px;
+                }
+            }
+        }
+        & [data-btn="remove"] {
+            display: none;
+        }
+        & [data-btn="change"] {
+            display: none;
+        }
+    }
+    & h2 {
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        color: #6E7491;
+    }
+}
+
+.single-trip {
+    &.step-1 {
+        & [data-btn="next"] {
+            display: flex;
+        }
+        & [data-btn="change"] {
+            display: none;
+        }
+    }
+    &.step-2 {
+        & [data-btn="next"] {
+            display: none;
+        }
+        & [data-btn="change"] {
+            display: flex;
+        }
+    }
+    &.step-3 {
+        & .search-box {
+            grid-template-columns: 1fr 48px 1fr 1fr 146px;
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+            & .search-field .dropdown-block .btn-dropdown {
+                border-right: 1px solid $gray-200;
+                border-radius: 0 4px 4px 0;
+                @include tablet {
+                    border-radius: 4px;
+                }
+            }
+        }
+        & [data-btn="next"] {
+            display: none;
+        }
+        & [data-btn="change"] {
+            display: none;
+        }
+    }
+}
+
+.btn-remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid $gray-200;
+    background-color: transparent;
+    @include tablet {
+        border-radius: 4px;
+        width: 48px;
+        margin-left: auto;
     }
 }
 
@@ -570,11 +671,8 @@
     }
     & .selected-jet-content {
         display: flex;
-        padding: 24px 80px 24px 43px;
+        padding: 24px 43px 24px 43px;
         width: 100%;
-        @include desktop {
-            padding: 24px 43px 24px 43px;
-        }
         @include tablet {
             flex-direction: column;
             padding: 24px 16px;

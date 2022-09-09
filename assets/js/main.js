@@ -137,7 +137,8 @@
         $('#searchTypeBlock input[type="radio"]').on('change', function(e) {
             $("#chooseJetType").hide();
             $("#selectedJetType").hide();
-            $("#multiTripBlock").find('.search-box').addClass('mutiple-search-box');
+            $('[data-trip="round"]').addClass('step-1').removeClass('step-2 step-3');
+            $('[data-trip="multiple"]').addClass('step-1').removeClass('step-2 step-3');
             $("#searchMultiTrip").show();
             let selectedVal = this.value;
             if (selectedVal == 'round-trip') {
@@ -150,21 +151,25 @@
             }
         });
         $(document).on('click', '#searchRoundTrip', function(e) {
-            $(this).text('Change');
+            $('[data-trip="round"]').addClass('step-2').removeClass('step-1');
             $("#selectedJetType").hide();
             $("#chooseJetType").fadeIn();
         });
         $(document).on('click', '#searchMultiTrip', function(e) {
             $(this).hide();
-            $("#multiTripBlock").find('.search-box').removeClass('mutiple-search-box');
+            $('[data-trip="multiple"]').addClass('step-2').removeClass('step-1');
             $("#selectedJetType").hide();
             $("#chooseJetType").fadeIn();
         });
         $(document).on('click', '#chooseJetBtn', function(e) {
+            $('[data-trip="round"]').addClass('step-3').removeClass('step-2');
+            $('[data-trip="multiple"]').addClass('step-3').removeClass('step-2');
             $("#chooseJetType").hide();
             $("#selectedJetType").fadeIn();
         });
         $(document).on('click', '#selectedJetBackBtn', function(e) {
+            $('[data-trip="round"]').addClass('step-2').removeClass('step-3');
+            $('[data-trip="multiple"]').addClass('step-2').removeClass('step-3');
             $("#selectedJetType").hide();
             $("#chooseJetType").fadeIn();
         });
