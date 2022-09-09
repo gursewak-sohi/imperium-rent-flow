@@ -33,17 +33,6 @@
     toggleMenu('#toggleBtn', '#toggleNav');
 
 
-    // Close Modal
-    const closeModal = (closeBtn, modal) => {
-        let closeLink = document.querySelector(closeBtn),
-            modalItem = document.querySelector(modal);
-        if (closeLink && modalItem) {
-            closeLink.onclick = () => {
-                modalItem.classList.remove("active");
-            }
-        }
-    }
-    closeModal('#closeModal', '#vipModal');
 
 
     // Gallery Swiper
@@ -130,7 +119,28 @@
             }
         }
     }
+    // Get textarea count
+    $(document).on('keyup', '.count-area', function() {
+        $(this).parent().find(".count").text($(this).val().length);
+    });
 
+    // Get Qoute 
+    if ($("#getQouteModal").length > 0 && $("#confirmModal").length > 0) {
+        $("#getQouteBtn").click(function() {
+            $("#getQouteModal").addClass('active');
+        });
+        $('[data-close="qoute-modal"]').click(function() {
+            $("#getQouteModal").removeClass('active');
+        });
+        $("#submitQouteBtn").click(function(e) {
+            e.preventDefault();
+            $("#getQouteModal").removeClass('active');
+            $("#confirmModal").addClass('active');
+        });
+        $('[data-close="confirm-modal"]').click(function() {
+            $("#confirmModal").removeClass('active');
+        });
+    }
 
     // Process Flow
     if ($("#searchTypeBlock").length > 0) {
@@ -174,6 +184,8 @@
             $("#chooseJetType").fadeIn();
         });
     }
+
+
 
 
 })();

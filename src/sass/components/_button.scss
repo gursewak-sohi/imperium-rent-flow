@@ -78,12 +78,12 @@
 
 .btn-light {
     background-color: $white;
-    color: $gray-800;
+    color: $primary;
     border: 1px solid $white;
     &:hover {
         background-color: lighten($secondary, 5%);
         border-color: lighten($secondary, 5%);
-        color: $gray-800;
+        color: $primary;
     }
 }
 

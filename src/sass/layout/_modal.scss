@@ -14,6 +14,7 @@
     transition: 0.3s all ease;
     opacity: 0;
     visibility: hidden;
+    overflow: auto;
     &.active {
         opacity: 1;
         visibility: visible;
@@ -22,12 +23,14 @@
         }
     }
     & .modal-block {
+        margin-top: auto;
+        margin-bottom: auto;
         background: $white;
         box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.1), 0px 8px 10px -6px rgba(16, 24, 40, 0.1);
-        border-radius: 6px;
-        padding: 24px;
+        border-radius: 8px;
+        padding: 48px;
         width: 100%;
-        max-width: 476px;
+        max-width: 451px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -35,44 +38,67 @@
         position: relative;
         transition: 0.3s all ease;
         transform: translateY(32px);
+        @include tablet {
+            padding: 24px;
+        }
         & .btn-close {
             background-color: transparent;
             border: none;
             top: 24px;
             right: 24px;
             position: absolute;
+            @include tablet {
+                top: 12px;
+                right: 12px;
+            }
         }
         & .modal-icon {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
         & h4 {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 28px;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 44px;
             color: $gray-900;
-            margin-bottom: 8px;
-        }
-        & p {
-            text-transform: capitalize;
-            font-size: 16px;
-            line-height: 20px;
             margin-bottom: 16px;
-            color: #737373;
+            @include tablet {
+                font-size: 30px;
+                line-height: 42px;
+            }
+        }
+        &>p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 16px;
+            color: #6B7280;
         }
         & .modal-form {
             width: 100%;
             display: flex;
             flex-direction: column;
+            margin-top: 16px;
             & .modal-field {
-                margin-bottom: 16px;
+                margin-bottom: 32px;
+                text-align: left;
+                position: relative;
+                & label {
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.08em;
+                    margin-bottom: 4px;
+                }
                 & input {
-                    font-size: 18px;
-                    line-height: 22px;
+                    font-size: 14px;
+                    line-height: 20px;
                     width: 100%;
-                    padding: 8px 12px;
-                    border: 1px solid #A1B0CC;
-                    height: 48px;
-                    border-radius: 4px;
+                    padding: 10px 12px;
+                    border: 1px solid $gray-200;
+                    height: 40px;
+                    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                    border-radius: 6px;
+                    transition: 0.2s all ease;
                     &::placeholder {
                         color: $gray-600;
                         opacity: 1;
@@ -83,10 +109,44 @@
                     &::-ms-input-placeholder {
                         color: $gray-600;
                     }
+                    &:focus {
+                        border-color: #0770E3;
+                    }
                 }
-            }
-            & .btn-primary {
-                margin-top: 16px;
+                & textarea {
+                    font-size: 14px;
+                    line-height: 20px;
+                    width: 100%;
+                    padding: 10px 12px;
+                    border: 1px solid $gray-200;
+                    height: 143px;
+                    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                    border-radius: 6px;
+                    resize: none;
+                    transition: 0.2s all ease;
+                    &::placeholder {
+                        color: $gray-600;
+                        opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        color: $gray-600;
+                    }
+                    &::-ms-input-placeholder {
+                        color: $gray-600;
+                    }
+                    &:focus {
+                        border-color: #0770E3;
+                    }
+                }
+                & .counter {
+                    position: absolute;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #737373;
+                    right: 0;
+                    top: 3px;
+                }
             }
         }
     }

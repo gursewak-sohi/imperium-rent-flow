@@ -761,3 +761,32 @@
         row-gap: 24px;
     }
 }
+
+.agree-mails {
+    margin-top: 32px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #FAFAFE;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px;
+    row-gap: 2px;
+    width: 100%;
+}
+
+.modal-btns {
+    width: 100%;
+    display: flex;
+    margin-top: 32px;
+    column-gap: 16px;
+    & .btn {
+        width: 100%;
+    }
+}
