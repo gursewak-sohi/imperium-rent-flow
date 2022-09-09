@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: center center;
     @include tablet {
-        padding: 89px 0;
+        padding: 100px 0;
         height: 519px;
     }
     @include mobile {
@@ -60,9 +60,6 @@
 
 .search-section {
     margin-top: -73px;
-    @include tablet {
-        margin-top: -160px;
-    }
 }
 
 .mega-search {
@@ -429,6 +426,7 @@
     & .jet-type-unit {
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         width: 100%;
         & input {
             display: none;

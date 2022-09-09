@@ -570,7 +570,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 .lg-outer .lg-thumb-item.active,
 .lg-outer .lg-thumb-item:hover {
-  border-color: #a90707;
+  border-color: #2B68DE;
 }
 
 .lg-outer .lg-thumb-item img {
@@ -3482,7 +3482,7 @@ footer {
 }
 @media (max-width: 1023px) {
   .hero-section {
-    padding: 89px 0;
+    padding: 100px 0;
     height: 519px;
   }
 }
@@ -3542,11 +3542,6 @@ footer {
 
 .search-section {
   margin-top: -73px;
-}
-@media (max-width: 1023px) {
-  .search-section {
-    margin-top: -160px;
-  }
 }
 
 .mega-search {
@@ -3938,6 +3933,7 @@ footer {
 .jet-type-list .jet-type-unit {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   width: 100%;
 }
 .jet-type-list .jet-type-unit input {
