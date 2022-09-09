@@ -180,7 +180,9 @@
     }
     & .field-swap {
         @include tablet {
-            display: none;
+            margin-bottom: 12px;
+            width: 48px;
+            margin-left: auto;
         }
         & button {
             width: 100%;
@@ -191,6 +193,10 @@
             border-right: none;
             background-color: $white;
             cursor: pointer;
+            @include tablet {
+                border: 1px solid $gray-200;
+                border-radius: 4px;
+            }
         }
     }
     & .search-button {

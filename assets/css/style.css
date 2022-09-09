@@ -3675,7 +3675,9 @@ footer {
 }
 @media (max-width: 1023px) {
   .search-box .field-swap {
-    display: none;
+    margin-bottom: 12px;
+    width: 48px;
+    margin-left: auto;
   }
 }
 .search-box .field-swap button {
@@ -3687,6 +3689,12 @@ footer {
   border-right: none;
   background-color: #FFFFFF;
   cursor: pointer;
+}
+@media (max-width: 1023px) {
+  .search-box .field-swap button {
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+  }
 }
 @media (max-width: 1023px) {
   .search-box .search-button {

@@ -102,6 +102,8 @@
             lightGallery(gallery[i], {
                 plugins: [lgZoom, lgThumbnail],
                 speed: 500,
+                download: false,
+                zoom: false,
                 mobileSettings: {
                     controls: true,
                     showCloseIcon: true,
@@ -149,6 +151,7 @@
             $("#selectedJetType").hide();
             $('[data-trip="round"]').addClass('step-1').removeClass('step-2 step-3');
             $('[data-trip="multiple"]').addClass('step-1').removeClass('step-2 step-3');
+            $('.mutiple-search-button').show();
             $("#searchMultiTrip").show();
             let selectedVal = this.value;
             if (selectedVal == 'round-trip') {
@@ -174,12 +177,14 @@
         $(document).on('click', '#chooseJetBtn', function(e) {
             $('[data-trip="round"]').addClass('step-3').removeClass('step-2');
             $('[data-trip="multiple"]').addClass('step-3').removeClass('step-2');
+            $('.mutiple-search-button').hide();
             $("#chooseJetType").hide();
             $("#selectedJetType").fadeIn();
         });
         $(document).on('click', '#selectedJetBackBtn', function(e) {
             $('[data-trip="round"]').addClass('step-2').removeClass('step-3');
             $('[data-trip="multiple"]').addClass('step-2').removeClass('step-3');
+            $('.mutiple-search-button').fadeIn();
             $("#selectedJetType").hide();
             $("#chooseJetType").fadeIn();
         });
