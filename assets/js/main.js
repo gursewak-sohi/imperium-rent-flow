@@ -154,6 +154,10 @@
             $('.mutiple-search-button').show();
             $("#searchMultiTrip").show();
             let selectedVal = this.value;
+            if (selectedVal == 'one-way') {
+                $("#multiTripBlock").hide();
+                $("#roundTripBlock").fadeIn();
+            }
             if (selectedVal == 'round-trip') {
                 $("#multiTripBlock").hide();
                 $("#roundTripBlock").fadeIn();

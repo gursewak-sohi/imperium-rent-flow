@@ -3576,6 +3576,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 48px 1fr 1fr 146px 130px;
   align-items: flex-end;
+  position: relative;
 }
 @media (max-width: 1023px) {
   .search-box {
@@ -3675,9 +3676,11 @@ footer {
 }
 @media (max-width: 1023px) {
   .search-box .field-swap {
-    margin-bottom: 12px;
-    width: 48px;
     margin-left: auto;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 .search-box .field-swap button {
@@ -3692,8 +3695,12 @@ footer {
 }
 @media (max-width: 1023px) {
   .search-box .field-swap button {
-    border: 1px solid #E5E7EB;
+    border: none;
+    background-color: transparent;
     border-radius: 4px;
+    height: 30px;
+    padding: 0;
+    transform: scale(0.9);
   }
 }
 @media (max-width: 1023px) {
@@ -3724,16 +3731,8 @@ footer {
   margin-left: 8px;
 }
 
-.single-trip {
-  margin-top: 32px;
-}
-@media (max-width: 1023px) {
-  .single-trip {
-    margin-top: 24px;
-  }
-}
-
 .mutiple-trips {
+  position: relative;
   margin-top: 32px;
 }
 @media (max-width: 1023px) {
@@ -3762,7 +3761,7 @@ footer {
   display: flex;
 }
 .mutiple-trips.step-3 .search-box {
-  grid-template-columns: 1fr 48px 1fr 1fr 146px;
+  grid-template-columns: 1fr 1fr 1fr 146px;
 }
 @media (max-width: 1023px) {
   .mutiple-trips.step-3 .search-box {
@@ -3778,6 +3777,9 @@ footer {
     border-radius: 4px;
   }
 }
+.mutiple-trips.step-3 .field-swap {
+  display: none;
+}
 .mutiple-trips.step-3 [data-btn=remove] {
   display: none;
 }
@@ -3792,6 +3794,15 @@ footer {
   color: #6E7491;
 }
 
+.single-trip {
+  position: relative;
+  margin-top: 32px;
+}
+@media (max-width: 1023px) {
+  .single-trip {
+    margin-top: 24px;
+  }
+}
 .single-trip.step-1 [data-btn=next] {
   display: flex;
 }
@@ -3805,7 +3816,7 @@ footer {
   display: flex;
 }
 .single-trip.step-3 .search-box {
-  grid-template-columns: 1fr 48px 1fr 1fr 146px;
+  grid-template-columns: 1fr 1fr 1fr 146px;
 }
 @media (max-width: 1023px) {
   .single-trip.step-3 .search-box {
@@ -3820,6 +3831,9 @@ footer {
   .single-trip.step-3 .search-box .search-field .dropdown-block .btn-dropdown {
     border-radius: 4px;
   }
+}
+.single-trip.step-3 .field-swap {
+  display: none;
 }
 .single-trip.step-3 [data-btn=next] {
   display: none;

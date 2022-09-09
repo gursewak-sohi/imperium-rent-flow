@@ -92,6 +92,7 @@
     display: grid;
     grid-template-columns: 1fr 48px 1fr 1fr 146px 130px;
     align-items: flex-end;
+    position: relative;
     @include tablet {
         grid-template-columns: 1fr;
     }
@@ -180,9 +181,11 @@
     }
     & .field-swap {
         @include tablet {
-            margin-bottom: 12px;
-            width: 48px;
             margin-left: auto;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
         & button {
             width: 100%;
@@ -194,8 +197,12 @@
             background-color: $white;
             cursor: pointer;
             @include tablet {
-                border: 1px solid $gray-200;
+                border: none;
+                background-color: transparent;
                 border-radius: 4px;
+                height: 30px;
+                padding: 0;
+                transform: scale(0.9);
             }
         }
     }
@@ -226,14 +233,8 @@
     }
 }
 
-.single-trip {
-    margin-top: 32px;
-    @include tablet {
-        margin-top: 24px;
-    }
-}
-
 .mutiple-trips {
+    position: relative;
     margin-top: 32px;
     @include tablet {
         margin-top: 24px;
@@ -262,7 +263,7 @@
     }
     &.step-3 {
         & .search-box {
-            grid-template-columns: 1fr 48px 1fr 1fr 146px;
+            grid-template-columns: 1fr 1fr 1fr 146px;
             @include tablet {
                 grid-template-columns: 1fr;
             }
@@ -273,6 +274,9 @@
                     border-radius: 4px;
                 }
             }
+        }
+        & .field-swap {
+            display: none;
         }
         & [data-btn="remove"] {
             display: none;
@@ -291,6 +295,11 @@
 }
 
 .single-trip {
+    position: relative;
+    margin-top: 32px;
+    @include tablet {
+        margin-top: 24px;
+    }
     &.step-1 {
         & [data-btn="next"] {
             display: flex;
@@ -309,7 +318,7 @@
     }
     &.step-3 {
         & .search-box {
-            grid-template-columns: 1fr 48px 1fr 1fr 146px;
+            grid-template-columns: 1fr 1fr 1fr 146px;
             @include tablet {
                 grid-template-columns: 1fr;
             }
@@ -320,6 +329,9 @@
                     border-radius: 4px;
                 }
             }
+        }
+        & .field-swap {
+            display: none;
         }
         & [data-btn="next"] {
             display: none;
