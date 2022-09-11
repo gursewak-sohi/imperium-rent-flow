@@ -352,9 +352,13 @@
     border: 1px solid $gray-200;
     background-color: transparent;
     @include tablet {
-        border-radius: 4px;
-        width: 48px;
+        border: none;
+        width: 30px;
+        height: 30px;
         margin-left: auto;
+        position: absolute;
+        top: -40px;
+        right: -6px;
     }
 }
 

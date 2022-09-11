@@ -2826,23 +2826,6 @@ header {
   align-items: center;
   flex: 1;
 }
-@media (max-width: 1023px) {
-  .header-nav .header-toggle-items {
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    background-color: #FFFFFF;
-    left: 0;
-    right: 0;
-    padding: 72px 16px 24px;
-    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1);
-    visibility: hidden;
-    opacity: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: 0.3s all ease;
-  }
-}
 .header-nav .buttons {
   display: flex;
   align-items: center;
@@ -2852,7 +2835,6 @@ header {
 @media (max-width: 1023px) {
   .header-nav .buttons {
     flex-direction: column;
-    width: 100%;
   }
   .header-nav .buttons .btn {
     width: 100%;
@@ -3854,9 +3836,13 @@ footer {
 }
 @media (max-width: 1023px) {
   .btn-remove {
-    border-radius: 4px;
-    width: 48px;
+    border: none;
+    width: 30px;
+    height: 30px;
     margin-left: auto;
+    position: absolute;
+    top: -40px;
+    right: -6px;
   }
 }
 
