@@ -55,6 +55,11 @@
                 margin-bottom: 12px;
             }
         }
+        & .btn {
+            @include tablet {
+                display: none;
+            }
+        }
     }
 }
 

@@ -70,6 +70,11 @@
             flex-direction: column;
             & .btn {
                 width: 100%;
+                & span {
+                    @include tablet {
+                        display: none;
+                    }
+                }
             }
         }
     }

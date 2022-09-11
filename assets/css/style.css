@@ -2840,6 +2840,11 @@ header {
     width: 100%;
   }
 }
+@media (max-width: 1023px) and (max-width: 1023px) {
+  .header-nav .buttons .btn span {
+    display: none;
+  }
+}
 
 header {
   position: fixed;
@@ -3519,6 +3524,11 @@ footer {
     font-size: 32px;
     line-height: 34px;
     margin-bottom: 12px;
+  }
+}
+@media (max-width: 1023px) {
+  .hero-block .hero-text .btn {
+    display: none;
   }
 }
 
