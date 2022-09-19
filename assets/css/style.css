@@ -4328,4 +4328,28 @@ footer {
   width: 100%;
 }
 
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+@media (max-width: 767px) {
+  .counter {
+    padding: 10px 0;
+  }
+}
+.counter .btn-counter {
+  background-color: #2B68DE;
+  width: 25px;
+  height: 25px;
+  color: #FFFFFF;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
 /*# sourceMappingURL=style.css.map */

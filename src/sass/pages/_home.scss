@@ -815,3 +815,25 @@
         width: 100%;
     }
 }
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    @include mobile {
+        padding: 10px 0;
+    }
+    & .btn-counter {
+        background-color: $primary;
+        width: 25px;
+        height: 25px;
+        color: $white;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+}
