@@ -1,0 +1,11 @@
+// Here you can add other styles
+span.required {
+    color: red;
+}
+.err-msg{
+    color: red !important;
+}
+.modal-body{
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}

@@ -1,0 +1,36 @@
+const usersData = [
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+  {id:1,UserId:'Bijay', Password:'bijay', UserType:'FA', Role:'SFFieldExecutive',  name: 'Bijay', OrgName: 'Test Role 1',LeadName:'JS SINGH', status: 'Active'},
+]
+
+export default usersData
+
+
