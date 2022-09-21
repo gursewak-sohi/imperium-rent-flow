@@ -1,0 +1,47 @@
+<template>
+  <section id="getQouteModal" class="modal">
+        <div class="modal-block">
+            <button data-close="qoute-modal" class="btn btn-close">
+                <img src="assets/images/svg/close.svg" alt="icon">
+            </button>
+            <h4>Get a Quote</h4>
+            <p>Fill in your details, and get an immediate quote to your email inbox. </p>
+            <form class="modal-form" action="">
+                <div class="modal-field">
+                    <label>*Full name</label>
+                    <input type="text" placeholder="e.g. John" required/>
+                </div>
+                <div class="modal-field">
+                    <label>*Email address</label>
+                    <input type="text" placeholder="e.g. john.dowry@example.com" required/>
+                </div>
+                <div class="modal-field">
+                    <label>*Phone number</label>
+                    <input type="text" placeholder="+972" required/>
+                </div>
+                <div class="modal-field">
+                    <label>Additional message (optional)</label>
+                    <textarea maxlength="300" class="count-area" name="" id="" cols="30" rows="10" placeholder="Type a message here..."></textarea>
+                    <div class="counter">
+                        <span class="count">0</span>/300
+                    </div>
+                </div>
+                <button id="submitQouteBtn" type="submit" class="btn btn-primary btn-md btn-iconed-lg">Send <img src="assets/images/svg/next.svg" alt="icon"/></button>
+                <div class="agree-mails">
+                    <div class="checkbox-unit">
+                        <input id="agreeMails" type="checkbox" />
+                        <label for="agreeMails">
+                            <span>
+                                <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7851 0.980672C10.9568 1.13811 10.9684 1.40498 10.811 1.57673L4.62349 8.32673C4.54573 8.41155 4.43671 8.46094 4.32166 8.46344C4.20662 8.46594 4.09555 8.42134 4.01419 8.33997L1.20169 5.52747C1.03694 5.36272 1.03694 5.0956 1.20169 4.93085C1.36644 4.7661 1.63356 4.7661 1.79831 4.93085L4.29925 7.43179L10.189 1.00659C10.3465 0.834834 10.6133 0.823232 10.7851 0.980672Z" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                                </span>
+                                By checking this box I agree to receive emails, telephone calls, SMS, marketing materials, promotional offers and other communications form. 
+                        </label>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+</template>
