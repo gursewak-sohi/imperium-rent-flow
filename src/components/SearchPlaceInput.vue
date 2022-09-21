@@ -1,33 +1,34 @@
 <template>
-    <input type="text" placeholder="Ben Gurion Intl (TLV)" v-model="searchTerm" @keyup="searchOrigin()" />
-    <ul v-if="typeof list != 'undefined' && list.length">
-        <li
-            v-for="org in list"
-            :key="org.name"
-            @click="selectOrigin(org)"
-        >
-            {{ org.name  }}
-        </li>
-        
-    </ul>
+    <input
+        type="text"
+        placeholder="Ben Gurion Intl (TLV)"
+        v-model="searchTerm"
+        @keyup="searchOrigin()"/>
+        <ul class="airport-listing" v-if="typeof list != 'undefined' && list.length">
+            <li v-for="org in list" :key="org.name" @click="selectOrigin(org)">
+                <div class="airtport-block">
+                    <div>
+                        <h5>{{org.name}}</h5>
+                        <p>{{org.address}}</p>
+                    </div>
+                    <h4>{{org.code}}</h4>
+                </div>
+            </li>
+        </ul>
 </template>
 
 <script setup>
 
-import axios from 'axios'
-import { ref } from "vue";
-import emitter from 'tiny-emitter/instance'
+    import axios from 'axios'
+    import {ref} from "vue";
+    import emitter from 'tiny-emitter/instance'
 
- const props =  defineProps({
-      type: String,
-   })
-       
-   console.log(props);
+    const props = defineProps({type: String})
 
+    console.log(props);
 
-const vm = ref(this);
+    const vm = ref(this);
 
-   
     let origin = ref('')
     let searchTerm = ref('')
     let destination = ref('')
@@ -42,26 +43,26 @@ const vm = ref(this);
 
     }
 
-    function searchOrigin () {
-        if(searchTerm.value != ''){
-               axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
-            srcterms: searchTerm.value 
-            }, {headers: {
-                'Content-Type': 'multipart/form-data',
-            }})
-            .then((response) => {
+    function searchOrigin() {
+        if (searchTerm.value != '') {
+            axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
+                srcterms: searchTerm.value
+            }, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }).then((response) => {
                 console.log(response.data.error);
-                if(response.data.result){
+                if (response.data.result) {
                     this.list = response.data.error;
-                }else{
+                } else {
                     this.list = [];
                 }
             }, (error) => {
-            console.log(error);
+                console.log(error);
             });
         } else {
             this.list = [];
         }
     };
-    
 </script>
