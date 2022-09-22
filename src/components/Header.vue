@@ -4,7 +4,7 @@
             <!-- Home Header -->
             <nav id="toggleNav" class="header-nav">
                 <a class="logo" href="index.html">
-                    <img src="assets/images/logo.png" width="132" height="51" alt="icon" />
+                    <img src="/assets/images/logo.png" width="132" height="51" alt="icon" />
                 </a>
 
                 <div class="header-toggle-items">

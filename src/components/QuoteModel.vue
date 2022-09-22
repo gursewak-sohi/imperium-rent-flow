@@ -1,32 +1,32 @@
 <template>
-  <section id="getQouteModal" class="modal">
+  <section id="getQouteModal" class="modal" :class="{'active': toggleModel}">
         <div class="modal-block">
-            <button data-close="qoute-modal" class="btn btn-close">
-                <img src="assets/images/svg/close.svg" alt="icon">
+            <button data-close="qoute-modal" class="btn btn-close" @click="closeModal()">
+                <img src="/assets/images/svg/close.svg" alt="icon">
             </button>
             <h4>Get a Quote</h4>
             <p>Fill in your details, and get an immediate quote to your email inbox. </p>
             <form class="modal-form" action="">
                 <div class="modal-field">
                     <label>*Full name</label>
-                    <input type="text" placeholder="e.g. John" required/>
+                    <input type="text" placeholder="e.g. John" v-model="name" required/>
                 </div>
                 <div class="modal-field">
                     <label>*Email address</label>
-                    <input type="text" placeholder="e.g. john.dowry@example.com" required/>
+                    <input type="text" placeholder="e.g. john.dowry@example.com" v-model="email" required/>
                 </div>
                 <div class="modal-field">
                     <label>*Phone number</label>
-                    <input type="text" placeholder="+972" required/>
+                    <input type="text" placeholder="+972" v-model="phone_number" required/>
                 </div>
                 <div class="modal-field">
                     <label>Additional message (optional)</label>
-                    <textarea maxlength="300" class="count-area" name="" id="" cols="30" rows="10" placeholder="Type a message here..."></textarea>
+                    <textarea maxlength="300" class="count-area" name="" id="" v-model="message" cols="30" rows="10" placeholder="Type a message here..."></textarea>
                     <div class="counter">
                         <span class="count">0</span>/300
                     </div>
                 </div>
-                <button id="submitQouteBtn" type="submit" class="btn btn-primary btn-md btn-iconed-lg">Send <img src="assets/images/svg/next.svg" alt="icon"/></button>
+                <button id="submitQouteBtn" type="button" class="btn btn-primary btn-md btn-iconed-lg" @click="submitForm()">Send <img src="/assets/images/svg/next.svg" alt="icon"/></button>
                 <div class="agree-mails">
                     <div class="checkbox-unit">
                         <input id="agreeMails" type="checkbox" />
@@ -45,3 +45,22 @@
         </div>
     </section>
 </template>
+
+<script setup>
+    import emitter from 'tiny-emitter/instance'
+    import {ref} from 'vue'
+    let name = ref('');
+    let email = ref('');
+    let phone_number = ref('');
+    let message = ref('');
+    let toggleModel = ref(false);
+    emitter.on('openQuoteMOdel', function (val) {
+        toggleModel.value = val;       
+    });
+    function closeModal(){
+         toggleModel.value = false;
+    }
+    function submitForm(){
+        emitter.emit('updateSearch', {data : {name : name.value, email : email.value, phone_number : phone_number.value, message : message.value }, path : '', from : 'quoteModel'});
+    }
+</script>

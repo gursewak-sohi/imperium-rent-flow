@@ -43,37 +43,63 @@
     import {ref} from "vue";
     import axios from 'axios'
 
-    let step = ref('initial');   
+    let step = ref('initial');  
+    let allDetails = {
+        name : '' ,
+        email :'',
+        phone:'',
+        msg:'',
+        aircraft:'',
+        origin:'',
+        dest:'',
+        date:'',
+        pax:''
+
+    };
     emitter.on('updateSearch', function (value) {
-        step.value = value.path;
+        if(value.path){
+            step.value = value.path;
+        }
+        
         console.log(value, 'Value');
+        if(value.from == 'search'){
+            allDetails.origin = value.data.origin;
+            allDetails.dest = value.data.dest;
+            allDetails.pax = value.data.pax;
+            let d = new Date(value.data.date);
+            let datestring = (d.getMonth()+1)  + "/" + d.getDate() + "/" + d.getFullYear();
+            allDetails.date = datestring;
 
-        // Make Api Call....
+        }else if(value.from == 'jettype'){
+            allDetails.aircraft = value.data.join(',');
+        }else if(value.from == 'quoteModel'){
+            allDetails.name = value.data.name;
+            allDetails.email = value.data.email;
+            allDetails.phone = value.data.phone_number;
+            allDetails.msg = value.data.message;
 
-         axios.post('https://test.api.impjets.com/v1/ext.charter/request', {
-                name : 'roni ron' ,
-                email :'ron.bentata@gmail.com',
-                phone:'050-1234567',
-                msg:'testing this',
-                aircraft:'1',
-                origin:'San Diego [KSAN]',
-                dest:'Las Vegas [KLAS]',
-                date:'10/19/2022',
-                pax:'2'
-            }, {
+
+             
+
+             axios.post('https://test.api.impjets.com/v1/ext.charter/request', allDetails, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((response) => {
-                console.log(response, '123');
-                // if (response.data.result) {
-                //     this.list = response.data.error;
-                // } else {
-                //     this.list = [];
-                // }
+                emitter.emit('openQuoteMOdel', false);
+                emitter.emit('openConfirmModel', true);
             }, (error) => {
                 console.log(error);
             });
+
+        }
+
+
+        console.log(allDetails, 'allDetails');
+
+        // Make Api Call....
+
+        
             
     });   
     

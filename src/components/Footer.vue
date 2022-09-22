@@ -13,7 +13,7 @@
                 </div>
                 <div class="footer-content">
                     <a class="logo" href="index.html">
-                        <img src="assets/images/svg/logo-blue.svg" alt="logo" />
+                        <img src="/assets/images/svg/logo-blue.svg" alt="logo" />
                     </a>
                     <p>Get the latest on By The Seat private Jet Flights.</p>
                     <form class="footer-subscribe">
@@ -63,20 +63,20 @@
                     <div class="footer-payments">
                         <h5>Payments methods</h5>
                         <ul>
-                            <li><img src="assets/images/home/cards/master.svg" alt="master"></li>
-                            <li><img src="assets/images/home/cards/visa.svg" alt="visa"></li>
-                            <li><img src="assets/images/home/cards/amex.svg" alt="amex"></li>
-                            <li><img src="assets/images/home/cards/paypal.svg" alt="paypal"></li>
-                            <li><img src="assets/images/home/cards/bitcoin.svg" alt="bitcoin"></li>
-                            <li><img src="assets/images/home/cards/discover.svg" alt="discover"></li>
+                            <li><img src="/assets/images/home/cards/master.svg" alt="master"></li>
+                            <li><img src="/assets/images/home/cards/visa.svg" alt="visa"></li>
+                            <li><img src="/assets/images/home/cards/amex.svg" alt="amex"></li>
+                            <li><img src="/assets/images/home/cards/paypal.svg" alt="paypal"></li>
+                            <li><img src="/assets/images/home/cards/bitcoin.svg" alt="bitcoin"></li>
+                            <li><img src="/assets/images/home/cards/discover.svg" alt="discover"></li>
                         </ul>
                     </div>
                 </div>
                 <ul class="footer-companies">
-                    <li><img src="assets/images/home/companies/bbb.svg" width="116" height="43" alt="bbb"></li>
-                    <li><img src="assets/images/home/companies/nbaa.png" width="129" height="30" alt="nbaa"></li>
-                    <li><img src="assets/images/home/companies/dot.svg" width="194" height="57" alt="dot"></li>
-                    <li><img src="assets/images/home/companies/excellece.svg" width="127" height="32" alt="review"></li>
+                    <li><img src="/assets/images/home/companies/bbb.svg" width="116" height="43" alt="bbb"></li>
+                    <li><img src="/assets/images/home/companies/nbaa.png" width="129" height="30" alt="nbaa"></li>
+                    <li><img src="/assets/images/home/companies/dot.svg" width="194" height="57" alt="dot"></li>
+                    <li><img src="/assets/images/home/companies/excellece.svg" width="127" height="32" alt="review"></li>
                 </ul>
             </div>
         </div>

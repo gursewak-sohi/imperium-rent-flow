@@ -4,23 +4,6 @@ import ConfirmModel from '../components/ConfirmModel.vue'
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 import Search from '../components/Search.vue'
-
-import emitter from 'tiny-emitter/instance'
-    import { ref } from 'vue'
-
-    emitter.on('updateInput', function (type,value) {
-        if(type === 'origin'){
-            searchRequest.origin = value;
-        } else {
-            searchRequest.dest.value = value;
-        }
-    });
-
-    function search(){
-                emitter.emit('updateSearch', searchRequest);
-    }
-    
-
 </script>
 
 <template>
@@ -68,22 +51,22 @@ import emitter from 'tiny-emitter/instance'
                     <div class="support-unit">
                         <h5>Need help?</h5>
                         <a class="support-content" href="javascript:;">
-                            <img src="assets/images/svg/support.svg" alt="icon" />Support Center
+                            <img src="/assets/images/svg/support.svg" alt="icon" />Support Center
                         </a>
                     </div>
                     <div class="support-unit">
                         <h5>Contact us:</h5>
                         <a class="support-content" href="mailto:Support@bytheseat.com">
-                            <img src="assets/images/svg/emailsvg.svg" alt="icon" />Support@bytheseat.com
+                            <img src="/assets/images/svg/emailsvg.svg" alt="icon" />Support@bytheseat.com
                         </a>
                         <a class="support-content space-16" href="mailto:Support@bytheseat.com">
-                            <img src="assets/images/svg/phone.svg" alt="icon" />+1.310.817.2621
+                            <img src="/assets/images/svg/phone.svg" alt="icon" />+1.310.817.2621
                         </a>
                     </div>
                     <div class="support-unit">
                         <h5>Our office:</h5>
                         <a class="support-content" href="mailto:Support@bytheseat.com">
-                            <img src="assets/images/svg/place.svg" alt="icon" />
+                            <img src="/assets/images/svg/place.svg" alt="icon" />
                             <p>3705 W Pico Blvd (#591), Los Angeles, CA, 90019-3451</p>
                         </a>
                     </div>
@@ -99,5 +82,7 @@ import emitter from 'tiny-emitter/instance'
 
   </main>
 </template>
+
+
 
 

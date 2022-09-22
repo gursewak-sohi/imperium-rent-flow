@@ -3,24 +3,24 @@
         <div class="search-box">
             <div class="search-field">
                 <div class="field-title">
-                    <img src="assets/images/svg/origin.svg" alt="icon"/>Origin
+                    <img src="/assets/images/svg/origin.svg" alt="icon"/>Origin
                 </div>
-                <SearchPlaceinput type="origin"/>
+                <SearchPlaceinput type="origin" />
             </div>
             <div class="field-swap">
                 <button>
-                    <img src="assets/images/svg/left-right.svg" alt="icon"/>
+                    <img src="/assets/images/svg/left-right.svg" alt="icon"/>
                 </button>
             </div>
             <div class="search-field">
                 <div class="field-title">
-                    <img src="assets/images/svg/destination.svg" alt="icon"/>Destination
+                    <img src="/assets/images/svg/destination.svg" alt="icon"/>Destination
                 </div>
                 <SearchPlaceinput type="destination"/>
             </div>
             <div class="search-field">
                 <div class="field-title">
-                    <img src="assets/images/svg/depart.svg" alt="icon"/>Depart
+                    <img src="/assets/images/svg/depart.svg" alt="icon"/>Depart
                 </div>
                 <DatePicker class="single-input" v-model="date" :columns="1" title-position="left" >
                     <template #default="{ inputValue ,togglePopover }">
@@ -40,7 +40,7 @@
             </div>
             <div class="search-field">
                 <div class="field-title">
-                    <img src="assets/images/svg/travelers.svg" alt="icon"/>Travelers
+                    <img src="/assets/images/svg/travelers.svg" alt="icon"/>Travelers
                 </div>
                 <div class="dropdown-block">
                     <button
@@ -48,7 +48,7 @@
                         data-dropdown="travelers"
                         @click="togglePassangerCount = !togglePassangerCount">{{ passangerCount }}
                         Passanger
-                        <img src="assets/images/svg/dropdown.svg" alt="icon"/></button>
+                        <img src="/assets/images/svg/dropdown.svg" alt="icon"/></button>
                     <div
                         id="travelers"
                         v-bind:class="['dropdown', { 'active' : togglePassangerCount }]"
@@ -66,7 +66,7 @@
             <div data-btn="next" class="search-button">
                 <button id="searchRoundTrip" class="btn btn-primary" @click="search()">
                     Next
-                    <img src="assets/images/svg/next.svg" alt="icon"/>
+                    <img src="/assets/images/svg/next.svg" alt="icon"/>
                 </button>
             </div>
             <div data-btn="change" class="search-button">
@@ -87,12 +87,7 @@
     const passangerCount = ref(1);
     const date = ref(new Date());
 
-    var searchRequest = {
-        name: 'roni ron',
-        email: 'ron.bentata@gmail.com',
-        phone: '050-1234567',
-        msg: 'testing this',
-        aircraft: 1,
+    let searchRequest = {
         origin: '',
         dest: '',
         date: picked.value,
@@ -108,13 +103,20 @@
             if (type === 'origin') {
                 searchRequest.origin = value;
             } else {
-                searchRequest.dest.value = value;
+                searchRequest.dest = value;
             }
         });
 
     function search() {
-        emitter.emit('updateSearch', {data : searchRequest, path : 'filter-result'});
-
+        // if(searchRequest.origin == ''){
+        //     alert('Orgin is required');
+        // }else if(searchRequest.dest == ''){
+        //     alert('dest is required');
+        // }else{
+            searchRequest.pax = passangerCount.value;
+            searchRequest.date = date.value;
+            emitter.emit('updateSearch', {data : searchRequest, path : 'filter-result', from: 'search'});
+        // }
     }
     
 </script>

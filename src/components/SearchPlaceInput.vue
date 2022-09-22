@@ -25,8 +25,6 @@
 
     const props = defineProps({type: String})
 
-    console.log(props);
-
     const vm = ref(this);
 
     let origin = ref('')
