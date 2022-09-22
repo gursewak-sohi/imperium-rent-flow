@@ -69,6 +69,8 @@
     let phone_number_error = ref('');
     let message_error = ref('');
 
+    
+
     emitter.on('openQuoteMOdel', function (val) {
         toggleModel.value = val;       
     });
@@ -95,7 +97,6 @@
                 message_error.value = 'Please enter this field';
 // 
         }
-        console.log(error);
         
     }
 </script>

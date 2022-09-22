@@ -27,7 +27,7 @@
                     <!-- Jet Type -->
                     <JetType v-if="step == 'filter-result'"/>
                     <!-- Selected Jet  -->
-                    <SelectedJet v-if="step === 'selected-result'"/>
+                    <SelectedJet v-if="step === 'selected-result'" :data="data_copy"/>
                 </div>
             </div>
         </section>
@@ -44,6 +44,7 @@
     import axios from 'axios'
 
     let step = ref('initial');  
+    
     let allDetails = {
         name : '' ,
         email :'',
@@ -58,12 +59,12 @@
         dt:''
 
     };
+    let data_copy = ref(allDetails);
     emitter.on('updateSearch', function (value) {
         if(value.path){
             step.value = value.path;
         }
         
-        console.log(value, 'Value');
         if(value.from == 'search'){
             allDetails.origin = value.data.origin;
             allDetails.dest = value.data.dest;
@@ -96,9 +97,8 @@
             allDetails.dt = value.data.dt;
 
         }
+        data_copy.value = allDetails;
 
-
-        console.log(allDetails, 'allDetails');
 
         // Make Api Call....
 
