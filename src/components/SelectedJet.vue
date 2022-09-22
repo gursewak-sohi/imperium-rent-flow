@@ -71,22 +71,22 @@
                     <ul>
                         <li>
                             <h5>Departure Airport</h5>
-                            <h6>Ben Gurion Intl (TLV)
+                            <h6>{{ props.data.origin}}
                             </h6>
                         </li>
                         <li>
                             <h5>Arrival Airport</h5>
-                            <h6>Ben Gurion Intl (TLV)
+                            <h6>{{ props.data.dest }}
                             </h6>
                         </li>
                         <li>
                             <h5>Passangers</h5>
-                            <h6>4
+                            <h6>{{ props.data.pax}}
                             </h6>
                         </li>
                         <li>
                             <h5>Aircraft Type</h5>
-                            <h6>Light, Heavy
+                            <h6>{{ getAircraftType(props.data.aircraft)}}
                             </h6>
                         </li>
                         <li>
@@ -147,12 +147,17 @@
     let origin_time = ref('');
     let departure_time = ref('');
 
+    const props = defineProps({
+        data: Object,
+        })
+
     let isQuoteModelActive = ref(false);
 
     var x = 60; 
     var times = [];
     var tt = 0;
     var ap = [' AM', ' PM'];
+    let aircraft = ['turbo','light','heavy'];
 
     for (var i=0;tt<24*60; i++) {
         var hh = Math.floor(tt/60); 
@@ -168,6 +173,15 @@
             path: 'selected-result',
             from : 'selected-jet'
         });
+    }
+
+    function getAircraftType(val){
+        let all = val.split(',');
+        let empty = [];
+        for(const key in all){
+            empty.push(aircraft[all[key]]);
+        }
+        return empty.join(',');
     }
 
     function goToPre(){
