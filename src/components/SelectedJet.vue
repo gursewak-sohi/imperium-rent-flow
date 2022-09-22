@@ -179,7 +179,7 @@
         let all = val.split(',');
         let empty = [];
         for(const key in all){
-            empty.push(aircraft[all[key]]);
+            empty.push(aircraft[(all[key] - 1)]);
         }
         return empty.join(',');
     }
