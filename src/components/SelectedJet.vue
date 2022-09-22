@@ -1,5 +1,5 @@
 <template>
-    <div id="selectedJetType" class="selected-jet-wrapper" style="display: none;">
+    <div id="selectedJetType" class="selected-jet-wrapper" >
                         <div class="selected-jet-block">
                             <div id="gallerySwiper" class="swiper selected-jet-image light-gallery-wrapper">
                                 <div class="swiper-wrapper result-gallery-top light-gallery">
@@ -74,7 +74,7 @@
                                         </div>
                                     </div>
                                     <div class="timing-buttons">
-                                        <button id="selectedJetBackBtn" type="button" class="btn btn-dark-outline btn-md">Back</button>
+                                        <button id="selectedJetBackBtn" type="button" class="btn btn-dark-outline btn-md" @click="goToPre()">Back</button>
                                         <button id="getQouteBtn" type="button" class="btn btn-primary btn-iconed-lg btn-md">Get Quote <img src="assets/images/svg/next.svg" alt="icon"></button>
                                     </div>
                                 </div>
@@ -82,3 +82,12 @@
                         </div>
                     </div>
 </template>
+<script setup>
+    import emitter from 'tiny-emitter/instance'
+
+    function goToNext() {
+        emitter.emit('updateSearch', {data : {}, path : 'selected-result'});
+
+    }
+    
+</script>

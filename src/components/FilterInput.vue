@@ -77,27 +77,17 @@
 </template>
 
 <script setup>
-
     import SearchPlaceinput from './SearchPlaceInput.vue'
     import emitter from 'tiny-emitter/instance'
     import { DatePicker } from 'v-calendar';
     import 'v-calendar/dist/style.css';
- 
     import {ref, reactive} from 'vue'
     const picked = ref(new Date())
     const togglePassangerCount = ref(false);
     const passangerCount = ref(1);
     const date = ref(new Date());
 
-    // Code for date-range picker
-
-    // date.value.setDate(Number(date.value.getDate()) + 35);
-    // const range = reactive({
-    //     start : new Date(),
-    //     end : date.value
-    // });
-
-    let searchRequest = {
+    var searchRequest = {
         name: 'roni ron',
         email: 'ron.bentata@gmail.com',
         phone: '050-1234567',
@@ -123,7 +113,7 @@
         });
 
     function search() {
-        emitter.emit('updateSearch', searchRequest);
+        emitter.emit('updateSearch', {data : searchRequest, path : 'filter-result'});
 
     }
     

@@ -1,5 +1,5 @@
 <template>
-    <div id="chooseJetType" class="jet-type-block" style="display: none;">
+    <div id="chooseJetType" class="jet-type-block" >
         <h4>Please choose type of jet (You can choose more than 1)
         </h4>
         <div class="jet-type-list">
@@ -204,9 +204,19 @@
             </div>
         </div>
         <div class="jet-type-button">
-            <button id="chooseJetBtn" class="btn btn-primary btn-md btn-iconed-lg">
+            <button id="chooseJetBtn" class="btn btn-primary btn-md btn-iconed-lg"  @click="goToNext()">
                 Next (2)
                 <img src="assets/images/svg/next.svg" alt="icon"/></button>
         </div>
     </div>
 </template>
+
+<script setup>
+    import emitter from 'tiny-emitter/instance'
+
+    function goToNext() {
+        emitter.emit('updateSearch', {data : {}, path : 'selected-result'});
+
+    }
+    
+</script>
