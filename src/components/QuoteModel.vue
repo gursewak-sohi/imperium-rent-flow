@@ -6,25 +6,32 @@
             </button>
             <h4>Get a Quote</h4>
             <p>Fill in your details, and get an immediate quote to your email inbox. </p>
+
+            <p>{{ gError }}</p>
             <form class="modal-form" action="">
                 <div class="modal-field">
-                    <label>*Full name</label>
-                    <input type="text" placeholder="e.g. John" v-model="name" required/>
+                    <label>*Full name</label>                     
+                    <input type="text" placeholder="e.g. John" v-model="name" name="name" required @change="checkError($event)"/>
+                    <span class="error">{{ name_error  }}</span>
                 </div>
+               
                 <div class="modal-field">
                     <label>*Email address</label>
-                    <input type="text" placeholder="e.g. john.dowry@example.com" v-model="email" required/>
+                    <input type="text" placeholder="e.g. john.dowry@example.com" name="email" v-model="email" required  @change="checkError($event)"/>
+                    <span class="error">{{ email_error  }}</span>
                 </div>
                 <div class="modal-field">
                     <label>*Phone number</label>
-                    <input type="text" placeholder="+972" v-model="phone_number" required/>
+                    <input type="text" placeholder="+972" name="phone_number" v-model="phone_number" required  @change="checkError($event)"/>
+                    <span class="error">{{ phone_number_error  }}</span>
                 </div>
                 <div class="modal-field">
                     <label>Additional message (optional)</label>
-                    <textarea maxlength="300" class="count-area" name="" id="" v-model="message" cols="30" rows="10" placeholder="Type a message here..."></textarea>
+                    <textarea maxlength="300" class="count-area" name="message" id="" v-model="message" cols="30" rows="10" placeholder="Type a message here..."  ></textarea>
                     <div class="counter">
                         <span class="count">0</span>/300
                     </div>
+
                 </div>
                 <button id="submitQouteBtn" type="button" class="btn btn-primary btn-md btn-iconed-lg" @click="submitForm()">Send <img src="/assets/images/svg/next.svg" alt="icon"/></button>
                 <div class="agree-mails">
@@ -54,6 +61,14 @@
     let phone_number = ref('');
     let message = ref('');
     let toggleModel = ref(false);
+    let gError = ref('');
+
+
+    let name_error = ref('');
+    let email_error = ref('');
+    let phone_number_error = ref('');
+    let message_error = ref('');
+
     emitter.on('openQuoteMOdel', function (val) {
         toggleModel.value = val;       
     });
@@ -61,6 +76,26 @@
          toggleModel.value = false;
     }
     function submitForm(){
-        emitter.emit('updateSearch', {data : {name : name.value, email : email.value, phone_number : phone_number.value, message : message.value }, path : '', from : 'quoteModel'});
+        gError.value = "";
+        if(name.value != '' && email.value != '' && phone_number.value != ''){
+            emitter.emit('updateSearch', {data : {name : name.value, email : email.value, phone_number : phone_number.value, message : message.value }, path : '', from : 'quoteModel'});
+        } else{
+            gError.value = "Please enter all the required fields.";
+        }
+    }
+    function checkError(e){
+        if(!e.target.value  ){
+            if(e.target.name == 'name')
+                name_error.value = 'Please enter this field';
+            if(e.target.name == 'email')
+                email_error.value = 'Please enter this field';
+            if(e.target.name == 'phone_number')
+                phone_number_error.value = 'Please enter this field';
+            if(e.target.name == 'message')
+                message_error.value = 'Please enter this field';
+// 
+        }
+        console.log(error);
+        
     }
 </script>

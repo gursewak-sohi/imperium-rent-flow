@@ -53,7 +53,9 @@
         origin:'',
         dest:'',
         date:'',
-        pax:''
+        pax:'',
+        at:'',
+        dt:''
 
     };
     emitter.on('updateSearch', function (value) {
@@ -78,9 +80,6 @@
             allDetails.phone = value.data.phone_number;
             allDetails.msg = value.data.message;
 
-
-             
-
              axios.post('https://test.api.impjets.com/v1/ext.charter/request', allDetails, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -91,6 +90,10 @@
             }, (error) => {
                 console.log(error);
             });
+
+        }else if(value.from =='selected-jet-data'){
+            allDetails.at = value.data.at;
+            allDetails.dt = value.data.dt;
 
         }
 

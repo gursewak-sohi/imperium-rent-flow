@@ -101,7 +101,7 @@
                         <div class="select-unit">
                              <select name="" id="" required="" v-model="origin_time">
                                 <option value="" disabled="" selected="" hidden="">00:00 AM</option>
-                                <option value="index + ' PM'" v-for="index in timeArray" :key="index" >{{index}}</option>
+                                <option :value="index" v-for="index in timeArray" :key="index" >{{index}}</option>
                             </select>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                         <div class="select-unit">
                              <select name="" id="" required="" v-model="departure_time">
                                 <option value="" disabled="" selected="" hidden="">00:00 AM</option>
-                                <option value="index + ' PM'" v-for="index in timeArray" :key="index" >{{index}}</option>
+                                <option :value="index" v-for="index in timeArray" :key="index" >{{index}}</option>
                             </select>
                         </div>
                     </div>
@@ -179,6 +179,11 @@
     }
 
     function getQuote(){
+        emitter.emit('updateSearch', {
+            data: {at : origin_time.value, dt : departure_time.value},
+            path: '',
+            from : 'selected-jet-data'
+        });
         emitter.emit('openQuoteMOdel', true);
     }
 
