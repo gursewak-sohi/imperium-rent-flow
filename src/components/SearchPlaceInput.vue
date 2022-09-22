@@ -41,26 +41,25 @@
 
     }
 
-    function searchOrigin() {
+    const  searchOrigin = async() => {
         if (searchTerm.value != '') {
-            axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
+           await axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
                 srcterms: searchTerm.value
             }, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((response) => {
-                console.log(response.data.error);
                 if (response.data.result) {
-                    this.list = response.data.error;
+                    list.value = response.data.error;
                 } else {
-                    this.list = [];
+                    list.value = [];
                 }
             }, (error) => {
                 console.log(error);
             });
         } else {
-            this.list = [];
+            list.value = [];
         }
     };
 </script>
