@@ -11,19 +11,19 @@
             <form class="modal-form" action="">
                 <div class="modal-field">
                     <label>*Full name</label>                     
-                    <input type="text" placeholder="e.g. John" v-model="name" name="name" required @change="checkError($event)"/>
-                    <span class="error">{{ name_error  }}</span>
+                    <input type="text" placeholder="e.g. John" v-model="name" name="name" :class="{'error' : name_error }" required @change="checkError($event)"/>
+                    
                 </div>
                
                 <div class="modal-field">
                     <label>*Email address</label>
-                    <input type="text" placeholder="e.g. john.dowry@example.com" name="email" v-model="email" required  @change="checkError($event)"/>
-                    <span class="error">{{ email_error  }}</span>
+                    <input type="text" placeholder="e.g. john.dowry@example.com" :class="{'error' : email_error }" name="email" v-model="email" required  @change="checkError($event)"/>
+                   
                 </div>
                 <div class="modal-field">
                     <label>*Phone number</label>
-                    <input type="text" placeholder="+972" name="phone_number" v-model="phone_number" required  @change="checkError($event)"/>
-                    <span class="error">{{ phone_number_error  }}</span>
+                    <input type="text" placeholder="+972" name="phone_number" :class="{'error' : phone_number_error }" v-model="phone_number" required  @change="checkError($event)"/>
+                    
                 </div>
                 <div class="modal-field">
                     <label>Additional message (optional)</label>
