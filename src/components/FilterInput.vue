@@ -22,7 +22,7 @@
                 <div class="field-title">
                     <img src="/assets/images/svg/depart.svg" alt="icon"/>Depart
                 </div>
-                <DatePicker class="single-input" v-model="date" :columns="1" title-position="left" >
+                <DatePicker class="single-input" v-model="date" :columns="1" >
                     <template #default="{ inputValue ,togglePopover }">
                         <input @click="togglePopover()" readonly  :value="inputValue" />
                     </template>
@@ -63,14 +63,11 @@
                     </div>
                 </div>
             </div>
-            <div data-btn="next" class="search-button">
-                <button id="searchRoundTrip" class="btn btn-primary" @click="search()">
+            <div class="search-button">
+                <button class="btn btn-primary" @click="search()">
                     Next
                     <img src="/assets/images/svg/next.svg" alt="icon"/>
                 </button>
-            </div>
-            <div data-btn="change" class="search-button">
-                <button id="searchRoundTrip" class="btn btn-primary">Change</button>
             </div>
         </div>
     </div>

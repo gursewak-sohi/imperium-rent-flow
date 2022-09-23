@@ -112,6 +112,11 @@
                     &:focus {
                         border-color: #0770E3;
                     }
+                    &.error {
+                        border-color: #f74949;
+                        color: #f74949;
+                        background-color: #ffeded;
+                    }
                 }
                 & textarea {
                     font-size: 14px;
@@ -136,6 +141,11 @@
                     }
                     &:focus {
                         border-color: #0770E3;
+                    }
+                    &.error {
+                        border-color: #f74949;
+                        color: #f74949;
+                        background-color: #ffeded;
                     }
                 }
                 & .counter {
