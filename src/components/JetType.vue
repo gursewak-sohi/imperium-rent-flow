@@ -24,19 +24,19 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/assets/images/home/gallery/3.jpg"
+                                href="/imperium-rent-flow/assets/images/home/gallery/3.jpg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery1" alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/assets/images/home/gallery/2.jpg"
+                                href="/imperium-rent-flow/assets/images/home/gallery/2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="Image 2" src="/assets/images/home/gallery/2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/assets/images/home/gallery/1.jpg"
+                                href="/imperium-rent-flow/assets/images/home/gallery/1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="Image 3" src="/assets/images/home/gallery/1.jpg"/>
                             </a>
@@ -102,19 +102,19 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/assets/images/home/gallery/3.jpg"
+                                href="/imperium-rent-flow/assets/images/home/gallery/3.jpg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery2" alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/assets/images/home/gallery/2.jpg"
+                                href="/imperium-rent-flow/assets/images/home/gallery/2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="Image 2" src="/assets/images/home/gallery/2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/assets/images/home/gallery/1.jpg"
+                                href="/imperium-rent-flow/assets/images/home/gallery/1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="Image 3" src="/assets/images/home/gallery/1.jpg"/>
                             </a>
@@ -178,19 +178,19 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/assets/images/home/gallery/3.jpg"
+                                href="/imperium-rent-flow/assets/images/home/gallery/3.jpg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery3" alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/assets/images/home/gallery/2.jpg"
+                                href="/imperium-rent-flow/assets/images/home/gallery/2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="Image 2" src="/assets/images/home/gallery/2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/assets/images/home/gallery/1.jpg"
+                                href="/imperium-rent-flow/assets/images/home/gallery/1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="Image 3" src="/assets/images/home/gallery/1.jpg"/>
                             </a>
