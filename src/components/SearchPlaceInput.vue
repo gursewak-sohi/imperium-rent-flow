@@ -1,11 +1,13 @@
 <template>
     <input
+    :ref="props.type"
         type="text"
         placeholder="Ben Gurion Intl (TLV)"
         v-model="searchTerm"
+        @click="initialize()"
         @keyup="searchOrigin()"/>
         <ul class="airport-listing" v-if="typeof list != 'undefined' && list.length">
-            <li v-for="org in list" :key="org.name" @click="selectOrigin(org)">
+            <li v-for="org in list" :key="org.name" @click="selectOrigin($event, org)">
                 <div class="airtport-block">
                     <div>
                         <h5>{{org.name}}</h5>
@@ -22,22 +24,47 @@
     import axios from 'axios'
     import {ref} from "vue";
     import emitter from 'tiny-emitter/instance'
-
-    const props = defineProps({type: String})
+    const defaultData = ref([]);
+    const props = defineProps({type: String, defaultData : Array})
+    
 
     const vm = ref(this);
 
     let origin = ref('')
     let searchTerm = ref('')
     let destination = ref('')
-    let list = ref([]);
+    let list = ref(props.defaultData);
+    let firstClick = true;
 
-    const selectOrigin = (country) => {
+    // Start
+    axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
+            srcterms: 'aa'
+        },
+        {
+            headers: { 
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then((response) => {
+            defaultData.value = response.data.error;
+        }, (error) => {
+            console.log(error);
+    });
+    // End
+
+    const selectOrigin = (event, country) => {
         origin.value = country.name
         searchTerm.value = country.name;
         list.value = [];
         let val = `${country.name}  [${country.code}]`;
         emitter.emit('updateInput', props.type, val);
+    }
+
+    const initialize = async() => {
+        if(firstClick){
+            console.log('First Click');
+            list.value = defaultData.value;
+            firstClick = false;
+        }
 
     }
 
@@ -53,13 +80,13 @@
                 if (response.data.result) {
                     list.value = response.data.error;
                 } else {
-                    list.value = [];
+                    list.value =[];
                 }
             }, (error) => {
                 console.log(error);
             });
         } else {
-            list.value = [];
+            list.value = defaultData.value;
         }
     };
 </script>
