@@ -1,11 +1,11 @@
 <template>
-    <div data-trip="round" id="roundTripBlock" class="single-trip step-1">
+    <div data-trip="round" id="roundTripBlock" :class="{'step-3' : buttonType == '', 'step-1' : buttonType != ''}" class="single-trip step-1">
         <div class="search-box">
             <div class="search-field">
                 <div class="field-title">
                     <img src="/assets/images/svg/origin.svg" alt="icon"/>Origin
                 </div>
-                <SearchPlaceinput type="origin" />
+                <SearchPlaceinput type="origin" :defaultData="defaultData" />
             </div>
             <div class="field-swap">
                 <button>
@@ -16,7 +16,7 @@
                 <div class="field-title">
                     <img src="/assets/images/svg/destination.svg" alt="icon"/>Destination
                 </div>
-                <SearchPlaceinput type="destination"/>
+                <SearchPlaceinput type="destination" :defaultData="defaultData"/>
             </div>
             <div class="search-field">
                 <div class="field-title">
@@ -64,8 +64,12 @@
                 </div>
             </div>
             <div class="search-button">
-                <button class="btn btn-primary" @click="search()">
+                <button class="btn btn-primary" @click="search()" v-if="buttonType === 'next'">
                     Next
+                    <img src="/assets/images/svg/next.svg" alt="icon"/>
+                </button>
+                <button class="btn btn-primary" @click="changeStep()" v-if="buttonType === 'change'">
+                    change
                     <img src="/assets/images/svg/next.svg" alt="icon"/>
                 </button>
             </div>
@@ -74,6 +78,7 @@
 </template>
 
 <script setup>
+    import axios from 'axios'
     import SearchPlaceinput from './SearchPlaceInput.vue'
     import emitter from 'tiny-emitter/instance'
     import { DatePicker } from 'v-calendar';
@@ -83,6 +88,8 @@
     const togglePassangerCount = ref(false);
     const passangerCount = ref(1);
     const date = ref(new Date());
+    const defaultData = ref([]);
+    const buttonType = ref('next');
 
     let searchRequest = {
         origin: '',
@@ -98,11 +105,17 @@
     emitter
         .on('updateInput', function (type, value) {
             if (type === 'origin') {
+                // this.$refs.origin.$el.focus()
                 searchRequest.origin = value;
             } else {
                 searchRequest.dest = value;
             }
         });
+
+    emitter
+    .on('updateButtonType', function (type, value) {
+        buttonType.value = '';
+    });
 
     function search() {
         // if(searchRequest.origin == ''){
@@ -112,8 +125,16 @@
         // }else{
             searchRequest.pax = passangerCount.value;
             searchRequest.date = date.value;
+            togglePassangerCount.value = false;
+            buttonType.value = 'change';
             emitter.emit('updateSearch', {data : searchRequest, path : 'filter-result', from: 'search'});
         // }
+    } 
+
+    function changeStep(){
+        // buttonType.value = 'next';
+        //  emitter.emit('updateSearch', {data : searchRequest, path : 'initial', from: ''});
+
     }
     
 </script>

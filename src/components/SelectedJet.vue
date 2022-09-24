@@ -100,7 +100,7 @@
                         <label>Departure Time</label>
                         <div class="select-unit">
                              <select name="" id="" required="" v-model="origin_time">
-                                <option value="" disabled="" selected="" hidden="">00:00 AM</option>
+                                <option value="" disabled="" selected="" hidden="">12:00 AM</option>
                                 <option :value="index" v-for="index in timeArray" :key="index" >{{index}}</option>
                             </select>
                         </div>
@@ -109,7 +109,7 @@
                         <label>Arrival Time</label>
                         <div class="select-unit">
                              <select name="" id="" required="" v-model="departure_time">
-                                <option value="" disabled="" selected="" hidden="">00:00 AM</option>
+                                <option value="" disabled="" selected="" hidden="">12:00 AM</option>
                                 <option :value="index" v-for="index in timeArray" :key="index" >{{index}}</option>
                             </select>
                         </div>
@@ -162,7 +162,8 @@
     for (var i=0;tt<24*60; i++) {
         var hh = Math.floor(tt/60); 
         var mm = (tt%60);
-        times[i] = ("0" + (hh % 12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ap[Math.floor(hh/12)]; 
+        let hour = hh % 12;
+        times[i] = ("0" + ((hour == 0 ? 12 : hour))).slice(-2) + ':' + ("0" + mm).slice(-2) + ap[Math.floor(hh/12)]; 
         tt = tt + x;
     }
 

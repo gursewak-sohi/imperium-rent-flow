@@ -259,6 +259,7 @@
     let selectedTypes = [];
 
     function goToNext() {
+        emitter.emit('updateButtonType');
         emitter.emit('updateSearch', {data : selectedTypes, path : 'selected-result', from : 'jettype'});
     }
 

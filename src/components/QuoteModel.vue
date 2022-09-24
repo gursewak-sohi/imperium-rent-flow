@@ -7,22 +7,21 @@
             <h4>Get a Quote</h4>
             <p>Fill in your details, and get an immediate quote to your email inbox. </p>
 
-            <p>{{ gError }}</p>
             <form class="modal-form" action="">
                 <div class="modal-field">
                     <label>*Full name</label>                     
-                    <input type="text" placeholder="e.g. John" v-model="name" name="name" :class="{'error' : name_error }" required @change="checkError($event)"/>
+                    <input type="text" placeholder="e.g. John" v-model="name" name="name" :class="{ 'error' : name_error != '' ? true:false }" required @keyup="checkError($event)"/>
                     
                 </div>
                
                 <div class="modal-field">
                     <label>*Email address</label>
-                    <input type="text" placeholder="e.g. john.dowry@example.com" :class="{'error' : email_error }" name="email" v-model="email" required  @change="checkError($event)"/>
+                    <input type="text" placeholder="e.g. john.dowry@example.com" :class="{'error' : email_error != '' ? true:false }" name="email" v-model="email" required  @keyup="checkError($event)"/>
                    
                 </div>
                 <div class="modal-field">
                     <label>*Phone number</label>
-                    <input type="text" placeholder="+972" name="phone_number" :class="{'error' : phone_number_error }" v-model="phone_number" required  @change="checkError($event)"/>
+                    <input type="text" placeholder="+972" name="phone_number" :class="{'error' : phone_number_error != '' ? true:false }" v-model="phone_number" required  @keyup="checkError($event)"/>
                     
                 </div>
                 <div class="modal-field">
@@ -82,20 +81,49 @@
         if(name.value != '' && email.value != '' && phone_number.value != ''){
             emitter.emit('updateSearch', {data : {name : name.value, email : email.value, phone_number : phone_number.value, message : message.value }, path : '', from : 'quoteModel'});
         } else{
-            gError.value = "Please enter all the required fields.";
+            if(name.value == '')
+                name_error.value = 'Please enter this field';
+            if(email.value == '')
+                email_error.value = 'Please enter this field';
+            if(phone_number.value == '')
+                phone_number_error.value = 'Please enter this field';
         }
     }
+
+    const  phonenumber = (inputtxt)=>
+    {
+        var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+
+        return re.test(inputtxt);    
+    }
+
+    const validateEmail = (email) => {
+        return email.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+        };
     function checkError(e){
-        if(!e.target.value  ){
+
+        console.log(e.target.value, e.target.name)
+        if(e.target.value ==''  ){
             if(e.target.name == 'name')
                 name_error.value = 'Please enter this field';
-            if(e.target.name == 'email')
+            if(e.target.name == 'email'){
                 email_error.value = 'Please enter this field';
+            }
             if(e.target.name == 'phone_number')
                 phone_number_error.value = 'Please enter this field';
-            if(e.target.name == 'message')
-                message_error.value = 'Please enter this field';
 // 
+        }else{
+            if(e.target.name == 'name')
+                name_error.value = '';
+            if(e.target.name == 'email' && validateEmail(e.target.value )){
+                email_error.value = '';
+            }
+            if(e.target.name == 'phone_number')
+                phone_number_error.value = '';
+            
+
         }
         
     }
