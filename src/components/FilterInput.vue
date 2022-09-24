@@ -69,8 +69,7 @@
                     <img src="/assets/images/svg/next.svg" alt="icon"/>
                 </button>
                 <button class="btn btn-primary" @click="changeStep()" v-if="buttonType === 'change'">
-                    change
-                    <img src="/assets/images/svg/next.svg" alt="icon"/>
+                    Change
                 </button>
             </div>
         </div>

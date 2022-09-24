@@ -12,6 +12,15 @@
     --rounded-lg: 4px
 }
 
+.vc-header {
+    border-bottom: 1px solid $gray-200;
+    padding: 10px 16px 10px;
+}
+
+.vc-weeks {
+    padding: 12px 6px 6px 6px;
+}
+
 .vc-title {
     font-weight: bold;
 }

@@ -116,7 +116,6 @@
                     </div>
                     <div class="timing-buttons">
                         <button
-                            id="selectedJetBackBtn"
                             type="button"
                             class="btn btn-dark-outline btn-md"
                             @click="goToPre()">Back</button>
@@ -157,7 +156,7 @@
     var times = [];
     var tt = 0;
     var ap = [' AM', ' PM'];
-    let aircraft = ['turbo','light','heavy'];
+    let aircraft = ['Turbo','Light','Heavy'];
 
     for (var i=0;tt<24*60; i++) {
         var hh = Math.floor(tt/60); 
@@ -182,7 +181,7 @@
         for(const key in all){
             empty.push(aircraft[(all[key] - 1)]);
         }
-        return empty.join(',');
+        return empty.join(', ');
     }
 
     function goToPre(){

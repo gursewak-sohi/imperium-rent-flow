@@ -21,8 +21,7 @@
                               showCloseIcon: true,
                           },
                           plugins: plugins }"
-                            :onInit="onInit"
-                            :onBeforeSlide="onBeforeSlide">
+                            :onInit="onInit">
                             <a
                                 class="result-image"
                                 href="/assets/images/home/gallery/3.jpg"
@@ -100,8 +99,7 @@
                               showCloseIcon: true,
                           },
                           plugins: plugins }"
-                            :onInit="onInit"
-                            :onBeforeSlide="onBeforeSlide">
+                            :onInit="onInit">
                             <a
                                 class="result-image"
                                 href="/assets/images/home/gallery/3.jpg"
@@ -169,16 +167,15 @@
                         <lightgallery
                             class="result-gallery-top light-gallery"
                             :settings="{
-                          speed: 500,
-                          download: false,
-                          zoom: false,
-                          mobileSettings: {
-                              controls: true,
-                              showCloseIcon: true,
-                          },
+                            speed: 500,
+                            download: false,
+                            zoom: false,
+                            mobileSettings: {
+                                controls: true,
+                                showCloseIcon: true,
+                            },
                           plugins: plugins }"
-                            :onInit="onInit"
-                            :onBeforeSlide="onBeforeSlide">
+                            :onInit="onInit">
                             <a
                                 class="result-image"
                                 href="/assets/images/home/gallery/3.jpg"
@@ -241,7 +238,6 @@
         </div>
         <div class="jet-type-button">
             <button
-                id="chooseJetBtn"
                 class="btn btn-primary btn-md btn-iconed-lg"
                 @click="goToNext()">
                 Next (2)
@@ -289,9 +285,6 @@
         methods : {
             onInit: () => {
                 console.log('lightGallery has been initialized');
-            },
-            onBeforeSlide: () => {
-                console.log('calling before slide');
             }
         }
     };
