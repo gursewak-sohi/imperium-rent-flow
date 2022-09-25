@@ -1,10 +1,9 @@
 <template>
     <div id="chooseJetType" class="jet-type-block">
-        <h4>Please choose type of jet (You can choose more than 1)
-        </h4>
+        <h4>Please choose type of jet (You can choose more than 1)</h4>
         <div class="jet-type-list">
             <div class="jet-type-unit">
-                <input id="jetType1" type="checkbox" v-on:click="selectType($event, 1)"/>
+                <input id="jetType1" value="jet1"  v-model="checkedJet" type="checkbox" v-on:click="selectType($event, 1)"/>
                 <label for="jetType1" class="jet-type-content">
                     <div class="checkbox">
                         <img src="/assets/images/svg/check-sm.svg" alt="check"/>
@@ -82,7 +81,7 @@
                 </label>
             </div>
             <div class="jet-type-unit">
-                <input id="jetType2" type="checkbox" v-on:click="selectType($event, 2)"/>
+                <input id="jetType2" value="jet2" v-model="checkedJet" type="checkbox" v-on:click="selectType($event, 2)"/>
                 <label for="jetType2" class="jet-type-content">
                     <div class="checkbox">
                         <img src="/assets/images/svg/check-sm.svg" alt="check"/>
@@ -158,7 +157,7 @@
                 </label>
             </div>
             <div class="jet-type-unit">
-                <input id="jetType3" type="checkbox" v-on:click="selectType($event, 3)"/>
+                <input id="jetType3" value="jet3" v-model="checkedJet" type="checkbox" v-on:click="selectType($event, 3)"/>
                 <label for="jetType3" class="jet-type-content">
                     <div class="checkbox">
                         <img src="/assets/images/svg/check-sm.svg" alt="check"/>
@@ -238,10 +237,9 @@
         </div>
         <div class="jet-type-button">
             <button
+                :disabled="checkedJet.length == 0"
                 class="btn btn-primary btn-md btn-iconed-lg"
-                @click="goToNext()">
-                Next (2)
-                <img src="/assets/images/svg/next.svg" alt="icon"/></button>
+                @click="goToNext()">Next (2)<img src="/assets/images/svg/next.svg" alt="icon"/></button>
         </div>
     </div>
 </template>
@@ -252,7 +250,9 @@
     const gallery1 = ref(null)
     const gallery2 = ref(null)
     const gallery3 = ref(null)
-    let selectedTypes = [];
+    let checkedJet = ref([])
+    let selectedTypes = []
+   
 
     function goToNext() {
         emitter.emit('updateButtonType');
@@ -275,7 +275,7 @@
     import lgZoom from 'lightgallery/plugins/zoom';
 
     export default {
-        name : 'App',
+        name : 'LightGallery',
         components : {
             Lightgallery
         },
@@ -283,9 +283,7 @@
             plugins: [lgZoom, lgThumbnail]
         }),
         methods : {
-            onInit: () => {
-                console.log('lightGallery has been initialized');
-            }
+            onInit: () => {}
         }
     };
 </script>

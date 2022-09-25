@@ -68,7 +68,7 @@
                     Next
                     <img src="/assets/images/svg/next.svg" alt="icon"/>
                 </button>
-                <button class="btn btn-primary" @click="changeStep()" v-if="buttonType === 'change'">
+                <button class="btn btn-primary" @click="search()" v-if="buttonType === 'change'">
                     Change
                 </button>
             </div>
@@ -133,7 +133,6 @@
     function changeStep(){
         // buttonType.value = 'next';
         //  emitter.emit('updateSearch', {data : searchRequest, path : 'initial', from: ''});
-
     }
     
 </script>

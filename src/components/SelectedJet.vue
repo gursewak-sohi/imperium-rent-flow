@@ -13,8 +13,7 @@
                             showCloseIcon: true,
                         },
                         plugins: plugins }"
-                    :onInit="onInit"
-                    :onBeforeSlide="onBeforeSlide">
+                    :onInit="onInit">
                     <a
                         class="result-image"
                         href="/imperium-rent-flow/assets/images/home/gallery/3.jpg"
@@ -220,12 +219,7 @@
             plugins: [lgZoom, lgThumbnail]
         }),
         methods : {
-            onInit: () => {
-                console.log('lightGallery has been initialized');
-            },
-            onBeforeSlide: () => {
-                console.log('calling before slide');
-            }
+            onInit: () => {}
         }
     };
 </script>

@@ -1,12 +1,11 @@
 // Lightbox Bundle SCSS
-@font-face {
-    font-family: lg;
-    src: url(../fonts/lg.woff2?io9a6k) format("woff2"), url(../fonts/lg.ttf?io9a6k) format("truetype"), url(../fonts/lg.woff?io9a6k) format("woff"), url(../fonts/lg.svg?io9a6k#lg) format("svg");
-    font-weight: 400;
-    font-style: normal;
-    font-display: block
-}
-
+// @font-face {
+//     font-family: lg;
+//     src: url(../fonts/lg.woff2?io9a6k) format("woff2"), url(../fonts/lg.ttf?io9a6k) format("truetype"), url(../fonts/lg.woff?io9a6k) format("woff"), url(../fonts/lg.svg?io9a6k#lg) format("svg");
+//     font-weight: 400;
+//     font-style: normal;
+//     font-display: block
+// }
 .lg-icon {
     font-family: lg!important;
     speak: never;
@@ -994,7 +993,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .lg-comment-box .fb-comments {
     height: 100%;
     width: 100%;
-    background: url(../images/loading.gif) no-repeat scroll center center #fff;
+    // background: url(../images/loading.gif) no-repeat scroll center center #fff;
     overflow-y: auto;
     display: inline-block
 }
