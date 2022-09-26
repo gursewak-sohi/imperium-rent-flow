@@ -78,7 +78,7 @@
     }
     function submitForm(){
         gError.value = "";
-        if(name.value != '' && email.value != '' && validateEmail(e.target.value) && phone_number.value != ''){
+        if(name.value != '' && email.value != '' && validateEmail(email.value) && phone_number.value != ''){
             emitter.emit('updateSearch', {data : {name : name.value, email : email.value, phone_number : phone_number.value, message : message.value }, path : '', from : 'quoteModel'});
         } else{
             if(name.value == '')
