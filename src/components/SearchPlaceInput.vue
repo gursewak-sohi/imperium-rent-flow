@@ -67,7 +67,8 @@
     const selectOrigin = (event, country) => {
         origin.value = country.name
         searchTerm.value = country.name;
-        list.value = [];
+        // list.value = [];
+         showList.value = false;
         let val = `${country.name}  [${country.code}]`;
         emitter.emit('updateInput', props.type, {name : val, details : country});
     }

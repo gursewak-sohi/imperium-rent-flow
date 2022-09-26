@@ -46,7 +46,7 @@
                     <button
                         class="btn-dropdown"
                         data-dropdown="travelers"
-                        @focusout="handleFocusOut"
+                        @focusout.self="handleFocusOut"
                         @click="togglePassangerCount = !togglePassangerCount">{{ passangerCount }}
                         Passanger
                         <img src="/assets/images/svg/dropdown.svg" alt="icon"/></button>
@@ -57,9 +57,10 @@
                         <div class="counter">
                             <button
                                 class="btn btn-counter"
-                                @click="passangerCount > 1 ? passangerCount-- :''">-</button>
+                                @focusout.self="handleFocusOut"
+                                @click.stop.prevent="changeCount($event,'decrement')">-</button>
                             <div class="count">{{  passangerCount }}</div>
-                            <button class="btn btn-counter" @click="passangerCount++ ">+</button>
+                            <button class="btn btn-counter" @focusout.self="handleFocusOut" @click.stop.prevent="changeCount($event,'increment')">+</button>
                         </div>
                     </div>
                 </div>
@@ -93,6 +94,8 @@
 
     let defaultDest = ref('');
     let defaultOrigin = ref('');
+
+    let incredecre = ref(false);
 
 
     let searchRequest = {
@@ -134,6 +137,22 @@
         buttonType.value = data.value;
     });
 
+    function changeCount(event, type){
+        // event.preventDefault();  
+        // event.stopPropagation();
+        // console.log('type', type);
+        incredecre.value = true;
+        if(type == 'decrement'){
+            if(passangerCount.value > 1)
+                passangerCount.value = passangerCount.value -1;
+        } else {
+            passangerCount.value = passangerCount.value + 1;
+        }
+        setTimeout(function(){
+            incredecre.value = false;
+        },300)
+    }
+
     function search() {
         // if(searchRequest.origin == ''){
         //     alert('Orgin is required');
@@ -154,7 +173,14 @@
     }
 
     function handleFocusOut(){
-        togglePassangerCount.value = false;
+
+        console.log(incredecre.value, 'incredecre')
+        setTimeout(function(){
+            if(!incredecre.value){
+                togglePassangerCount.value = false;
+            }
+        },200);
+        
     }
     
 </script>
