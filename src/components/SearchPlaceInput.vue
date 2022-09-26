@@ -1,8 +1,9 @@
 <template>
     <input
+    :id="props.type "
+    ref="searchInput"
     @focus="handleFocus"
     @focusout="handleFocusOut"
-    :ref="props.type"
         type="text"
         placeholder="Ben Gurion Intl (TLV)"
         v-model="searchTerm"
@@ -41,6 +42,7 @@
     let firstClick = true;
     let copy = list;
     let showList = ref(false)
+    // let vm = this;
 
     // Start
     axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
@@ -61,6 +63,18 @@
     .on('exchangeInputField', function (value) {
         if(value.type == props.type){
               searchTerm.value = value.value;
+        }
+    });
+
+    emitter
+    .on('focuInput', function (value) {
+        if(value.type == 'origin'){
+            //   vm.$refs.searchInput.$el.focus();
+            document.getElementById("origin").focus();
+            initialize();
+        }else{
+            document.getElementById("destination").focus();
+            initialize(); 
         }
     });
 
@@ -107,13 +121,13 @@
     function handleFocusOut(){
         setTimeout(function(){
             showList.value = false;
-        },500);
+        },200);
         
     }
 
     function handleFocus(){
         setTimeout(function(){
             showList.value = true;
-        },500);
+        },200);
     }
 </script>

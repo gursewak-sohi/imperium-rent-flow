@@ -154,17 +154,17 @@
     }
 
     function search() {
-        // if(searchRequest.origin == ''){
-        //     alert('Orgin is required');
-        // }else if(searchRequest.dest == ''){
-        //     alert('dest is required');
-        // }else{
+        if(searchRequest.origin == ''){
+             emitter.emit('focuInput', {type : 'origin'});
+        }else if(searchRequest.dest == ''){
+             emitter.emit('focuInput', {type : 'destination'});
+        }else{
             searchRequest.pax = passangerCount.value;
             searchRequest.date = date.value;
             togglePassangerCount.value = false;
             buttonType.value = 'change';
             emitter.emit('updateSearch', {data : searchRequest, path : 'filter-result', from: 'search'});
-        // }
+        }
     } 
 
     function changeStep(){
