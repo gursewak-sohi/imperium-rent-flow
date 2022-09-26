@@ -100,11 +100,10 @@
     const validateEmail = (email) => {
         return email.match(
             /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
+        )
         };
     function checkError(e){
-
-        console.log(e.target.value, e.target.name)
+      
         if(e.target.value ==''  ){
             if(e.target.name == 'name')
                 name_error.value = 'Please enter this field';
@@ -115,10 +114,15 @@
                 phone_number_error.value = 'Please enter this field';
 // 
         }else{
+
             if(e.target.name == 'name')
                 name_error.value = '';
-            if(e.target.name == 'email' && validateEmail(e.target.value )){
-                email_error.value = '';
+            if(e.target.name == 'email'){
+                if(validateEmail(e.target.value)){
+                    email_error.value = '';
+                }else{
+                    email_error.value = 'Please enter this field';
+                }
             }
             if(e.target.name == 'phone_number')
                 phone_number_error.value = '';

@@ -184,6 +184,8 @@
     }
 
     function goToPre(){
+
+         emitter.emit('updateButtonType', {value :'change'});
          emitter.emit('updateSearch', {
             data: {},
             path: 'filter-result', 

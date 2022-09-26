@@ -1,12 +1,14 @@
 <template>
     <input
+    @focus="handleFocus"
+    @focusout="handleFocusOut"
     :ref="props.type"
         type="text"
         placeholder="Ben Gurion Intl (TLV)"
         v-model="searchTerm"
         @click="initialize()"
         @keyup="searchOrigin()"/>
-        <ul class="airport-listing" v-if="typeof list != 'undefined' && list.length">
+        <ul class="airport-listing" v-if="typeof list != 'undefined' && list.length  && showList">
             <li v-for="org in list" :key="org.name" @click="selectOrigin($event, org)">
                 <div class="airtport-block">
                     <div>
@@ -25,16 +27,20 @@
     import {ref} from "vue";
     import emitter from 'tiny-emitter/instance'
     const defaultData = ref([]);
-    const props = defineProps({type: String, defaultData : Array})
+    const props = defineProps({type: String, defaultData : Array, defaultValue:String})
+
+    console.log(props, 'props');
     
 
     const vm = ref(this);
 
     let origin = ref('')
-    let searchTerm = ref('')
+    let searchTerm = ref(props.defaultValue)
     let destination = ref('')
     let list = ref(props.defaultData);
     let firstClick = true;
+    let copy = list;
+    let showList = ref(false)
 
     // Start
     axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
@@ -51,12 +57,19 @@
     });
     // End
 
+    emitter
+    .on('exchangeInputField', function (value) {
+        if(value.type == props.type){
+              searchTerm.value = value.value;
+        }
+    });
+
     const selectOrigin = (event, country) => {
         origin.value = country.name
         searchTerm.value = country.name;
         list.value = [];
         let val = `${country.name}  [${country.code}]`;
-        emitter.emit('updateInput', props.type, val);
+        emitter.emit('updateInput', props.type, {name : val, details : country});
     }
 
     const initialize = async() => {
@@ -89,4 +102,17 @@
             list.value = defaultData.value;
         }
     };
+
+    function handleFocusOut(){
+        setTimeout(function(){
+            showList.value = false;
+        },500);
+        
+    }
+
+    function handleFocus(){
+        setTimeout(function(){
+            showList.value = true;
+        },500);
+    }
 </script>

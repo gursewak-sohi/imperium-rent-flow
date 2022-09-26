@@ -58,7 +58,7 @@
                                 <span>332 mph</span>
                             </li>
                             <li>Nautical miles
-                                <span>2,075 miles</span>
+                                <span>{{props.distance}} miles</span>
                             </li>
                             <li>Max seats
                                 <span>332 mph
@@ -134,7 +134,7 @@
                                 <span>332 mph</span>
                             </li>
                             <li>Nautical miles
-                                <span>2,075 miles</span>
+                                <span>{{props.distance}} miles</span>
                             </li>
                             <li>Max seats
                                 <span>332 mph
@@ -212,7 +212,7 @@
                                 <span>332 mph</span>
                             </li>
                             <li>Nautical miles
-                                <span>2,075 miles</span>
+                                <span>{{props.distance}} miles</span>
                             </li>
                             <li>Max seats
                                 <span>332 mph
@@ -253,9 +253,11 @@
     let checkedJet = ref([])
     let selectedTypes = []
    
-
+const props = defineProps({
+        distance: String,
+        })
     function goToNext() {
-        emitter.emit('updateButtonType');
+        emitter.emit('updateButtonType', {value :''});
         emitter.emit('updateSearch', {data : selectedTypes, path : 'selected-result', from : 'jettype'});
     }
 
