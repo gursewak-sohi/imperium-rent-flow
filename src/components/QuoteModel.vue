@@ -16,12 +16,12 @@
                
                 <div class="modal-field">
                     <label>*Email address</label>
-                    <input type="text" autocomplete="off" placeholder="e.g. john.dowry@example.com" :class="{'error' : email_error != '' ? true:false }" name="email" v-model="email" required  @keyup="checkError($event)"/>
+                    <input type="email" autocomplete="off" placeholder="e.g. john.dowry@example.com" :class="{'error' : email_error != '' ? true:false }" name="email" v-model="email" required  @keyup="checkError($event)"/>
                    
                 </div>
                 <div class="modal-field">
                     <label>*Phone number</label>
-                    <input type="text" autocomplete="off" placeholder="+972" name="phone_number" :class="{'error' : phone_number_error != '' ? true:false }" v-model="phone_number" required  @keyup="checkError($event)"/>
+                    <input type="tel" autocomplete="off" placeholder="+1" name="phone_number" :class="{'error' : phone_number_error != '' ? true:false }" v-model="phone_number" required  @keyup="checkError($event)"/>
                     
                 </div>
                 <div class="modal-field">
@@ -93,7 +93,6 @@
     const  phonenumber = (inputtxt)=>
     {
         var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-
         return re.test(inputtxt);    
     }
 

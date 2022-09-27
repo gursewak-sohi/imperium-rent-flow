@@ -239,7 +239,7 @@
             <button
                 :disabled="checkedJet.length == 0"
                 class="btn btn-primary btn-md btn-iconed-lg"
-                @click="goToNext()">Next (2)<img src="/assets/images/svg/next.svg" alt="icon"/></button>
+                @click="goToNext()">Next ({{ checkedJet.length }})<img src="/assets/images/svg/next.svg" alt="icon"/></button>
         </div>
     </div>
 </template>

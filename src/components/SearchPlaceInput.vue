@@ -27,11 +27,13 @@
     import axios from 'axios'
     import {ref} from "vue";
     import emitter from 'tiny-emitter/instance'
-    const defaultData = ref([]);
+    
     const props = defineProps({type: String, defaultData : Array, defaultValue:String})
 
+    import { default_list } from "./DefaultData"
+
     console.log(props, 'props');
-    
+    const defaultData = ref(default_list);
 
     const vm = ref(this);
 
@@ -45,18 +47,20 @@
     // let vm = this;
 
     // Start
-    axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
-            srcterms: 'aa'
-        },
-        {
-            headers: { 
-                'Content-Type': 'multipart/form-data'
-            }
-        }).then((response) => {
-            defaultData.value = response.data.error;
-        }, (error) => {
-            console.log(error);
-    });
+    // axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
+    //         srcterms: 'aa'
+    //     },
+    //     {
+    //         headers: { 
+    //             'Content-Type': 'multipart/form-data'
+    //         }
+    //     }).then((response) => {
+
+    //         console.log(response, 'response');
+    //         defaultData.value = response.data.error;
+    //     }, (error) => {
+    //         console.log(error);
+    // });
     // End
 
     emitter
@@ -72,7 +76,7 @@
             //   vm.$refs.searchInput.$el.focus();
             document.getElementById("origin").focus();
             initialize();
-        }else{
+        }else if(value.type == 'destination'){
             document.getElementById("destination").focus();
             initialize(); 
         }
@@ -84,7 +88,15 @@
         // list.value = [];
          showList.value = false;
         let val = `${country.name}  [${country.code}]`;
+
+        
         emitter.emit('updateInput', props.type, {name : val, details : country});
+
+        if(props.type == 'origin')
+            emitter.emit('focuInput', {type : 'destination'});
+
+        if(props.type == 'destination')
+            emitter.emit('focuInput', {type : 'dateTimePicker'});
     }
 
     const initialize = async() => {

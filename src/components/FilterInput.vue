@@ -22,9 +22,11 @@
                 <div class="field-title">
                     <img src="/assets/images/svg/depart.svg" alt="icon"/>Depart
                 </div>
-                <DatePicker class="single-input" v-model="date" :columns="1" >
+               
+                <DatePicker class="single-input"   v-model="date" :columns="1" :min-date="new Date()" @dayclick="onDayClick" ref="calendar" >
                     <template #default="{ inputValue ,togglePopover }">
-                        <input @click="togglePopover()" readonly  :value="inputValue" />
+                          
+                        <input @click="togglePopover()" id="datepicker" readonly  :value="inputValue" />
                     </template>
                 </DatePicker>
                 
@@ -91,6 +93,9 @@
     const date = ref(new Date());
     const defaultData = ref([]);
     const buttonType = ref('next');
+    const calendar = ref(null);
+
+    console.log()
 
     let defaultDest = ref('');
     let defaultOrigin = ref('');
@@ -111,6 +116,26 @@
         console.log('ref');
     }
 
+    function onDayClick(){
+        emitter.emit('focuInput', {type : 'passengerCount'});
+
+    }
+    // 
+
+    emitter
+    .on('focuInput', function (value) {
+
+        console.log(value, 'from input')
+        if(value.type == 'dateTimePicker'){
+            setTimeout(function(){document.getElementById("datepicker").click()},200);
+            // this.togglePopover();
+            //  calendar.move(5)
+           
+        }else if(value.type == 'passengerCount'){
+            togglePassangerCount.value = true;
+        }
+    });
+
     function exchangeOriDest(){
         let org = searchRequest.origin;
         searchRequest.origin = searchRequest.dest;
@@ -122,6 +147,8 @@
 
     emitter
         .on('updateInput', function (type, value) {
+
+            console.log(type, value, '-----');
             if (type === 'origin') {
                 // this.$refs.origin.$el.focus()
                 searchRequest.origin = value.name;
@@ -138,9 +165,6 @@
     });
 
     function changeCount(event, type){
-        // event.preventDefault();  
-        // event.stopPropagation();
-        // console.log('type', type);
         incredecre.value = true;
         if(type == 'decrement'){
             if(passangerCount.value > 1)
@@ -164,17 +188,14 @@
             togglePassangerCount.value = false;
             buttonType.value = 'change';
             emitter.emit('updateSearch', {data : searchRequest, path : 'filter-result', from: 'search'});
+            window.scrollBy(0, 100);
         }
     } 
 
     function changeStep(){
-        // buttonType.value = 'next';
-        //  emitter.emit('updateSearch', {data : searchRequest, path : 'initial', from: ''});
     }
 
     function handleFocusOut(){
-
-        console.log(incredecre.value, 'incredecre')
         setTimeout(function(){
             if(!incredecre.value){
                 togglePassangerCount.value = false;

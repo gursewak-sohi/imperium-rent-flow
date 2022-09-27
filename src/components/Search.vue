@@ -75,6 +75,8 @@
         }
         
         if(value.from == 'search'){
+
+            step.value = 'initial';
             allDetails.origin = value.data.origin;
             allDetails.dest = value.data.dest;
             allDetails.pax = value.data.pax;
@@ -89,6 +91,7 @@
                 allDetails.origin_details.coords_long, 
                 allDetails.destination_details.coords_lat, 
                 allDetails.destination_details.coords_long);
+            setTimeout(function(){step.value = value.path;},400)
 
         }else if(value.from == 'jettype'){
             allDetails.aircraft = value.data.join(',');
