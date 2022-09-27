@@ -40,18 +40,16 @@
             </div>
             <div class="search-field">
                 <div class="field-title">
-                    <img src="/assets/images/svg/travelers.svg" alt="icon"/>Travelers
+                    <img src="/assets/images/svg/travelers.svg" alt="icon"/>Passenger
                 </div>
                 <div class="dropdown-block">
                     <button
                         class="btn-dropdown"
-                        data-dropdown="travelers"
                         @focusout.self="handleFocusOut"
                         @click="togglePassangerCount = !togglePassangerCount">{{ passangerCount }}
                         Passanger
                         <img src="/assets/images/svg/dropdown.svg" alt="icon"/></button>
                     <div
-                        id="travelers"
                         v-bind:class="['dropdown', { 'active' : togglePassangerCount }]"
                         class="">
                         <div class="counter">
