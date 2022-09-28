@@ -1,5 +1,5 @@
 <template>
-    <div data-trip="round" id="roundTripBlock" :class="{'step-3' : buttonType == '', 'step-1' : buttonType != ''}" class="single-trip step-1">
+    <div data-trip="round" id="roundTripBlock" :class="{'step-3' : buttonType == '', 'step-1' : buttonType != ''}" class="single-trip">
         <div class="search-box">
             <div class="search-field">
                 <div class="field-title">
@@ -7,7 +7,7 @@
                 </div>
                 <SearchPlaceinput type="origin" :defaultData="defaultOrigin"   />
             </div>
-            <div class="field-swap">
+            <div class="field-swap" :class="{ 'swapped' : toggleIcon}">
                 <button @click="exchangeOriDest()">
                     <img src="/assets/images/svg/left-right.svg" alt="icon"/>
                 </button>
@@ -49,7 +49,7 @@
                         class="btn-dropdown"
                         @focusout.self="handleFocusOut"
                         @click="togglePassangerCount = !togglePassangerCount">{{ passangerCount }}
-                        Passanger
+                        {{ passangerCount > 1 ? 'Passangers' : 'Passanger'}}
                         <img src="/assets/images/svg/dropdown.svg" alt="icon"/></button>
                     <div
                         v-bind:class="['dropdown', { 'active' : togglePassangerCount }]"
@@ -97,6 +97,7 @@
 
     let defaultDest = ref('');
     let defaultOrigin = ref('');
+    let toggleIcon = ref(false);
 
     let incredecre = ref(false);
 
@@ -135,6 +136,7 @@
     });
 
     function exchangeOriDest(){
+        toggleIcon.value = !toggleIcon.value;
         let org = searchRequest.origin;
         searchRequest.origin = searchRequest.dest;
         searchRequest.dest = org;

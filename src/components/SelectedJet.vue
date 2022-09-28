@@ -63,7 +63,7 @@
                             </h6>
                         </li>
                         <li>
-                            <h5>Aircraft Type</h5>
+                            <h5>{{props.data.aircraft.indexOf(',') != -1 ? 'Aircraft Types' : 'Aircraft Type'}}</h5>
                             <h6>{{ getAircraftType(props.data.aircraft)}}
                             </h6>
                         </li>
