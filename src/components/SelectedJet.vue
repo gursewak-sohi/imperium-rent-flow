@@ -8,7 +8,7 @@
                     :space-between="0"
                     :modules="[Pagination]"
                     :pagination="true">
-                    <SwiperSlide>
+                    <SwiperSlide v-if="props.data.aircraft.indexOf(1) != -1">
                         <div class="result-image">
                             <img alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
                         </div>
@@ -16,10 +16,10 @@
                             <h5>PILATUS PC-12/45</h5>
                             <p>8 Passengers
                                 <span>&bull;</span>
-                                Light</p>
+                                Turbo Prop</p>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide v-if="props.data.aircraft.indexOf(2) != -1">
                         <div class="result-image">
                             <img alt="Image 1" src="/assets/images/home/gallery/2.jpg"/>
                         </div>
@@ -27,10 +27,10 @@
                             <h5>PILATUS PC-12/45</h5>
                             <p>8 Passengers
                                 <span>&bull;</span>
-                                Light</p>
+                                Light - Super-midsize jets</p>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide v-if="props.data.aircraft.indexOf(3) != -1">
                         <div class="result-image">
                             <img alt="Image 1" src="/assets/images/home/gallery/1.jpg"/>
                         </div>
@@ -38,7 +38,7 @@
                             <h5>PILATUS PC-12/45</h5>
                             <p>8 Passengers
                                 <span>&bull;</span>
-                                Light</p>
+                                Heavy jets</p>
                         </div>
                     </SwiperSlide>
                 </swiper>
