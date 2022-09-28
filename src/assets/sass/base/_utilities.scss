@@ -3,6 +3,22 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+     ::-webkit-scrollbar {
+        width: 8px;
+    }
+     ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+     ::-webkit-scrollbar-thumb {
+        background: #111F44;
+    }
+     ::-webkit-scrollbar-thumb:hover {
+        background: #2878BB;
+    }
+}
+
 main {
     overflow: hidden;
 }

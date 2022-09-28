@@ -209,6 +209,16 @@
                 padding: 0;
                 transform: scale(0.9);
             }
+            & img {
+                transition: 0.4s all ease;
+            }
+        }
+        &.swapped {
+            & button {
+                & img {
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
     & .search-button {
@@ -327,9 +337,15 @@
             @include tablet {
                 grid-template-columns: 1fr;
             }
+            & .search-field {
+                & input {
+                    pointer-events: none;
+                }
+            }
             & .search-field .dropdown-block .btn-dropdown {
                 border-right: 1px solid $gray-200;
                 border-radius: 0 4px 4px 0;
+                pointer-events: none;
                 @include tablet {
                     border-radius: 4px;
                 }
@@ -638,7 +654,7 @@
     & .selected-jet-image {
         width: 100%;
         max-width: 402px;
-        height: 380px;
+        // height: 380px;
         position: relative;
         @include laptop {
             max-width: 322px;
@@ -821,6 +837,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 5px 0;
+    font-size: 18px;
     @include mobile {
         padding: 10px 0;
     }
@@ -852,12 +869,17 @@
     text-align: left;
     padding: 0;
     width: 324px;
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-    &::-webkit-scrollbar {
-        display: none;
+     ::-webkit-scrollbar {
+        width: 8px;
+    }
+     ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+     ::-webkit-scrollbar-thumb {
+        background: #111F44;
+    }
+     ::-webkit-scrollbar-thumb:hover {
+        background: #2878BB;
     }
     @include mobile {
         width: 100%;
@@ -866,11 +888,23 @@
         padding: 10px 15px;
         transition: $link-transition;
         cursor: pointer;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
         &:not(:last-child) {
             border-bottom: 1px solid $gray-200;
         }
         &:hover {
-            background-color: #dce6f9;
+            background-color: $gray-900;
+            color: $white;
         }
         & .airtport-block {
             display: flex;
@@ -883,7 +917,7 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 line-height: 16px;
-                margin-bottom: 4px;
+                margin-bottom: 6px;
             }
             & p {
                 font-size: 12px;
