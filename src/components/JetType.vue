@@ -1,6 +1,6 @@
 <template>
     <div id="chooseJetType" class="jet-type-block">
-        <h4>Please choose type of jet (You can choose more than 1)</h4>
+        <h4>Please choose type of aircraft (You can choose more than 1)</h4>
         <div class="jet-type-list">
             <div class="jet-type-unit">
                 <input id="jetType1" value="jet1"  v-model="checkedJet" type="checkbox" v-on:click="selectType($event, 1)"/>
@@ -9,8 +9,13 @@
                         <img src="/assets/images/svg/check-sm.svg" alt="check"/>
                     </div>
                     <div class="jet-type-head light-gallery-wrapper">
+                        <div class="result-gallery-top light-gallery">  
+                            <div class="result-image">
+                                <img alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
+                            </div>
+                        </div>
                         <lightgallery
-                            class="result-gallery-top light-gallery"
+                            class="result-gallery-top light-gallery hidden"
                             :settings="{
                           speed: 500,
                           download: false,
@@ -45,37 +50,37 @@
                         </button>
                     </div>
                     <div class="jet-type-body">
-                        <h4>Turbo Prop</h4>
+                        <h4>Turbo Prop <span>(e.g: Turboprop)</span></h4>
                         <ul>
-                            <li>8 Passengers max</li>
+                            <li>8 Passengers</li>
                             <li><img src="/assets/images/svg/pump.svg" alt="icon"/>
                                 Fuel stop</li>
                         </ul>
+                        
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
-                            <li>Hours Range
+                            <li>Max Hrs Range
                                 <span>332 mph</span>
                             </li>
-                            <li>Nautical miles
+                            <li>Max Nm Range
                                 <span>{{props.distance}} miles</span>
                             </li>
-                            <li>Max seats
+                            <li>Max Speed (no seat)
                                 <span>332 mph
                                 </span>
                             </li>
-                            <li>Cruising speed
+                            <li>Cruising Speed
                                 <span>332 mph</span>
                             </li>
-                            <li>Altitude
+                            <li>Cruising Altitude
                                 <span>2,075 miles</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
                             <li>
-                                <img src="/assets/images/svg/drinks.svg" alt="drinks"/>Drinks</li>
-                            <li>
-                                <img src="/assets/images/svg/snaks.svg" alt="drinks"/>Snacks</li>
+                                <img src="/assets/images/svg/drinks.svg" alt="drinks"/>Included: snacks & beverages</li>
+                             
                         </ul>
                     </div>
                 </label>
@@ -87,8 +92,13 @@
                         <img src="/assets/images/svg/check-sm.svg" alt="check"/>
                     </div>
                     <div class="jet-type-head light-gallery-wrapper">
+                        <div class="result-gallery-top light-gallery">  
+                            <div class="result-image">
+                                <img alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
+                            </div>
+                        </div>
                         <lightgallery
-                            class="result-gallery-top light-gallery"
+                            class="result-gallery-top light-gallery hidden"
                             :settings="{
                           speed: 500,
                           download: false,
@@ -125,33 +135,31 @@
                     <div class="jet-type-body">
                         <h4>Light - Super-midsize jets</h4>
                         <ul>
-                            <li>8 Passengers max</li>
+                            <li>8 Passengers</li>
                         </ul>
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
-                            <li>Hours Range
+                            <li>Max Hrs Range
                                 <span>332 mph</span>
                             </li>
-                            <li>Nautical miles
+                            <li>Max Nm Range
                                 <span>{{props.distance}} miles</span>
                             </li>
-                            <li>Max seats
+                            <li>Max Speed (no seat)
                                 <span>332 mph
                                 </span>
                             </li>
-                            <li>Cruising speed
+                            <li>Cruising Speed
                                 <span>332 mph</span>
                             </li>
-                            <li>Altitude
+                            <li>Cruising Altitude
                                 <span>2,075 miles</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
                             <li>
-                                <img src="/assets/images/svg/drinks.svg" alt="drinks"/>Drinks</li>
-                            <li>
-                                <img src="/assets/images/svg/snaks.svg" alt="drinks"/>Snacks</li>
+                                <img src="/assets/images/svg/drinks.svg" alt="drinks"/>Included: snacks & beverages</li>
                         </ul>
                     </div>
                 </label>
@@ -163,8 +171,13 @@
                         <img src="/assets/images/svg/check-sm.svg" alt="check"/>
                     </div>
                     <div class="jet-type-head light-gallery-wrapper">
+                        <div class="result-gallery-top light-gallery">  
+                            <div class="result-image">
+                                <img alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
+                            </div>
+                        </div>
                         <lightgallery
-                            class="result-gallery-top light-gallery"
+                            class="result-gallery-top light-gallery hidden"
                             :settings="{
                             speed: 500,
                             download: false,
@@ -201,35 +214,33 @@
                     <div class="jet-type-body">
                         <h4>Heavy jets</h4>
                         <ul>
-                            <li>8 Passengers max</li>
+                            <li>8 Passengers</li>
                             <li><img src="/assets/images/svg/pump.svg" alt="icon"/>
                                 Fuel stop</li>
                         </ul>
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
-                            <li>Hours Range
+                            <li>Max Hrs Range
                                 <span>332 mph</span>
                             </li>
-                            <li>Nautical miles
+                            <li>Max Nm Range
                                 <span>{{props.distance}} miles</span>
                             </li>
-                            <li>Max seats
+                            <li>Max Speed (no seat)
                                 <span>332 mph
                                 </span>
                             </li>
-                            <li>Cruising speed
+                            <li>Cruising Speed
                                 <span>332 mph</span>
                             </li>
-                            <li>Altitude
+                            <li>Cruising Altitude
                                 <span>2,075 miles</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
                             <li>
-                                <img src="/assets/images/svg/drinks.svg" alt="drinks"/>Drinks</li>
-                            <li>
-                                <img src="/assets/images/svg/snaks.svg" alt="drinks"/>Snacks</li>
+                                <img src="/assets/images/svg/drinks.svg" alt="drinks"/>Included: snacks & beverages</li>
                         </ul>
                     </div>
                 </label>

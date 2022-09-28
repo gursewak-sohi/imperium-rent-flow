@@ -2,6 +2,7 @@
     <input
     :id="props.type "
     ref="searchInput"
+    autocomplete="off"
     @focus="handleFocus"
     @focusout="handleFocusOut"
         type="text"
