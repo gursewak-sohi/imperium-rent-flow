@@ -11,7 +11,7 @@
                     <div class="jet-type-head light-gallery-wrapper">
                         <div class="result-gallery-top light-gallery">  
                             <div class="result-image">
-                                <img alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
+                                <img alt="Image" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                             </div>
                         </div>
                         <lightgallery
@@ -28,21 +28,27 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/home/gallery/3.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/main.jpeg"
                                 data-lg-size="1200-857">
-                                <img ref="gallery1" alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
+                                <img ref="gallery1" alt="Front" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/home/gallery/2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside1.png"
                                 data-lg-size="1200-857">
-                                <img alt="Image 2" src="/assets/images/home/gallery/2.jpg"/>
+                                <img alt="Inside" src="/assets/images/aircraft/1-turbo/inside1.png"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/home/gallery/1.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside2.png"
                                 data-lg-size="1200-857">
-                                <img alt="Image 3" src="/assets/images/home/gallery/1.jpg"/>
+                                <img alt="Inside" src="/assets/images/aircraft/1-turbo/inside2.png"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/back.jpeg"
+                                data-lg-size="1200-857">
+                                <img alt="Back" src="/assets/images/aircraft/1-turbo/back.jpeg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery1.click()" class="btn play-gallery">
@@ -50,9 +56,9 @@
                         </button>
                     </div>
                     <div class="jet-type-body">
-                        <h4>Turbo Prop <span>(e.g: Turboprop)</span></h4>
+                        <h4>Turbo Prop</h4>
                         <ul>
-                            <li>8 Passengers</li>
+                            <li>7 Passengers</li>
                             <li><img src="/assets/images/svg/pump.svg" alt="icon"/>
                                 Fuel stop</li>
                         </ul>
@@ -60,6 +66,9 @@
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
+                            <li>Sample Aircraft
+                                <span>PC-12</span>
+                            </li>
                             <li>Max Hrs Range
                                 <span>332 mph</span>
                             </li>
@@ -67,20 +76,19 @@
                                 <span>{{props.distance}} miles</span>
                             </li>
                             <li>Max Speed (no seat)
-                                <span>332 mph
+                                <span>420 km/h
                                 </span>
                             </li>
                             <li>Cruising Speed
-                                <span>332 mph</span>
+                                <span>420 km/h</span>
                             </li>
                             <li>Cruising Altitude
-                                <span>2,075 miles</span>
+                                <span>9,144 miles</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
                             <li>
                                 <img src="/assets/images/svg/drinks.svg" alt="drinks"/>Included: snacks & beverages</li>
-                             
                         </ul>
                     </div>
                 </label>
@@ -94,7 +102,7 @@
                     <div class="jet-type-head light-gallery-wrapper">
                         <div class="result-gallery-top light-gallery">  
                             <div class="result-image">
-                                <img alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
+                                <img alt="Image" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
                             </div>
                         </div>
                         <lightgallery
@@ -111,21 +119,21 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/home/gallery/3.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"
                                 data-lg-size="1200-857">
-                                <img ref="gallery2" alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
+                                <img ref="gallery2" alt="Front" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/home/gallery/2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"
                                 data-lg-size="1200-857">
-                                <img alt="Image 2" src="/assets/images/home/gallery/2.jpg"/>
+                                <img alt="Inside" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/home/gallery/1.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.JPG"
                                 data-lg-size="1200-857">
-                                <img alt="Image 3" src="/assets/images/home/gallery/1.jpg"/>
+                                <img alt="Inside" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.JPG"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery2.click()" class="btn play-gallery">
@@ -140,6 +148,9 @@
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
+                            <li>Sample Aircraft
+                                <span>Citation CJ2, Citation XLS</span>
+                            </li>
                             <li>Max Hrs Range
                                 <span>332 mph</span>
                             </li>
@@ -147,14 +158,14 @@
                                 <span>{{props.distance}} miles</span>
                             </li>
                             <li>Max Speed (no seat)
-                                <span>332 mph
+                                <span>445 mph
                                 </span>
                             </li>
                             <li>Cruising Speed
-                                <span>332 mph</span>
+                                <span>445 mph</span>
                             </li>
                             <li>Cruising Altitude
-                                <span>2,075 miles</span>
+                                <span>8,500 miles</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
@@ -173,7 +184,7 @@
                     <div class="jet-type-head light-gallery-wrapper">
                         <div class="result-gallery-top light-gallery">  
                             <div class="result-image">
-                                <img alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
+                                <img alt="Image" src="/assets/images/aircraft/3-heavy/front.webp"/>
                             </div>
                         </div>
                         <lightgallery
@@ -190,21 +201,21 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/home/gallery/3.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/front.webp"
                                 data-lg-size="1200-857">
-                                <img ref="gallery3" alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
+                                <img ref="gallery3" alt="Front" src="/assets/images/aircraft/3-heavy/front.webp"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/home/gallery/2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/inside-1.webp"
                                 data-lg-size="1200-857">
-                                <img alt="Image 2" src="/assets/images/home/gallery/2.jpg"/>
+                                <img alt="Image 2" src="/assets/images/aircraft/3-heavy/inside-1.webp"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/home/gallery/1.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/inside-2.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="Image 3" src="/assets/images/home/gallery/1.jpg"/>
+                                <img alt="Image 3" src="/assets/images/aircraft/3-heavy/inside-2.jpg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery3.click()" class="btn play-gallery">
@@ -214,13 +225,16 @@
                     <div class="jet-type-body">
                         <h4>Heavy jets</h4>
                         <ul>
-                            <li>8 Passengers</li>
+                            <li>9 Passengers</li>
                             <li><img src="/assets/images/svg/pump.svg" alt="icon"/>
                                 Fuel stop</li>
                         </ul>
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
+                            <li>Sample Aircraft
+                                <span>Hawker 1000</span>
+                            </li>
                             <li>Max Hrs Range
                                 <span>332 mph</span>
                             </li>
@@ -228,14 +242,14 @@
                                 <span>{{props.distance}} miles</span>
                             </li>
                             <li>Max Speed (no seat)
-                                <span>332 mph
+                                <span>517 mph
                                 </span>
                             </li>
                             <li>Cruising Speed
-                                <span>332 mph</span>
+                                <span>517 mph</span>
                             </li>
                             <li>Cruising Altitude
-                                <span>2,075 miles</span>
+                                <span>7,008 Miles</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">

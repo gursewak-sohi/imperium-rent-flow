@@ -10,21 +10,21 @@
                     :pagination="props.data.aircraft.indexOf(',') != -1 ?true:false">
                     <SwiperSlide v-if="props.data.aircraft.indexOf(1) != -1">
                         <div class="result-image">
-                            <img alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
+                            <img alt="Image" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                         </div>
                         <div class="gallery-text">
-                            <h5>PILATUS PC-12/45</h5>
-                            <p>8 Passengers
+                            <h5>PC-12</h5>
+                            <p>7 Passengers
                                 <span>&bull;</span>
                                 Turbo Prop</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide v-if="props.data.aircraft.indexOf(2) != -1">
                         <div class="result-image">
-                            <img alt="Image 1" src="/assets/images/home/gallery/2.jpg"/>
+                            <img alt="Image" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
                         </div>
                         <div class="gallery-text">
-                            <h5>PILATUS PC-12/45</h5>
+                            <h5>Citation XLS</h5>
                             <p>8 Passengers
                                 <span>&bull;</span>
                                 Light - Super-midsize jets</p>
@@ -32,11 +32,11 @@
                     </SwiperSlide>
                     <SwiperSlide v-if="props.data.aircraft.indexOf(3) != -1">
                         <div class="result-image">
-                            <img alt="Image 1" src="/assets/images/home/gallery/1.jpg"/>
+                            <img alt="Image" src="/assets/images/aircraft/3-heavy/front.webp"/>
                         </div>
                         <div class="gallery-text">
-                            <h5>PILATUS PC-12/45</h5>
-                            <p>8 Passengers
+                            <h5>Hawker 1000</h5>
+                            <p>9 Passengers
                                 <span>&bull;</span>
                                 Heavy jets</p>
                         </div>
