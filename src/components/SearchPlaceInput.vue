@@ -94,6 +94,10 @@
 
     const  searchOrigin = async() => {
         if (searchTerm.value != '') {
+
+            if(searchTerm.value.length < 2)
+             return;
+
            await axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
                 srcterms: searchTerm.value
             }, {

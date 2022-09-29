@@ -48,7 +48,7 @@
                     <button
                         class="btn-dropdown"
                         @focusout.self="handleFocusOut"
-                        @click="togglePassangerCount = !togglePassangerCount">{{ passangerCount }}
+                        @click="togglePassangerCountFun()">{{ passangerCount }}
                         {{ passangerCount > 1 ? 'Passengers' : 'Passenger'}}
                     </button>
                     <div
@@ -93,7 +93,6 @@
     const buttonType = ref('next');
     const calendar = ref(null);
 
-    console.log()
 
     let defaultDest = ref('');
     let defaultOrigin = ref('');
@@ -113,6 +112,13 @@
 
     function forceRender1() {
         console.log('ref');
+    }
+
+    function togglePassangerCountFun(){
+        togglePassangerCount = !togglePassangerCount;
+        setTimeout(function(){
+            togglePassangerCount.value = false
+            },1500);
     }
 
     function onDayClick(){
