@@ -67,7 +67,7 @@
                     <div class="jet-type-footer">
                         <ul class="jet-details">
                             <li>Sample Aircraft
-                                <span>King Air 250</span>
+                                <span>King Air 250, PC-12</span>
                             </li>
                             <li>Max Hrs Range
                                 <span>332 mph</span>

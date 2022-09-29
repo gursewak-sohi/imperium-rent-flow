@@ -41,23 +41,21 @@ import Search from '../components/Search.vue'
             <div class="container">
                 <div class="support-block">
                     <div class="support-unit">
-                        <h5>Need help?</h5>
-                        <a class="support-content" href="javascript:;">
-                            <img src="/assets/images/svg/support.svg" alt="icon" />Support Center
-                        </a>
-                    </div>
-                    <div class="support-unit">
-                        <h5>Contact us:</h5>
-                        <a class="support-content" href="mailto:Support@bytheseat.com">
-                            <img src="/assets/images/svg/emailsvg.svg" alt="icon" />Support@bytheseat.com
-                        </a>
-                        <a class="support-content space-16" href="mailto:Support@bytheseat.com">
+                        <h5>Call us:</h5>
+                        <a class="support-content" href="tel:+13108172621">
                             <img src="/assets/images/svg/phone.svg" alt="icon" />+1.310.817.2621
                         </a>
                     </div>
                     <div class="support-unit">
+                        <h5>Contact us:</h5>
+                        <a class="support-content" href="mailto:support@bytheseat.com">
+                            <img src="/assets/images/svg/emailsvg.svg" alt="icon" />Support@bytheseat.com
+                        </a>
+                        
+                    </div>
+                    <div class="support-unit">
                         <h5>Our office:</h5>
-                        <a class="support-content" href="mailto:Support@bytheseat.com">
+                        <a class="support-content" target="_blank" href="https://www.google.com/maps/place/3705+W+Pico+Blvd,+Los+Angeles,+CA+90019,+USA/@34.0475447,-118.3237152,17z">
                             <img src="/assets/images/svg/place.svg" alt="icon" />
                             <p>3705 W Pico Blvd (#591), Los Angeles, CA, 90019-3451</p>
                         </a>
