@@ -4,11 +4,11 @@
             <button data-close="confirm-modal" class="btn btn-close"  @click="closeModal()">
                 <img src="/assets/images/svg/close.svg" alt="icon">
             </button>
-            <h4>Thank you for choosing ByTheSeat.</h4>
+            <h4>Quote has been Sent!</h4>
             <div class="modal-icon">
                 <img src="/assets/images/svg/confirm.svg" alt="icon" />
             </div>
-            <p>An estimated quote is waiting for you in the email inbox you provided. Our representative will contact you by phone with a detailed quote.</p>
+            <p>Please check your email inbox to review your estimated quote. A representative will contact you shortly to provide any additional help needed!</p>
             <div class="contact-info">
                 <p>You can always contact us</p>
                 <a href="tel: +1.310.817.2621 ">+1.310.817.2621 </a>
@@ -16,10 +16,7 @@
                 <p>By The Seat Team.</p>
             </div>
             <div class="modal-btns">
-                <a href="#" class="btn btn-primary btn-md" @click="goHome($event)">
-                    Home page
-                </a>
-                <button data-close="confirm-modal" type="button" class="btn btn-light btn-md">
+                <button type="button" class="btn btn-primary btn-md" @click="goHome($event)">
                     Close
                 </button>
             </div>

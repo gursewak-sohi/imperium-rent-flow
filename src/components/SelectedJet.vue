@@ -2,37 +2,6 @@
     <div id="selectedJetType" class="selected-jet-wrapper">
         <div class="selected-jet-block">
             <div class="selected-jet-image light-gallery-wrapper">
-                <lightgallery
-                    class="hidden"
-                    :settings="{
-                        speed: 500,
-                        download: false,
-                        zoom: false,
-                        mobileSettings: {
-                            controls: true,
-                            showCloseIcon: true,
-                        },
-                        plugins: plugins }"
-                    :onInit="onInit">
-                    <a
-                        class="result-image"
-                        href="/imperium-rent-flow/assets/images/home/gallery/3.jpg"
-                        data-lg-size="1200-857">
-                        <img ref="gallery4" alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
-                    </a>
-                    <a
-                        class="result-image"
-                        href="/imperium-rent-flow/assets/images/home/gallery/2.jpg"
-                        data-lg-size="1200-857">
-                        <img alt="Image 2" src="/assets/images/home/gallery/2.jpg"/>
-                    </a>
-                    <a
-                        class="result-image"
-                        href="/imperium-rent-flow/assets/images/home/gallery/1.jpg"
-                        data-lg-size="1200-857">
-                        <img alt="Image 3" src="/assets/images/home/gallery/1.jpg"/>
-                    </a>
-                </lightgallery>
                 <swiper
                     class="result-gallery-top light-gallery"
                     :slides-per-view="1"
@@ -43,27 +12,37 @@
                         <div class="result-image">
                             <img alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
                         </div>
+                        <div class="gallery-text">
+                            <h5>PILATUS PC-12/45</h5>
+                            <p>8 Passengers
+                                <span>&bull;</span>
+                                Turbo Prop</p>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide v-if="props.data.aircraft.indexOf(2) != -1">
                         <div class="result-image">
                             <img alt="Image 1" src="/assets/images/home/gallery/2.jpg"/>
+                        </div>
+                        <div class="gallery-text">
+                            <h5>PILATUS PC-12/45</h5>
+                            <p>8 Passengers
+                                <span>&bull;</span>
+                                Light - Super-midsize jets</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide v-if="props.data.aircraft.indexOf(3) != -1">
                         <div class="result-image">
                             <img alt="Image 1" src="/assets/images/home/gallery/1.jpg"/>
                         </div>
+                        <div class="gallery-text">
+                            <h5>PILATUS PC-12/45</h5>
+                            <p>8 Passengers
+                                <span>&bull;</span>
+                                Heavy jets</p>
+                        </div>
                     </SwiperSlide>
                 </swiper>
-                <button @click="gallery4.click()" class="btn play-gallery">
-                    <img src="/assets/images/svg/gallery-btn.svg" alt="icon"/>
-                </button>
-                <div class="gallery-text">
-                    <h5>PILATUS PC-12/45</h5>
-                    <p>8 Passengers
-                        <span>&bull;</span>
-                        Light</p>
-                </div>
+                
             </div>
             <div class="selected-jet-content">
                 <div class="selected-jet-description">
@@ -84,7 +63,7 @@
                             </h6>
                         </li>
                         <li>
-                            <h5>Aircraft Type</h5>
+                            <h5>{{props.data.aircraft.indexOf(',') != -1 ? 'Aircraft Types' : 'Aircraft Type'}}</h5>
                             <h6>{{ getAircraftType(props.data.aircraft)}}
                             </h6>
                         </li>
@@ -141,7 +120,6 @@
     import 'swiper/css';
 
     import 'swiper/css';
-    const gallery4 = ref(null);
     let origin_time = ref('');
     let departure_time = ref('');
 
@@ -207,27 +185,5 @@
     }
 </script>
 
-<script>
-    import Lightgallery from 'lightgallery/vue';
-    import lgThumbnail from 'lightgallery/plugins/thumbnail';
-    import lgZoom from 'lightgallery/plugins/zoom';
-
-    export default {
-        name : 'App',
-        components : {
-            Lightgallery
-        },
-        data : () => ({
-            plugins: [lgZoom, lgThumbnail]
-        }),
-        methods : {
-            onInit: () => {}
-        }
-    };
-</script>
-
-<style lang="css" scoped>
-    @import 'lightgallery/css/lightgallery.css';
-    @import 'lightgallery/css/lg-thumbnail.css';
-    @import 'lightgallery/css/lg-zoom.css';
-</style>
+ 
+ 

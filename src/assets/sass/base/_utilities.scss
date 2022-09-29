@@ -3,6 +3,36 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+     ::-webkit-scrollbar {
+        width: 8px;
+    }
+     ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+     ::-webkit-scrollbar-thumb {
+        background: #111F44;
+    }
+     ::-webkit-scrollbar-thumb:hover {
+        background: #2878BB;
+    }
+}
+
+* {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
 main {
     overflow: hidden;
 }

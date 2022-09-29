@@ -2,8 +2,8 @@
     <header class="home-header">
         <div class="container">
             <!-- Home Header -->
-            <nav id="toggleNav" class="header-nav">
-                <a class="logo" href="index.html">
+            <nav class="header-nav">
+                <a class="logo" target="_blank" href="https://www.bytheseat.com/">
                     <img src="/assets/images/logo.png" width="132" height="51" alt="icon"/>
                 </a>
 
