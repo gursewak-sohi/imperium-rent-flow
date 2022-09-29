@@ -235,7 +235,7 @@
             console.log(time,'24format');
             let travellingTime = parseInt(time) + parseInt(travelTime) + hourDiff;
             console.log(travellingTime,'travellingTime');
-            let newtime = parseInt(travellingTime);
+            let newtime = Math.abs(travellingTime);
             newtime = parseInt(newtime%24);
             console.log(newtime,'newtime');
             let newampm = newtime < 12 ?  'AM' : 'PM' ;
@@ -261,7 +261,7 @@
             console.log(time,'24format');
             let travellingTime = parseInt(time) - parseInt(travelTime) - hourDiff;
             console.log(travellingTime,'travellingTime');
-            let newtime = parseInt(travellingTime);
+            let newtime = Math.abs(travellingTime);
             newtime = parseInt(newtime%24);
             console.log(newtime,'newtime');
             let newampm = newtime < 12 ?  'AM' : 'PM' ;
