@@ -1,0 +1,8 @@
+
+Light size jet
+sample aircraft: Citation CJ2 
+price: $3,200 / Hour
+max Pax: 8
+Cruising Speed: 405 mph
+Nautical Miles: 1,074 miles
+Altitude: 5,000 miles

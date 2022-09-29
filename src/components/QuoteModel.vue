@@ -32,7 +32,6 @@
                     </div>
 
                 </div>
-                <button :disabled="!agreeMails" type="button" class="btn btn-primary btn-md btn-iconed-lg" @click="submitForm()">Send <img src="/assets/images/svg/next.svg" alt="icon"/></button>
                 <div class="agree-mails">
                     <div class="checkbox-unit">
                         <input id="agreeMails" v-model="agreeMails" type="checkbox" />
@@ -46,6 +45,8 @@
                         </label>
                     </div>
                 </div>
+                <button :disabled="!agreeMails" type="button" class="btn btn-primary btn-md btn-iconed-lg" @click="submitForm()">Send <img src="/assets/images/svg/next.svg" alt="icon"/></button>
+                
             </form>
         </div>
     </section>

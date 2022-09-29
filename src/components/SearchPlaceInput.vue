@@ -6,7 +6,7 @@
     @focus="handleFocus"
     @focusout="handleFocusOut"
         type="text"
-        placeholder="Ben Gurion Intl (TLV)"
+        placeholder="Select airport"
         v-model="searchTerm"
         @click="initialize()"
         @keyup="searchOrigin()"/>
@@ -33,7 +33,6 @@
 
     import { default_list } from "./DefaultData"
 
-    console.log(props, 'props');
     const defaultData = ref(default_list);
 
     const vm = ref(this);
@@ -85,7 +84,6 @@
 
     const initialize = async() => {
         if(firstClick){
-            console.log('First Click');
             list.value = defaultData.value;
             firstClick = false;
         }
@@ -106,7 +104,6 @@
                 }
             }).then((response) => {
 
-                console.log(response.data.result);
                 if (response.data.result) {
                     list.value = response.data.error;
                 } else {

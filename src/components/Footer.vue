@@ -17,8 +17,8 @@
                     </a>
                     <p>Get the latest on By The Seat private Jet Flights.</p>
                     <form class="footer-subscribe">
-                        <input type="email" placeholder="Email address">
-                        <button class="btn btn-dark btn-sm" type="submit">Subscribe</button>
+                        <input type="email" placeholder="Email address" v-model="email" :class="{'error' : email_error != '' ? true:false }" @keyup="checkError($event)">
+                        <button class="btn btn-dark btn-sm" type="button" @click="subscribe(event)">Subscribe</button>
                     </form>
                     <div class="footer-social">
                         <h5>Follow us</h5>
@@ -101,3 +101,63 @@
         </div>
     </footer>
 </template>
+
+<script setup>
+    import {ref, reactive} from 'vue'
+    import axios from 'axios'
+    let email = ref('');
+    let email_error = ref('');
+    const subscribe = (e) => {
+        // e.preventDefault();
+        if(email.value != '' && validateEmail(email.value)){
+        //    Send Mail
+        let detail = {
+            name : 'not provided',
+            email : email.value,
+            msg : 'User has subscribed to email.'
+        };
+            axios.post('https://test.api.impjets.com/v1/ext.charter/contact', detail, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }).then((response) => {
+                console.log(response.data.result)
+                if(response.data.result){
+                    email.value = '';
+
+                }else{
+
+                }
+            }, (error) => {
+                console.log(error);
+            });
+        } else{
+            if(email.value == '')
+                email_error.value = 'Please enter this field';
+        }
+    }
+
+    const validateEmail = (email) => {
+        return email.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        )
+    };
+
+    function checkError(e){
+        if(e.target.value ==''  ){
+            if(e.target.name == 'email'){
+                email_error.value = 'Please enter this field';
+            }
+        }else{
+            if(validateEmail(e.target.value)){
+                email_error.value = '';
+            }else{
+                email_error.value = 'Please enter this field';
+            }
+        }
+    }
+    
+</script>
+
+ 
+ 
