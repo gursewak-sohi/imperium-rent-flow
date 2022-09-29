@@ -78,7 +78,7 @@
                     <div class="form-group">
                         <label>Departure Time</label>
                         <div class="select-unit">
-                             <select name="" id="" required="" v-model="origin_time">
+                             <select name="" id="" required="" v-model="origin_time" @change="updateTime('origin')">
                                 <option value="" disabled="" selected="" hidden="">12:00 AM</option>
                                 <option :value="index" v-for="index in timeArray" :key="index" >{{index}}</option>
                             </select>
@@ -87,7 +87,7 @@
                     <div class="form-group">
                         <label>Arrival Time</label>
                         <div class="select-unit">
-                             <select name="" id="" required="" v-model="departure_time">
+                             <select name="" id="" required="" v-model="departure_time"  @change="updateTime('destination')">
                                 <option value="" disabled="" selected="" hidden="">12:00 AM</option>
                                 <option :value="index" v-for="index in timeArray" :key="index" >{{index}}</option>
                             </select>
@@ -129,8 +129,10 @@
         })
     let flight_type = ref(0);
     let net_speed = ref(0);
-
-  
+    
+    let s = props.data.origin_details.hours_diff;
+    let d = props.data.destination_details.hours_diff;
+    let hourDiff = getHourDiference(s, d);
 
     let isQuoteModelActive = ref(false);
 
@@ -140,6 +142,7 @@
     var ap = [' AM', ' PM'];
     let aircraft = ['Turbo','Light','Heavy'];
     let speed = [420,445,517];
+    let travelTime = 0;
 
     for (var i=0;tt<24*60; i++) {
         var hh = Math.floor(tt/60); 
@@ -180,8 +183,9 @@
             count++;
 
         }
-        console.log(sum, count, 'count');
-        return (sum / count).toFixed(2);
+        travelTime = parseInt(sum / count);
+        // console.log(sum, count, 'count');
+        return travelTime;
     }
 
 
@@ -211,11 +215,82 @@
         emitter.emit('openQuoteMOdel', true);
     }
 
+    function getTime(){
+        
+    }
+
+     function updateTime(type){
+
     
 
-    function updateTime(){
-        // alert('32');
+        if(type === 'origin'){
+
+            let time = origin_time.value;
+            time = time.split(':');
+            let type = time[1].indexOf('AM') == -1? 'PM':'AM';
+            time = time[0];
+            let orgTime = time;
+            time = parseInt(time) + parseInt((type == 'AM' ? 0 : 12));
+
+            
+            let travellingTime = parseInt(time) + parseInt(travelTime) + hourDiff;
+            let newtime = parseInt(travellingTime);
+            newtime = parseInt(newtime%24);
+            let newampm = newtime < 12 ?  'AM' : 'PM' ;
+            newtime = newtime > 12 ? newtime - 12 : newtime;
+            let tt =("0" + (newtime)).slice(-2) + ':00 '+newampm ;
+            departure_time.value = tt;
+            // let time = hourDiff + travelTime;
+
+        }
+
+        if(type === 'destination'){
+            // let time = hourDiff + travelTime;
+
+            let time = departure_time.value;
+            time = time.split(':');
+            let type = time[1].indexOf('AM') == -1? 'PM':'AM';
+            time = time[0];
+            let orgTime = time;
+            time = parseInt(time) + parseInt((type == 'AM' ? 0 : 12));
+
+            let travellingTime = parseInt(time) - parseInt(travelTime) - hourDiff;
+            let newtime = parseInt(travellingTime);
+            newtime = parseInt(newtime%24);
+            let newampm = newtime < 12 ?  'AM' : 'PM' ;
+            newtime = newtime > 12 ? newtime - 12 : newtime;
+            let tt =("0" + (newtime)).slice(-2) + ':00 '+newampm ;
+            origin_time.value = tt;
+
+        }
     }
+
+    function getHourDiference(s, d){
+
+        let td = 0;
+        
+        // case 1 both are
+        if(s > 0 && d > 0){
+            if(s > d)
+                td = (d-s);
+            else if( d > s)
+                td = (d-s);
+        } else if (s <= 0 && d >= 0){
+            td = Math.abs(s) + Math.abs(d);
+        }else if(s > 0 && d <= 0){
+            td = -1 * (Math.abs(s) + Math.abs(d));
+        }else if(s <= 0 && d <= 0){
+            if(Math.abs(s) > Math.abs(d))
+                td = (Math.abs(s) - Math.abs(d));
+            else if(Math.abs(s) < Math.abs(d))
+                td = -1 * (Math.abs(d) - Math.abs(s));
+        }
+        return td;
+    }
+
+    
+
+   
 </script>
 
  

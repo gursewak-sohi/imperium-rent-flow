@@ -66,8 +66,12 @@
 
      emitter.on('exchangeInput', function () {
         let temp = allDetails.origin;
-        allDetails.dest = allDetails.origin;
-        allDetails.origin = temp;
+        allDetails.origin = allDetails.dest;
+        allDetails.dest = origin;
+
+         let temp_d = allDetails.origin_details;
+        allDetails.origin_details = allDetails.destination_details;
+        allDetails.destination_details = temp_d;
      });
     emitter.on('updateSearch', function (value) {
         if(value.path){
@@ -131,23 +135,15 @@
     {
 
         let d = calc_distance(lat1, lon1, lat2, lon2);
-    //   var R = 6371; // km
-    //   var dLat = toRad(lat2-lat1);
-    //   var dLon = toRad(lon2-lon1);
-    //   var lat1 = toRad(lat1);
-    //   var lat2 = toRad(lat2);
-    //   var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-    //     Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
-    //   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-    //   var d = (R * c) * 0.621371;
-      distance.value = d.toFixed(2);
+        distance.value = d.toFixed(2);
     }
 
     function calc_distance(lat1, lat2, lng1, lng2){
         const R = 6371e3; // metres
         const φ1 = lat1 * Math.PI/180; // φ, λ in radians
         const φ2 = lat2 * Math.PI/180;
-        const Δφ = (lat1 - lat2) * Math.PI/180;
+        const Δφ = (
+            lat1 - lat2) * Math.PI/180;
         const Δλ = (lng2 - lng1) * Math.PI/180;
         const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) + Math.cos(φ1) * Math.cos(φ2) *
         Math.sin(Δλ/2) * Math.sin(Δλ/2);
@@ -161,5 +157,7 @@
     {
         return Value * Math.PI / 180;
     }
+
+    
     
 </script>
