@@ -169,16 +169,14 @@
     }
 
     function getAircraftSpeed(val){
-        return (this.props.distance / speed[val-1]).toFixed(2);
+        // return (this.props.distance / speed[val-1]).toFixed(2);
     }
 
-    // props.data.aircraft
 
     const onSlideChange = (s) =>{
         let all = props.data.aircraft.split(',');
         flight_type.value = aircraft[all[s.activeIndex]-1];
         net_speed.value = (props.distance / speed[all[s.activeIndex]-1]).toFixed(2);
-        // props.data.aircraft[0]
         
     }
 
