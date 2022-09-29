@@ -59,15 +59,15 @@
                         <h4>Turbo Prop</h4>
                         <ul>
                             <li>7 Passengers</li>
-                            <li><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                Fuel stop</li>
+                            <!-- <li><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                Fuel stop</li> -->
                         </ul>
                         
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
                             <li>Sample Aircraft
-                                <span>PC-12</span>
+                                <span>King Air 250</span>
                             </li>
                             <li>Max Hrs Range
                                 <span>332 mph</span>
@@ -226,8 +226,8 @@
                         <h4>Heavy jets</h4>
                         <ul>
                             <li>9 Passengers</li>
-                            <li><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                Fuel stop</li>
+                            <!-- <li><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                Fuel stop</li> -->
                         </ul>
                     </div>
                     <div class="jet-type-footer">

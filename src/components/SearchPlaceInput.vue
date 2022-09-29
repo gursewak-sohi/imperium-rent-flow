@@ -6,7 +6,7 @@
     @focus="handleFocus"
     @focusout="handleFocusOut"
         type="text"
-        placeholder="Ben Gurion Intl (TLV)"
+        placeholder="Select airport"
         v-model="searchTerm"
         @click="initialize()"
         @keyup="searchOrigin()"/>

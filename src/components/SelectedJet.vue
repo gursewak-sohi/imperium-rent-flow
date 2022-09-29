@@ -14,7 +14,7 @@
                             <img alt="Image" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                         </div>
                         <div class="gallery-text">
-                            <h5>PC-12</h5>
+                            <h5>King Air 250</h5>
                             <p>7 Passengers
                                 <span>&bull;</span>
                                 Turbo Prop</p>

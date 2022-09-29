@@ -13,7 +13,6 @@
                 <p>You can always contact us</p>
                 <a href="tel: +1.310.817.2621 ">+1.310.817.2621 </a>
                 <a href="mailto:support@bytheseat.com">Support@bytheseat.com</a>
-                <p>By The Seat Team.</p>
             </div>
             <div class="modal-btns">
                 <button type="button" class="btn btn-primary btn-md" @click="goHome($event)">
