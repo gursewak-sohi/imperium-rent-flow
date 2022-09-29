@@ -7,8 +7,9 @@
                     :slides-per-view="1"
                     :space-between="0"
                     :modules="[Pagination]"
+                    @slideChange="onSlideChange"
                     :pagination="props.data.aircraft.indexOf(',') != -1 ?true:false">
-                    <SwiperSlide v-if="props.data.aircraft.indexOf(1) != -1">
+                    <SwiperSlide v-if="props.data.aircraft.indexOf(1) != -1" data-no="1">
                         <div class="result-image">
                             <img alt="Image" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                         </div>
@@ -19,7 +20,7 @@
                                 Turbo Prop</p>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide v-if="props.data.aircraft.indexOf(2) != -1">
+                    <SwiperSlide v-if="props.data.aircraft.indexOf(2) != -1" data-no="2">
                         <div class="result-image">
                             <img alt="Image" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
                         </div>
@@ -30,7 +31,7 @@
                                 Light - Super-midsize jets</p>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide v-if="props.data.aircraft.indexOf(3) != -1">
+                    <SwiperSlide v-if="props.data.aircraft.indexOf(3) != -1" data-no="3">
                         <div class="result-image">
                             <img alt="Image" src="/assets/images/aircraft/3-heavy/front.webp"/>
                         </div>
@@ -64,12 +65,12 @@
                         </li>
                         <li>
                             <h5>{{props.data.aircraft.indexOf(',') != -1 ? 'Aircraft Types' : 'Aircraft Type'}}</h5>
-                            <h6>{{ getAircraftType(props.data.aircraft)}}
+                            <h6>{{ flight_type != 0 ? flight_type : getAircraftType(props.data.aircraft[0]) }}
                             </h6>
                         </li>
                         <li>
                             <h5>Est Flight time</h5>
-                            <h6>4:00 hrs</h6>
+                            <h6>{{ net_speed != 0 ? net_speed : getAircraftSpeed(props.data.aircraft[0]) }} hrs</h6>
                         </li>
                     </ul>
                 </div>
@@ -122,10 +123,14 @@
     import 'swiper/css';
     let origin_time = ref('');
     let departure_time = ref('');
-
     const props = defineProps({
         data: Object,
+        distance:String
         })
+    let flight_type = ref(0);
+    let net_speed = ref(0);
+
+  
 
     let isQuoteModelActive = ref(false);
 
@@ -134,6 +139,7 @@
     var tt = 0;
     var ap = [' AM', ' PM'];
     let aircraft = ['Turbo','Light','Heavy'];
+    let speed = [420,445,517];
 
     for (var i=0;tt<24*60; i++) {
         var hh = Math.floor(tt/60); 
@@ -153,12 +159,27 @@
     }
 
     function getAircraftType(val){
-        let all = val.split(',');
-        let empty = [];
-        for(const key in all){
-            empty.push(aircraft[(all[key] - 1)]);
-        }
-        return empty.join(', ');
+        return aircraft[val-1];
+        // let all = val.split(',');
+        // let empty = [];
+        // for(const key in all){
+        //     empty.push(aircraft[(all[key] - 1)]);
+        // }
+        // return empty.join(', ');
+    }
+
+    function getAircraftSpeed(val){
+        return (this.props.distance / speed[val-1]).toFixed(2);
+    }
+
+    // props.data.aircraft
+
+    const onSlideChange = (s) =>{
+        let all = props.data.aircraft.split(',');
+        flight_type.value = aircraft[all[s.activeIndex]-1];
+        net_speed.value = (props.distance / speed[all[s.activeIndex]-1]).toFixed(2);
+        // props.data.aircraft[0]
+        
     }
 
     function goToPre(){
@@ -179,6 +200,8 @@
         });
         emitter.emit('openQuoteMOdel', true);
     }
+
+    
 
     function updateTime(){
         // alert('32');

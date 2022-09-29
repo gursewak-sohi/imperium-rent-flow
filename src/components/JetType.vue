@@ -294,6 +294,7 @@ const props = defineProps({
         }else{
             selectedTypes.splice(index, 1);
         }
+        selectedTypes.sort();
     }
 </script>
 

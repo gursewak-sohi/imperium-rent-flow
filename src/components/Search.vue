@@ -27,7 +27,7 @@
                     <!-- Jet Type -->
                     <JetType v-if="step == 'filter-result'" :distance="distance"/>
                     <!-- Selected Jet  -->
-                    <SelectedJet v-if="step === 'selected-result'" :data="data_copy"/>
+                    <SelectedJet v-if="step === 'selected-result'" :data="data_copy" :distance="distance"/>
                 </div>
             </div>
         </section>
@@ -118,7 +118,6 @@
 
         }
 
-        console.log(allDetails.origin_details, 'allDetails final')
         data_copy.value = allDetails;
 
 

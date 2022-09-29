@@ -16,6 +16,28 @@ export const  default_list =[
 	// 	name: "Dubai International Airport",
 	// },
 	{
+		address : "St Michael, AK, United States",
+		code : "PAMK",
+		code_ata:"SMK",
+		coords_lat:"63.490101",
+		coords_long:"-162.110001",
+		hours_diff:"-8.00",
+		id:"9210",
+		location_distance:"2.336444751042958",
+		name:"St Michael"
+	},
+	{
+		address:"Miami, FL, United States",
+		code:"KMIA",
+		code_ata:"MIA",
+		coords_lat:"25.793200",
+		coords_long:"-80.290604",
+		hours_diff:"-4.00",
+		id:"6322",
+		location_distance:"6.167446826850104",
+		name:"Miami International Airport"
+	},
+	{
 		address: "Van Nuys, CA, USA",
 		code: "KVNY",
 		code_ata: "KVNY",

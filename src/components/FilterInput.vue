@@ -93,8 +93,6 @@
     const buttonType = ref('next');
     const calendar = ref(null);
 
-    console.log()
-
     let defaultDest = ref('');
     let defaultOrigin = ref('');
     let toggleIcon = ref(false);
@@ -124,7 +122,6 @@
     emitter
     .on('focuInput', function (value) {
 
-        console.log(value, 'from input')
         if(value.type == 'dateTimePicker'){
             setTimeout(function(){document.getElementById("datepicker").click()},200);
             // this.togglePopover();
@@ -132,6 +129,10 @@
            
         }else if(value.type == 'passengerCount'){
             togglePassangerCount.value = true;
+
+            setTimeout(function(){
+                togglePassangerCount.value = false;
+            },1500)
         }
     });
 
