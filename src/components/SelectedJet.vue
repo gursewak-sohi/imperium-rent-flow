@@ -14,7 +14,7 @@
                             <img alt="Image" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                         </div>
                         <div class="gallery-text">
-                            <h5>King Air 250, PC-12</h5>
+                            <h5>King Air 250</h5>
                             <p>7 Passengers
                                 <span>&bull;</span>
                                 Turbo Prop</p>
@@ -221,7 +221,7 @@
 
      function updateTime(type){
 
-    
+      
 
         if(type === 'origin'){
 
@@ -232,13 +232,17 @@
             let orgTime = time;
             time = parseInt(time) + parseInt((type == 'AM' ? 0 : 12));
 
-            
+            console.log(time,'24format');
             let travellingTime = parseInt(time) + parseInt(travelTime) + hourDiff;
+            console.log(travellingTime,'travellingTime');
             let newtime = parseInt(travellingTime);
             newtime = parseInt(newtime%24);
+            console.log(newtime,'newtime');
             let newampm = newtime < 12 ?  'AM' : 'PM' ;
             newtime = newtime > 12 ? newtime - 12 : newtime;
+            newtime = newtime == 0 ? 12 : newtime;
             let tt =("0" + (newtime)).slice(-2) + ':00 '+newampm ;
+            console.log(tt,'tt');
             departure_time.value = tt;
             // let time = hourDiff + travelTime;
 
@@ -254,12 +258,17 @@
             let orgTime = time;
             time = parseInt(time) + parseInt((type == 'AM' ? 0 : 12));
 
+            console.log(time,'24format');
             let travellingTime = parseInt(time) - parseInt(travelTime) - hourDiff;
+            console.log(travellingTime,'travellingTime');
             let newtime = parseInt(travellingTime);
             newtime = parseInt(newtime%24);
+            console.log(newtime,'newtime');
             let newampm = newtime < 12 ?  'AM' : 'PM' ;
             newtime = newtime > 12 ? newtime - 12 : newtime;
+            newtime = newtime == 0 ? 12 : newtime;
             let tt =("0" + (newtime)).slice(-2) + ':00 '+newampm ;
+            console.log(tt,'tt');
             origin_time.value = tt;
 
         }
