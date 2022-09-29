@@ -131,9 +131,9 @@
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.JPG"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="Inside" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.JPG"/>
+                                <img alt="Inside" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery2.click()" class="btn play-gallery">
