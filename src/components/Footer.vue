@@ -16,11 +16,11 @@
                         <img src="/assets/images/svg/logo-blue.svg" alt="logo" />
                     </a>
                     <p>Get the latest on By The Seat private Jet Flights.</p>
-                    <form class="footer-subscribe">
+                    <form class="footer-subscribe" v-if="!mailSent">
                         <input type="email" placeholder="Email address" v-model="email" :class="{'error' : email_error != '' ? true:false }" @keyup="checkError($event)">
-                        <button class="btn btn-dark btn-sm" disabled type="button" @click="subscribe(event)">Subscribe</button>
+                        <button class="btn btn-dark btn-sm"  type="button" @click="subscribe(event)">{{ inProgress ? 'Subscribing..' : 'Subscribe'}}</button>
                     </form>
-                    <div class="success-content">
+                    <div class="success-content" v-else>
                         <h5>WELCOME ABOARD!</h5>
                         <p>Thank you for joinging our Newsletter.</p>
                     </div>
@@ -112,10 +112,13 @@
     import axios from 'axios'
     let email = ref('');
     let email_error = ref('');
-    const subscribe = (e) => {
+    let mailSent = ref(false);
+    let inProgress = ref(false);
+    let subscribe = (e) => {
         // e.preventDefault();
         if(email.value != '' && validateEmail(email.value)){
         //    Send Mail
+        inProgress.value = true;
         let detail = {
             name : 'not provided',
             email : email.value,
@@ -126,9 +129,10 @@
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((response) => {
-                console.log(response.data.result)
+                inProgress.value = false;
                 if(response.data.result){
                     email.value = '';
+                    mailSent.value = true;
 
                 }else{
 

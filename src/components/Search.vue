@@ -134,7 +134,7 @@
     function calcCrow(lat1, lon1, lat2, lon2) 
     {
 
-        let d = calc_distance(lat1, lon1, lat2, lon2);
+        let d = calc_distance(lat1, lat2,lon1, lon2);
         distance.value = d.toFixed(2);
     }
 
