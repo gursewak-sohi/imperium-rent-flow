@@ -9,7 +9,7 @@
                 </div>
                 <div class="footer-unit">
                     <h4>SUPPORT</h4>
-                    <p><a href="mailto:support@bytheseat.com">support@bytheseat.com</a> 3705 W Pico Blvd (#591),<br> Los Angeles, CA, 90019-3451 <br/> <a href="https://www.google.com/maps/place/3705+W+Pico+Blvd,+Los+Angeles,+CA+90019,+USA/@34.0475447,-118.3237152,17z" target="_blank">Map</a></p>
+                    <p><a href="mailto:support@bytheseat.com">support@bytheseat.com</a> <br> 3705 W Pico Blvd (#591),<br> Los Angeles, CA, 90019-3451 <br/> <a href="https://www.google.com/maps/place/3705+W+Pico+Blvd,+Los+Angeles,+CA+90019,+USA/@34.0475447,-118.3237152,17z" target="_blank">Map</a></p>
                 </div>
                 <div class="footer-content">
                     <a class="logo" target="_blank" href="https://www.bytheseat.com/">
@@ -89,11 +89,11 @@
             <div class="container">
                 <div class="footer-bottom">
                     <ul>
-                        <li><a href="javascript:;">Terms of Service</a></li>
-                        <li><a href="javascript:;">Terms of Flight</a></li>
-                        <li><a href="javascript:;">Privacy</a></li>
-                        <li><a href="javascript:;">Cookies</a></li>
-                        <li><a href="javascript:;">Covid-19 Guidelines</a></li>
+                        <li><a href="https://bytheseat.com/terms" target="_blank">Terms of Use</a></li>
+                        <li><a href="https://bytheseat.com/terms-flight" target="_blank">Terms of Flight</a></li>
+                        <li><a href="https://bytheseat.com/privacy" target="_blank">Privacy</a></li>
+                        <li><a href="https://bytheseat.com/cookies" target="_blank">Cookies</a></li>
+                        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" rel="nofollow noopener" target="_blank">Covid-19 Guidelines</a></li>
                     </ul>
                     <div class="external-links">
                         <p>© 2022 Imperiun jets. All rights reserved.</p>

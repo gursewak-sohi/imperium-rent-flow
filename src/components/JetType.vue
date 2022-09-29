@@ -73,7 +73,8 @@
                                 <span>332 mph</span>
                             </li>
                             <li>Max Nm Range
-                                <span>{{props.distance}} miles</span>
+                                <!-- <span>{{props.distance}} miles</span> -->
+                                <span>1,742 miles</span>
                             </li>
                             <li>Max Speed (no seat)
                                 <span>420 km/h
@@ -155,7 +156,8 @@
                                 <span>332 mph</span>
                             </li>
                             <li>Max Nm Range
-                                <span>{{props.distance}} miles</span>
+                                <!-- <span>{{props.distance}} miles</span> -->
+                                <span>1,350 miles</span>
                             </li>
                             <li>Max Speed (no seat)
                                 <span>445 mph
@@ -239,7 +241,8 @@
                                 <span>332 mph</span>
                             </li>
                             <li>Max Nm Range
-                                <span>{{props.distance}} miles</span>
+                                <!-- <span>{{props.distance}} miles</span> -->
+                                <span>3,530 Miles</span>
                             </li>
                             <li>Max Speed (no seat)
                                 <span>517 mph
