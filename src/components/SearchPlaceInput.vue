@@ -44,24 +44,7 @@
     let firstClick = true;
     let copy = list;
     let showList = ref(false)
-    // let vm = this;
 
-    // Start
-    // axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
-    //         srcterms: 'aa'
-    //     },
-    //     {
-    //         headers: { 
-    //             'Content-Type': 'multipart/form-data'
-    //         }
-    //     }).then((response) => {
-
-    //         console.log(response, 'response');
-    //         defaultData.value = response.data.error;
-    //     }, (error) => {
-    //         console.log(error);
-    // });
-    // End
 
     emitter
     .on('exchangeInputField', function (value) {
@@ -117,6 +100,8 @@
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((response) => {
+
+                console.log(response.data.result);
                 if (response.data.result) {
                     list.value = response.data.error;
                 } else {

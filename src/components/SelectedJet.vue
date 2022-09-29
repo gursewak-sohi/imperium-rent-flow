@@ -38,18 +38,18 @@
                     :slides-per-view="1"
                     :space-between="0"
                     :modules="[Pagination]"
-                    :pagination="true">
-                    <SwiperSlide>
+                    :pagination="props.data.aircraft.indexOf(',') != -1 ?true:false">
+                    <SwiperSlide v-if="props.data.aircraft.indexOf(1) != -1">
                         <div class="result-image">
                             <img alt="Image 1" src="/assets/images/home/gallery/3.jpg"/>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide v-if="props.data.aircraft.indexOf(2) != -1">
                         <div class="result-image">
                             <img alt="Image 1" src="/assets/images/home/gallery/2.jpg"/>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide v-if="props.data.aircraft.indexOf(3) != -1">
                         <div class="result-image">
                             <img alt="Image 1" src="/assets/images/home/gallery/1.jpg"/>
                         </div>
