@@ -77,6 +77,17 @@
                 }
             }
         }
+        & .btn-primary {
+            display: none;
+            @include tablet {
+                display: flex;
+            }
+        }
+        & .btn-link {
+            @include tablet {
+                display: none;
+            }
+        }
     }
 }
 
