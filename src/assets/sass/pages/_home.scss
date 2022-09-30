@@ -392,7 +392,8 @@
 
 .support-block {
     display: grid;
-    grid-template-columns: 200px 301px 281px;
+    // grid-template-columns: 200px 301px 281px;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     background-color: #FAFAFE;
     border-radius: 8px;
