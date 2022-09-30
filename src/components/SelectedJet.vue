@@ -187,9 +187,11 @@
         travelTime = sum / count;
         let hour = parseInt(travelTime);
         let remining_minute = travelTime % 1;
-        remining_minute= parseInt(remining_minute * 60);
-        console.log(remining_minute, hour, 'count');
-        return ((hour * 60 ) +':'+  remining_minute);
+        hour = parseInt(hour) + parseInt(remining_minute > 0 ? 1 : 0);
+        travelTime =hour;
+
+        
+        return hour;
     }
 
 
