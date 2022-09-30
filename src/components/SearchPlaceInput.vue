@@ -2,6 +2,7 @@
     <input
     :id="props.type "
     ref="searchInput"
+    @input='e => searchInput = e.target.value'
     autocomplete="off"
     @focus="handleFocus"
     @focusout="handleFocusOut"
