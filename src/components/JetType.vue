@@ -30,25 +30,25 @@
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/1-turbo/main.jpeg"
                                 data-lg-size="1200-857">
-                                <img ref="gallery1" alt="Front" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
+                                <img ref="gallery1" alt="" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside1.png"
                                 data-lg-size="1200-857">
-                                <img alt="Inside" src="/assets/images/aircraft/1-turbo/inside1.png"/>
+                                <img alt="" src="/assets/images/aircraft/1-turbo/inside1.png"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside2.png"
                                 data-lg-size="1200-857">
-                                <img alt="Inside" src="/assets/images/aircraft/1-turbo/inside2.png"/>
+                                <img alt="" src="/assets/images/aircraft/1-turbo/inside2.png"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/1-turbo/back.jpeg"
                                 data-lg-size="1200-857">
-                                <img alt="Back" src="/assets/images/aircraft/1-turbo/back.jpeg"/>
+                                <img alt="" src="/assets/images/aircraft/1-turbo/back.jpeg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery1.click()" class="btn play-gallery">
@@ -122,19 +122,37 @@
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"
                                 data-lg-size="1200-857">
-                                <img ref="gallery2" alt="Front" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
+                                <img ref="gallery2" alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"
                                 data-lg-size="1200-857">
-                                <img alt="Inside" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"/>
+                                <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="Inside" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"/>
+                                <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/main.jpg"
+                                data-lg-size="1200-857">
+                                <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/main.jpg"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/1.jpg"
+                                data-lg-size="1200-857">
+                                <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/1.jpg"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/2.jpg"
+                                data-lg-size="1200-857">
+                                <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/2.jpg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery2.click()" class="btn play-gallery">
@@ -205,19 +223,19 @@
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/3-heavy/front.webp"
                                 data-lg-size="1200-857">
-                                <img ref="gallery3" alt="Front" src="/assets/images/aircraft/3-heavy/front.webp"/>
+                                <img ref="gallery3" alt="" src="/assets/images/aircraft/3-heavy/front.webp"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/3-heavy/inside-1.webp"
                                 data-lg-size="1200-857">
-                                <img alt="Image 2" src="/assets/images/aircraft/3-heavy/inside-1.webp"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy/inside-1.webp"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/3-heavy/inside-2.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="Image 3" src="/assets/images/aircraft/3-heavy/inside-2.jpg"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy/inside-2.jpg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery3.click()" class="btn play-gallery">

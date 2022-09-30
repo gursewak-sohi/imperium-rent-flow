@@ -84,9 +84,18 @@
             }
         }
         & .btn-link {
+            color: $white;
             @include tablet {
                 display: none;
             }
+        }
+    }
+}
+
+.home-header {
+    &.active {
+        & .btn-link {
+            color: $primary;
         }
     }
 }
