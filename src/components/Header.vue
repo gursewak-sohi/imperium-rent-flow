@@ -9,7 +9,7 @@
 
                 <div class="header-toggle-items">
                     <div class="buttons">
-                        <a href="tel:+13108172621" class="btn btn-primary btn-sm btn-iconed">
+                        <!-- <a href="tel:+13108172621" class="btn btn-primary btn-sm btn-iconed">
                             <svg
                                 width="25"
                                 height="25"
@@ -22,7 +22,7 @@
                             </svg>
                             Call
                             <span>support center</span>
-                        </a>
+                        </a> -->
                         <a class="btn-link" href="mailto:support@bytheseat.com">support@bytheseat.com </a>
                         <!-- <a class="btn-link" href="tel:+13108172621">+1.310.817.2621  </a> -->
                     </div>
