@@ -23,7 +23,7 @@
                     <img src="/assets/images/svg/depart.svg" alt="icon"/>Depart
                 </div>
                
-                <DatePicker class="single-input"   v-model="date" :columns="1" :min-date="new Date()" @dayclick="onDayClick" ref="calendar" >
+                <DatePicker class="single-input"   v-model="date" :columns="1" :min-date="new Date()" @dayclick="onDayClick(event)" :is-required="true" ref="calendar" >
                     <template #default="{ inputValue ,togglePopover }">
                           
                         <input @click="togglePopover()" id="datepicker" readonly  :value="inputValue" />
@@ -89,6 +89,7 @@
     const togglePassangerCount = ref(false);
     const passangerCount = ref(1);
     const date = ref(new Date());
+    let lastDay = date.value;
     const defaultData = ref([]);
     const buttonType = ref('next');
     const calendar = ref(null);
@@ -131,7 +132,10 @@
     });
 
 
-    function onDayClick(){
+    function onDayClick(e){
+        if(!date.value)
+        date.value = lastDay;
+        console.log(date.value, 'My Date Value');
         emitter.emit('focuInput', {type : 'passengerCount'});
 
     }
