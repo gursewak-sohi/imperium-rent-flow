@@ -57,6 +57,13 @@
                                 </a>
                             </li>
                             <li>
+                            <a href="https://www.tiktok.com/@bytheseat" target="_blank" nofollow="" noindex="" title="TikTok">
+                            	<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            		<path d="M 20.125 5.792969 C 19.96875 5.710938 19.8125 5.621094 19.664062 5.527344 C 19.230469 5.238281 18.832031 4.902344 18.480469 4.519531 C 17.597656 3.507812 17.265625 2.480469 17.144531 1.761719 L 17.148438 1.761719 C 17.046875 1.167969 17.089844 0.78125 17.097656 0.78125 L 13.070312 0.78125 L 13.070312 16.347656 C 13.070312 16.554688 13.070312 16.761719 13.0625 16.964844 C 13.0625 16.992188 13.058594 17.015625 13.058594 17.042969 C 13.058594 17.054688 13.058594 17.066406 13.054688 17.078125 C 13.054688 17.078125 13.054688 17.082031 13.054688 17.085938 C 12.96875 18.21875 12.324219 19.238281 11.335938 19.796875 C 10.828125 20.085938 10.253906 20.238281 9.671875 20.238281 C 7.796875 20.238281 6.273438 18.710938 6.273438 16.820312 C 6.273438 14.929688 7.792969 13.402344 9.671875 13.402344 C 10.027344 13.402344 10.378906 13.457031 10.714844 13.566406 L 10.71875 9.46875 C 8.648438 9.203125 6.558594 9.8125 4.960938 11.15625 C 4.265625 11.757812 3.683594 12.476562 3.234375 13.28125 C 3.066406 13.574219 2.425781 14.75 2.347656 16.660156 C 2.296875 17.746094 2.625 18.867188 2.777344 19.332031 L 2.777344 19.34375 C 2.875 19.617188 3.253906 20.550781 3.871094 21.335938 C 4.367188 21.96875 4.957031 22.523438 5.613281 22.980469 L 5.617188 22.972656 L 5.625 22.980469 C 7.574219 24.304688 9.734375 24.21875 9.734375 24.21875 C 10.109375 24.203125 11.359375 24.21875 12.785156 23.542969 C 14.363281 22.796875 15.261719 21.683594 15.261719 21.683594 C 15.835938 21.019531 16.292969 20.257812 16.609375 19.441406 C 16.976562 18.484375 17.097656 17.335938 17.097656 16.875 L 17.097656 8.617188 C 17.144531 8.648438 17.796875 9.078125 17.796875 9.078125 C 17.796875 9.078125 18.734375 9.679688 20.195312 10.070312 C 21.242188 10.347656 22.65625 10.40625 22.65625 10.40625 L 22.65625 6.410156 C 22.160156 6.464844 21.15625 6.308594 20.125 5.792969 Z M 20.125 5.792969 " fill="#9CA3AF"></path>
+                            	</svg>
+                            </a>
+                            </li>
+                            <li>
                                 <a href="https://www.linkedin.com/company/imperium-jets/" target="_blank" nofollow="" noindex="">
                                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M22.7254 0.207275H2.27383C1.29414 0.207275 0.501953 0.980713 0.501953 1.93696V22.4729C0.501953 23.4291 1.29414 24.2073 2.27383 24.2073H22.7254C23.7051 24.2073 24.502 23.4292 24.502 22.4776V1.93696C24.502 0.980713 23.7051 0.207275 22.7254 0.207275ZM7.62227 20.6588H4.05977V9.20259H7.62227V20.6588ZM5.84102 7.64165C4.69727 7.64165 3.77383 6.71821 3.77383 5.57915C3.77383 4.44009 4.69727 3.51665 5.84102 3.51665C6.98008 3.51665 7.90352 4.44009 7.90352 5.57915C7.90352 6.71353 6.98008 7.64165 5.84102 7.64165ZM20.9535 20.6588H17.3957V15.0901C17.3957 13.7635 17.3723 12.0526 15.5441 12.0526C13.6926 12.0526 13.4113 13.501 13.4113 14.9963V20.6588H9.8582V9.20259H13.2707V10.7682H13.3176C13.791 9.86821 14.9535 8.91665 16.6832 8.91665C20.2879 8.91665 20.9535 11.2885 20.9535 14.3729V20.6588Z" fill="#9CA3AF"/>
@@ -78,7 +85,17 @@
                     </div>
                 </div>
                 <ul class="footer-companies">
-                    <li><img src="/assets/images/home/companies/bbb.svg" width="116" height="43" alt="bbb"></li>
+                    <!-- <li><img src="/assets/images/home/companies/bbb.svg" width="116" height="43" alt="bbb"></li> -->
+                    <li>
+                        <a class="frhzbus" target="_blank"
+                            href="https://www.bbb.org/us/ca/los-angeles/profile/aviation-services/imperium-jets-inc-1216-
+                            1293605#bbbseal" title="Imperium Jets, Inc. is a BBB Accredited Aviation Service in Los
+                            Angeles, CA" style="position: relative;overflow: hidden; width: 200px; height: 42px; margin:
+                            0px; padding: 0px;" ><img style="padding: 0px; border: none;"
+                            src="https://seal-sanjose.bbb.org/logo/frhzbus/imperium-jets-1293605.png" width="200"
+                            height="42" alt="Imperium Jets, Inc. is a BBB Accredited Aviation Service in Los Angeles,
+                            CA" /></a>
+                    </li>
                     <li><img src="/assets/images/home/companies/nbaa.png" width="129" height="30" alt="nbaa"></li>
                     <li><img src="/assets/images/home/companies/dot.svg" width="194" height="57" alt="dot"></li>
                     <li><img src="/assets/images/home/companies/excellece.svg" width="127" height="32" alt="review"></li>
@@ -90,7 +107,7 @@
                 <div class="footer-bottom">
                     <ul>
                         <li><a href="https://bytheseat.com/terms" target="_blank">Terms of Use</a></li>
-                        <li><a href="https://bytheseat.com/terms-flight" target="_blank">Terms of Flight</a></li>
+                        <!-- <li><a href="https://bytheseat.com/terms-flight" target="_blank">Terms of Flight</a></li> -->
                         <li><a href="https://bytheseat.com/privacy" target="_blank">Privacy</a></li>
                         <li><a href="https://bytheseat.com/cookies" target="_blank">Cookies</a></li>
                         <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" rel="nofollow noopener" target="_blank">Covid-19 Guidelines</a></li>

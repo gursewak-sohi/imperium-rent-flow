@@ -1,7 +1,7 @@
 <template>
   <section id="getQouteModal" class="modal" :class="{'active': toggleModel}">
         <div class="modal-block">
-            <button data-close="qoute-modal" class="btn btn-close" @click="closeModal()">
+            <button class="btn btn-close" @click="closeModal()">
                 <img src="/assets/images/svg/close.svg" alt="icon">
             </button>
             <h4>Get An Immediate Quote!</h4>

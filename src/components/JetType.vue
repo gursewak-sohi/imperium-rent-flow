@@ -30,25 +30,25 @@
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/1-turbo/main.jpeg"
                                 data-lg-size="1200-857">
-                                <img ref="gallery1" alt="Front" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
+                                <img ref="gallery1" alt="" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside1.png"
                                 data-lg-size="1200-857">
-                                <img alt="Inside" src="/assets/images/aircraft/1-turbo/inside1.png"/>
+                                <img alt="" src="/assets/images/aircraft/1-turbo/inside1.png"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside2.png"
                                 data-lg-size="1200-857">
-                                <img alt="Inside" src="/assets/images/aircraft/1-turbo/inside2.png"/>
+                                <img alt="" src="/assets/images/aircraft/1-turbo/inside2.png"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/1-turbo/back.jpeg"
                                 data-lg-size="1200-857">
-                                <img alt="Back" src="/assets/images/aircraft/1-turbo/back.jpeg"/>
+                                <img alt="" src="/assets/images/aircraft/1-turbo/back.jpeg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery1.click()" class="btn play-gallery">
@@ -69,17 +69,12 @@
                             <li>Sample Aircraft
                                 <span>King Air 250, PC-12</span>
                             </li>
-                            <li>Max Hrs Range
-                                <span>332 mph</span>
-                            </li>
+                             
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
                                 <span>1,742 miles</span>
                             </li>
-                            <li>Max Speed (no seat)
-                                <span>420 km/h
-                                </span>
-                            </li>
+                             
                             <li>Cruising Speed
                                 <span>420 km/h</span>
                             </li>
@@ -122,19 +117,37 @@
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"
                                 data-lg-size="1200-857">
-                                <img ref="gallery2" alt="Front" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
+                                <img ref="gallery2" alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"
                                 data-lg-size="1200-857">
-                                <img alt="Inside" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"/>
+                                <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="Inside" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"/>
+                                <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/main.jpg"
+                                data-lg-size="1200-857">
+                                <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/main.jpg"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/1.jpg"
+                                data-lg-size="1200-857">
+                                <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/1.jpg"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/2.jpg"
+                                data-lg-size="1200-857">
+                                <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/2.jpg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery2.click()" class="btn play-gallery">
@@ -152,17 +165,12 @@
                             <li>Sample Aircraft
                                 <span>Citation CJ2, Citation XLS</span>
                             </li>
-                            <li>Max Hrs Range
-                                <span>332 mph</span>
-                            </li>
+                             
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
                                 <span>1,350 miles</span>
                             </li>
-                            <li>Max Speed (no seat)
-                                <span>445 mph
-                                </span>
-                            </li>
+                             
                             <li>Cruising Speed
                                 <span>445 mph</span>
                             </li>
@@ -205,19 +213,19 @@
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/3-heavy/front.webp"
                                 data-lg-size="1200-857">
-                                <img ref="gallery3" alt="Front" src="/assets/images/aircraft/3-heavy/front.webp"/>
+                                <img ref="gallery3" alt="" src="/assets/images/aircraft/3-heavy/front.webp"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/3-heavy/inside-1.webp"
                                 data-lg-size="1200-857">
-                                <img alt="Image 2" src="/assets/images/aircraft/3-heavy/inside-1.webp"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy/inside-1.webp"/>
                             </a>
                             <a
                                 class="result-image"
                                 href="/imperium-rent-flow/assets/images/aircraft/3-heavy/inside-2.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="Image 3" src="/assets/images/aircraft/3-heavy/inside-2.jpg"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy/inside-2.jpg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery3.click()" class="btn play-gallery">
@@ -237,17 +245,12 @@
                             <li>Sample Aircraft
                                 <span>Hawker 1000</span>
                             </li>
-                            <li>Max Hrs Range
-                                <span>332 mph</span>
-                            </li>
+                            
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
                                 <span>3,530 Miles</span>
                             </li>
-                            <li>Max Speed (no seat)
-                                <span>517 mph
-                                </span>
-                            </li>
+                            
                             <li>Cruising Speed
                                 <span>517 mph</span>
                             </li>
