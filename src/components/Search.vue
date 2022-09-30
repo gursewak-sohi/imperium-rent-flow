@@ -62,6 +62,7 @@
         destination_details :{},
 
     };
+    let emptyVal = allDetails;
     let data_copy = ref(allDetails);
 
      emitter.on('exchangeInput', function () {
@@ -110,8 +111,11 @@
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((response) => {
+                allDetails = emptyVal;
                 emitter.emit('openQuoteMOdel', false);
                 emitter.emit('openConfirmModel', true);
+                
+                emitter.emit('reset');
             }, (error) => {
                 console.log(error);
             });

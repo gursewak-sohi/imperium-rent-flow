@@ -123,6 +123,13 @@
             },1500);
     }
 
+    emitter
+    .on('reset', function () {
+       date.value = new Date();
+       passangerCount.value = 1;
+    });
+
+
     function onDayClick(){
         emitter.emit('focuInput', {type : 'passengerCount'});
 

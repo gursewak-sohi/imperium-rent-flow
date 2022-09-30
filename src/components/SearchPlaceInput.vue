@@ -53,6 +53,12 @@
         }
     });
 
+
+    emitter
+    .on('reset', function () {
+       searchTerm.value = '';
+    });
+
     emitter
     .on('focuInput', function (value) {
         if(value.type == 'origin'){
