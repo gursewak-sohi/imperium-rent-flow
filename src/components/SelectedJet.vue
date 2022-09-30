@@ -178,14 +178,20 @@
         let sum = 0;
         let count = 0;
         for(const key in all){
+            console.log(props.distance,speed[all[key] - 1] )
             sum += parseFloat((props.distance /speed[all[key] - 1]).toFixed(2));
             console.log(sum)
             count++;
 
         }
-        travelTime = parseInt(sum / count);
-        // console.log(sum, count, 'count');
-        return travelTime;
+        travelTime = sum / count;
+        let hour = parseInt(travelTime);
+        let remining_minute = travelTime % 1;
+        hour = parseInt(hour) + parseInt(remining_minute > 0 ? 1 : 0);
+        travelTime =hour;
+
+        
+        return hour;
     }
 
 
@@ -220,6 +226,9 @@
     }
 
      function updateTime(type){
+
+        // travelTime = 1;
+        // hourDiff = 9;
 
       
 

@@ -53,6 +53,12 @@
         }
     });
 
+
+    emitter
+    .on('reset', function () {
+       searchTerm.value = '';
+    });
+
     emitter
     .on('focuInput', function (value) {
         if(value.type == 'origin'){
@@ -67,10 +73,10 @@
 
     const selectOrigin = (event, country) => {
         origin.value = country.name
-        searchTerm.value = `${country.address} ${country.name}  [${country.code}]`
+        searchTerm.value = `${country.name}  [${country.code}]`
         // list.value = [];
          showList.value = false;
-        let val = `${country.address} ${country.name}  [${country.code}]`;
+        let val = `${country.name}  [${country.code}]`;
 
         
         emitter.emit('updateInput', props.type, {name : val, details : country});
