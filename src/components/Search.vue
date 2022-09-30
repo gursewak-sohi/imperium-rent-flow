@@ -9,7 +9,7 @@
                                 <span></span>One way
                         </label>
                         </div>
-                        <div class="radio-unit">
+                        <!-- <div class="radio-unit">
                             <input id="roundTrip" type="radio" value="round-trip" name="flight-type" />
                             <label for="roundTrip">
                                 <span></span>Round trip
@@ -20,7 +20,7 @@
                             <label for="multiTrip">
                                 <span></span>Multi trip
                             </label>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- Round Trip -->
                     <FilterInput />

@@ -6,7 +6,7 @@
     @focus="handleFocus"
     @focusout="handleFocusOut"
         type="text"
-        placeholder="Select airport"
+        placeholder="Select or search airport"
         v-model="searchTerm"
         @click="initialize()"
         @keyup="searchOrigin()"/>
