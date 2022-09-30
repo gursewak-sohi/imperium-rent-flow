@@ -221,6 +221,9 @@
 
      function updateTime(type){
 
+        travelTime = 1;
+        hourDiff = 9;
+
       
 
         if(type === 'origin'){

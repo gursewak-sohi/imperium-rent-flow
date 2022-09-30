@@ -112,10 +112,13 @@
     function forceRender1() {
         console.log('ref');
     }
-
+    let timeoutVar;
     function togglePassangerCountFun(){
+
+         if(clearTimeout)
+            clearTimeout(timeoutVar);
         togglePassangerCount.value = !togglePassangerCount.value;
-        setTimeout(function(){
+        timeoutVar = setTimeout(function(){
             togglePassangerCount.value = false
             },1500);
     }
@@ -125,6 +128,7 @@
 
     }
     // 
+    
 
     emitter
     .on('focuInput', function (value) {
@@ -137,7 +141,7 @@
         }else if(value.type == 'passengerCount'){
             togglePassangerCount.value = true;
 
-            setTimeout(function(){
+            timeoutVar = setTimeout(function(){
                 togglePassangerCount.value = false;
             },1500)
         }
@@ -172,7 +176,11 @@
         buttonType.value = data.value;
     });
 
+    
+
     function changeCount(event, type){
+        if(clearTimeout)
+            clearTimeout(timeoutVar);
         incredecre.value = true;
         if(type == 'decrement'){
             if(passangerCount.value > 1)
@@ -180,6 +188,10 @@
         } else {
             passangerCount.value = passangerCount.value + 1;
         }
+
+        timeoutVar = setTimeout(function(){
+                togglePassangerCount.value = false;
+            },1500)
         setTimeout(function(){
             incredecre.value = false;
         },300)

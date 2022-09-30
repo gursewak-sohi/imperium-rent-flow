@@ -115,6 +115,8 @@
             }, (error) => {
                 console.log(error);
             });
+            //   emitter.emit('openQuoteMOdel', false);
+            //     emitter.emit('openConfirmModel', true);
 
         }else if(value.from =='selected-jet-data'){
             allDetails.at = value.data.at;
