@@ -11,6 +11,40 @@
 
 <body class="home">
     <div id="app"></div>
+    <!-- Accessibility Code for "www.bytheseat.com" -->
+    <script>
+        window.interdeal = {
+            "sitekey": "d580b14706a8bac40625ae033116981a",
+            "Position": "Left",
+            "Menulang": "EN",
+            "domains": {
+                "js": "https://cdn.equalweb.com/",
+                "acc": "https://access.equalweb.com/"
+            },
+            "btnStyle": {
+                "vPosition": ["80%", null],
+                "scale": ["0.6", "0.6"],
+                "color": {
+                    "main": "#0a51f2",
+                    "second": ""
+                },
+                "icon": {
+                    "type": 1,
+                    "shape": "semicircle",
+                    "outline": false
+                }
+            }
+        };
+        (function(doc, head, body) {
+            var coreCall = doc.createElement('script');
+            coreCall.src = 'https://cdn.equalweb.com/core/4.4.0/accessibility.js';
+            coreCall.defer = true;
+            coreCall.integrity = 'sha512-3lGJBcuai1J0rGJHJj4e4lYOzm7K08oEHsg1Llt7x24OOsa/Ca0wwbSi9HhWUn92FKN3fylaq9xmIKVZnUsT3Q==';
+            coreCall.crossOrigin = 'anonymous';
+            coreCall.setAttribute('data-cfasync', true);
+            body ? body.appendChild(coreCall) : head.appendChild(coreCall);
+        })(document, document.head, document.body);
+    </script>
 </body>
 
 <script type="module" src="/src/main.js"></script>
