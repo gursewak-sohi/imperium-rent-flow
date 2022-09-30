@@ -290,7 +290,7 @@ const props = defineProps({
     function goToNext() {
         emitter.emit('updateButtonType', {value :''});
         emitter.emit('updateSearch', {data : selectedTypes, path : 'selected-result', from : 'jettype'});
-        window.scrollBy(0, -500);
+        window.scrollBy(0, -200);
     }
 
     function selectType(e, value){

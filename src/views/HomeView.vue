@@ -40,12 +40,12 @@ import Search from '../components/Search.vue'
         <section class="support-section">
             <div class="container">
                 <div class="support-block">
-                    <div class="support-unit">
+                    <!-- <div class="support-unit">
                         <h5>Call us:</h5>
                         <a class="support-content" href="tel:+13108172621">
                             <img src="/assets/images/svg/phone.svg" alt="icon" />+1.310.817.2621
                         </a>
-                    </div>
+                    </div> -->
                     <div class="support-unit">
                         <h5>Contact us:</h5>
                         <a class="support-content" href="mailto:support@bytheseat.com">
@@ -73,6 +73,7 @@ import Search from '../components/Search.vue'
   </main>
 </template>
 
+ 
 
 
 
