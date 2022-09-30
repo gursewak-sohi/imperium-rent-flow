@@ -69,17 +69,12 @@
                             <li>Sample Aircraft
                                 <span>King Air 250, PC-12</span>
                             </li>
-                            <li>Max Hrs Range
-                                <span>332 mph</span>
-                            </li>
+                             
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
                                 <span>1,742 miles</span>
                             </li>
-                            <li>Max Speed (no seat)
-                                <span>420 km/h
-                                </span>
-                            </li>
+                             
                             <li>Cruising Speed
                                 <span>420 km/h</span>
                             </li>
@@ -170,17 +165,12 @@
                             <li>Sample Aircraft
                                 <span>Citation CJ2, Citation XLS</span>
                             </li>
-                            <li>Max Hrs Range
-                                <span>332 mph</span>
-                            </li>
+                             
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
                                 <span>1,350 miles</span>
                             </li>
-                            <li>Max Speed (no seat)
-                                <span>445 mph
-                                </span>
-                            </li>
+                             
                             <li>Cruising Speed
                                 <span>445 mph</span>
                             </li>
@@ -255,17 +245,12 @@
                             <li>Sample Aircraft
                                 <span>Hawker 1000</span>
                             </li>
-                            <li>Max Hrs Range
-                                <span>332 mph</span>
-                            </li>
+                            
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
                                 <span>3,530 Miles</span>
                             </li>
-                            <li>Max Speed (no seat)
-                                <span>517 mph
-                                </span>
-                            </li>
+                            
                             <li>Cruising Speed
                                 <span>517 mph</span>
                             </li>
