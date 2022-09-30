@@ -34,7 +34,7 @@
                 </div>
                 <div class="agree-mails">
                     <div class="checkbox-unit">
-                        <input id="agreeMails" v-model="agreeMails" type="checkbox" />
+                        <input id="agreeMails" type="checkbox" />
                         <label for="agreeMails">
                             <span>
                                 <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@
                         </label>
                     </div>
                 </div>
-                <button :disabled="!agreeMails" type="button" class="btn btn-primary btn-md btn-iconed-lg" @click="submitForm()">Send <img src="/assets/images/svg/next.svg" alt="icon"/></button>
+                <button type="button" class="btn btn-primary btn-md btn-iconed-lg" @click="submitForm()">Send <img src="/assets/images/svg/next.svg" alt="icon"/></button>
                 
             </form>
         </div>
@@ -68,7 +68,7 @@
     let phone_number_error = ref('');
     let message_error = ref('');
 
-    let agreeMails = ref(false)
+    
     
 
     emitter.on('openQuoteMOdel', function (val) {
