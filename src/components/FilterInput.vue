@@ -127,6 +127,7 @@
     .on('reset', function () {
        date.value = new Date();
        passangerCount.value = 1;
+       buttonType.value = 'next';
     });
 
 

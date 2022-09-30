@@ -123,8 +123,8 @@
             //     emitter.emit('openConfirmModel', true);
 
         }else if(value.from =='selected-jet-data'){
-            allDetails.at = value.data.at;
-            allDetails.dt = value.data.dt;
+            allDetails.at = value.data.dt;
+            allDetails.dt = value.data.at;
 
         }
 
