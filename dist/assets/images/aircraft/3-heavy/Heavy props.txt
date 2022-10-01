@@ -1,0 +1,8 @@
+
+Super mid size jet
+sample aircraft: Hawker 1000 
+price: $5,700 / Hour
+max Pax: 9 
+Cruising Speed: 517 mph
+Range: 3,530 Miles
+Altitude: 7,008 Miles
