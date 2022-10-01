@@ -45,7 +45,7 @@
                         </label>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary btn-md btn-iconed-lg" @click="submitForm()">Send <img src="/assets/images/svg/next.svg" alt="icon"/></button>
+                <button type="button" class="btn btn-primary btn-md btn-iconed-lg" @click="submitForm()" :disabled="inProgress">{{ inProgress ? 'sending...' : 'Send'}} <img src="/assets/images/svg/next.svg" alt="icon"/></button>
                 
             </form>
         </div>
@@ -67,6 +67,7 @@
     let email_error = ref('');
     let phone_number_error = ref('');
     let message_error = ref('');
+    let inProgress = ref(false);
 
     
     
@@ -74,14 +75,19 @@
     emitter.on('openQuoteMOdel', function (val) {
         toggleModel.value = val;       
     });
+     emitter.on('requestIsDone', function (val) {
+       inProgress.value = false;      
+    });
     function closeModal(){
          toggleModel.value = false;
     }
     function submitForm(){
+        inProgress.value = true;
         gError.value = "";
         if(name.value != '' && email.value != '' && validateEmail(email.value) && phone_number.value != ''){
             emitter.emit('updateSearch', {data : {name : name.value, email : email.value, phone_number : phone_number.value, message : message.value }, path : '', from : 'quoteModel'});
         } else{
+            inProgress.value = false;
             if(name.value == '')
                 name_error.value = 'Please enter this field';
             if(email.value == '')
@@ -91,10 +97,11 @@
         }
     }
 
-    const  phonenumber = (inputtxt)=>
+    const  phonevalnumber = (inputtxt)=>
     {
-        var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-        return re.test(inputtxt);    
+        return inputtxt.match(
+            /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+        )   
     }
 
     const validateEmail = (email) => {
@@ -118,17 +125,21 @@
             if(e.target.name == 'name')
                 name_error.value = '';
             if(e.target.name == 'email'){
-                if(validateEmail(e.target.value)){
+                if(phonevalnumber(e.target.value)){
                     email_error.value = '';
                 }else{
                     email_error.value = 'Please enter this field';
                 }
             }
-            if(e.target.name == 'phone_number')
-                phone_number_error.value = '';
-            
-
+            if(e.target.name == 'phone_number'){
+                 if(phonevalnumber(e.target.value)){
+                    phone_number_error.value = '';
+                }else{
+                    phone_number_error.value = 'Please enter this field';
+                }
+            }
         }
+        inProgress.value = false;
         
     }
 </script>
