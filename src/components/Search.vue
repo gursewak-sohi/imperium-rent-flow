@@ -111,6 +111,7 @@
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((response) => {
+                 emitter.emit('requestIsDone');
                 allDetails = emptyVal;
                 emitter.emit('openQuoteMOdel', false);
                 emitter.emit('openConfirmModel', true);
