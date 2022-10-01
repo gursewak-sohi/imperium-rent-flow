@@ -220,11 +220,19 @@
             togglePassangerCount.value = false;
             buttonType.value = 'change';
             emitter.emit('updateSearch', {data : searchRequest, path : 'filter-result', from: 'search'});
-             window.scrollTo({
-                top: document.getElementById('chooseJetType').offsetTop,
-                left: 0,
-                behavior: "smooth",
-            });
+            //  window.scrollTo({
+            //     top: document.getElementById('chooseJetType').offsetTop,
+            //     left: 0,
+            //     behavior: "smooth",
+            // });
+            setTimeout(function(){
+                window.scrollTo({
+                    top: document.getElementById('chooseJetType').scrollHeight -100,
+                    left: 0,
+                    behavior: "smooth",
+                });
+            },500);
+             
         }
     } 
 

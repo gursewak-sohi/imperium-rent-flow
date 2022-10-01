@@ -284,19 +284,26 @@
     let checkedJet = ref([])
     let selectedTypes = []
    
-const props = defineProps({
-        distance: String,
-        })
+    const props = defineProps({
+            distance: String,
+    })
+
+    
+
+
     function goToNext() {
         emitter.emit('updateButtonType', {value :''});
         emitter.emit('updateSearch', {data : selectedTypes, path : 'selected-result', from : 'jettype'});
         // window.scrollBy(0, -200);
         setTimeout(function(){
+
              window.scrollTo({
-                top: document.getElementById('selectedJetType').offsetTop + 300,
+                top: document.getElementById('selectedJetType').scrollHeight * 1.4,
                 left: 0,
                 behavior: "smooth",
             });
+
+
 
         },200);
        
