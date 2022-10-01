@@ -60,7 +60,8 @@
                         <ul>
                             <li>7 Passengers</li>
                             <li  v-if="props.distance > 1742"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                {{ getFuelStop(1742)}} Fuel stop</li>
+                                 Fuel stop</li>
+                                 <!-- {{ getFuelStop(1742)}} -->
                         </ul>
                         
                     </div>
@@ -159,7 +160,8 @@
                         <ul>
                             <li>8 Passengers</li>
                             <li  v-if="props.distance > 1350"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                               {{ getFuelStop(1350)}} Fuel stop</li>
+                                Fuel stop</li>
+                                <!-- {{ getFuelStop(1350)}} -->
                         </ul>
                     </div>
                     <div class="jet-type-footer">
@@ -239,7 +241,8 @@
                         <ul>
                             <li>9 Passengers</li>
                             <li v-if="props.distance > 3530"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                               {{ getFuelStop(3530)}} Fuel stop</li>
+                                Fuel stop</li>
+                                <!-- {{ getFuelStop(3530)}} -->
                         </ul>
                     </div>
                     <div class="jet-type-footer">
