@@ -60,7 +60,7 @@
                         <ul>
                             <li>7 Passengers</li>
                             <li  v-if="props.distance > 1742"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                Fuel stop</li>
+                                2 Fuel stop</li>
                         </ul>
                         
                     </div>
