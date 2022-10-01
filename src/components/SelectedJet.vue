@@ -142,6 +142,7 @@
     var ap = [' AM', ' PM'];
     let aircraft = ['Turbo','Light','Heavy'];
     let speed = [420,445,517];
+    let range = [1742,1350,3530];
     let travelTime = 0;
 
     for (var i=0;tt<24*60; i++) {
@@ -174,23 +175,31 @@
     function getAircraftSpeed(val){
         
         let all = val.split(',');
-        console.log(all, props.distance, 'distance')
+        console.log( props.distance, 'distance');
+        
+
         let sum = 0;
         let count = 0;
         for(const key in all){
-            console.log(props.distance,speed[all[key] - 1] )
-            sum += parseFloat((props.distance /speed[all[key] - 1]).toFixed(2));
-            console.log(sum)
-            count++;
+            console.log( range[all[key] - 1], 'distance');
+            let extraHour = 0;
+            if(props.distance > range[all[key] - 1]){
+                let extraTimeTaken = props.distance / range[all[key] - 1];
+                extraHour += parseInt(extraTimeTaken);
+                extraHour += extraTimeTaken%1  > 0 ? 0.5 : 0;
 
+
+            }
+
+            console.log(extraHour);
+            sum += parseFloat(((props.distance /speed[all[key] - 1]) + extraHour).toFixed(2));
+            count++;
         }
         travelTime = sum / count;
         let hour = parseInt(travelTime);
         let remining_minute = travelTime % 1;
         hour = parseInt(hour) + parseInt(remining_minute > 0 ? 1 : 0);
         travelTime =hour;
-
-        
         return hour;
     }
 
@@ -240,18 +249,13 @@
             time = time[0];
             let orgTime = time;
             time = parseInt(time) + parseInt((type == 'AM' ? 0 : 12));
-
-            console.log(time,'24format');
             let travellingTime = parseInt(time) + parseInt(travelTime) + hourDiff;
-            console.log(travellingTime,'travellingTime');
             let newtime = Math.abs(travellingTime);
             newtime = parseInt(newtime%24);
-            console.log(newtime,'newtime');
             let newampm = newtime < 12 ?  'AM' : 'PM' ;
             newtime = newtime > 12 ? newtime - 12 : newtime;
             newtime = newtime == 0 ? 12 : newtime;
             let tt =("0" + (newtime)).slice(-2) + ':00 '+newampm ;
-            console.log(tt,'tt');
             departure_time.value = tt;
             // let time = hourDiff + travelTime;
 
@@ -266,18 +270,13 @@
             time = time[0];
             let orgTime = time;
             time = parseInt(time) + parseInt((type == 'AM' ? 0 : 12));
-
-            console.log(time,'24format');
             let travellingTime = parseInt(time) - parseInt(travelTime) - hourDiff;
-            console.log(travellingTime,'travellingTime');
             let newtime = Math.abs(travellingTime);
             newtime = parseInt(newtime%24);
-            console.log(newtime,'newtime');
             let newampm = newtime < 12 ?  'AM' : 'PM' ;
             newtime = newtime > 12 ? newtime - 12 : newtime;
             newtime = newtime == 0 ? 12 : newtime;
             let tt =("0" + (newtime)).slice(-2) + ':00 '+newampm ;
-            console.log(tt,'tt');
             origin_time.value = tt;
 
         }

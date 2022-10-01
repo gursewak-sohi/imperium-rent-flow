@@ -59,8 +59,8 @@
                         <h4>Turbo Prop</h4>
                         <ul>
                             <li>7 Passengers</li>
-                            <!-- <li><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                Fuel stop</li> -->
+                            <li  v-if="props.distance > 1742"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                Fuel stop</li>
                         </ul>
                         
                     </div>
@@ -158,6 +158,8 @@
                         <h4>Light - Super-midsize jets</h4>
                         <ul>
                             <li>8 Passengers</li>
+                            <li  v-if="props.distance > 1350"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                Fuel stop</li>
                         </ul>
                     </div>
                     <div class="jet-type-footer">
@@ -236,8 +238,8 @@
                         <h4>Heavy jets</h4>
                         <ul>
                             <li>9 Passengers</li>
-                            <!-- <li><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                Fuel stop</li> -->
+                            <li v-if="props.distance > 3530"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                Fuel stop</li>
                         </ul>
                     </div>
                     <div class="jet-type-footer">
