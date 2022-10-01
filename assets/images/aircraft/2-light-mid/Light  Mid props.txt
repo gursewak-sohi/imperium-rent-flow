@@ -1,8 +1,0 @@
-
-Light - Mid
-sample aircraft: Citation CJ2, Citation XLS
-price: $3,750 / Hour
-max Pax: 8
-Cruising Speed: 445 mph
-Range: 1,350 miles
-Altitude: 8,500 miles
