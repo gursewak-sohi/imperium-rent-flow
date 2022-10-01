@@ -1,5 +1,5 @@
 <template>
-    <div id="selectedJetType" class="selected-jet-wrapper">
+    <div class="selected-jet-wrapper">
         <div class="selected-jet-block">
             <div class="selected-jet-image light-gallery-wrapper">
                 <swiper
@@ -108,6 +108,7 @@
                 </div>
             </div>
         </div>
+        <div id="selectedJetType" class="scrolled-view"></div>
     </div>
 </template>
 <script setup>

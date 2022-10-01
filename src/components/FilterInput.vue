@@ -226,11 +226,26 @@
             //     behavior: "smooth",
             // });
             setTimeout(function(){
-                window.scrollTo({
-                    top: document.getElementById('chooseJetType').scrollHeight -100,
-                    left: 0,
-                    behavior: "smooth",
-                });
+                // window.scrollTo({
+                //     top: document.getElementById('chooseJetType').scrollHeight,
+                //     left: 0,
+                //     behavior: "smooth",
+                // });
+                document.getElementById('chooseJetType').scrollIntoView({behavior: "smooth", block: "start"});
+                
+                
+                // var node = document.getElementById('chooseJetType');
+                // var yourHeight = 75;
+
+                // // scroll to your element
+                // node.scrollIntoView(true);
+
+                // // now account for fixed header
+                // var scrolledY = window.scrollY;
+
+                // if(scrolledY){
+                //     window.scroll(0, scrolledY - yourHeight);
+                // }
             },500);
              
         }

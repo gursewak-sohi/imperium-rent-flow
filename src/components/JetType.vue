@@ -1,5 +1,5 @@
 <template>
-    <div id="chooseJetType" class="jet-type-block">
+    <div class="jet-type-block">
         <h4>Please choose type of aircraft (You can choose more than 1)</h4>
         <div class="jet-type-list">
             <div class="jet-type-unit">
@@ -277,6 +277,7 @@
                 class="btn btn-primary btn-md btn-iconed-lg"
                 @click="goToNext()">Next ({{ checkedJet.length }})<img src="/assets/images/svg/next.svg" alt="icon"/></button>
         </div>
+        <div id="chooseJetType" class="scrolled-view"></div>
     </div>
 </template>
 
@@ -301,11 +302,12 @@
         emitter.emit('updateSearch', {data : selectedTypes, path : 'selected-result', from : 'jettype'});
         // window.scrollBy(0, -200);
         setTimeout(function(){
-             window.scrollTo({
-                top: document.getElementById('selectedJetType').scrollHeight * 1.4,
-                left: 0,
-                behavior: "smooth",
-            });
+            //  window.scrollTo({
+            //     top: document.getElementById('selectedJetType').scrollHeight * 1.4,
+            //     left: 0,
+            //     behavior: "smooth",
+            // });
+            document.getElementById('selectedJetType').scrollIntoView({behavior: "smooth", block: "start"});
         },200);       
     }
 

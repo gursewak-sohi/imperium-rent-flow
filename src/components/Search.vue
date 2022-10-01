@@ -129,11 +129,13 @@
 
         }else if(value.from =='selected-jet'){
              setTimeout(function(){
-                window.scrollTo({
-                    top: document.getElementById('chooseJetType').scrollHeight -100,
-                    left: 0,
-                    behavior: "smooth",
-                });
+                // window.scrollTo({
+                //     top: document.getElementById('chooseJetType').scrollHeight -100,
+                //     left: 0,
+                //     behavior: "smooth",
+                // });
+                document.getElementById('chooseJetType').scrollIntoView({behavior: "smooth", block: "start"});
+                
             },500);
         }
 
