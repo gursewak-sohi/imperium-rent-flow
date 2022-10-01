@@ -1,0 +1,8 @@
+
+Turbo Prop
+sample aircraft: PC-12
+price: $2,500 / Hour
+max Pax: 7
+Cruise Speed: 420 km/h
+Range: 1,742 miles
+Altitude: 9,144 miles
