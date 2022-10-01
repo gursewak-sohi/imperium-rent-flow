@@ -60,7 +60,7 @@
                         <ul>
                             <li>7 Passengers</li>
                             <li  v-if="props.distance > 1742"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                2 Fuel stop</li>
+                                {{ getFuelStop(1742)}} Fuel stop</li>
                         </ul>
                         
                     </div>
@@ -159,7 +159,7 @@
                         <ul>
                             <li>8 Passengers</li>
                             <li  v-if="props.distance > 1350"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                Fuel stop</li>
+                               {{ getFuelStop(1350)}} Fuel stop</li>
                         </ul>
                     </div>
                     <div class="jet-type-footer">
@@ -239,7 +239,7 @@
                         <ul>
                             <li>9 Passengers</li>
                             <li v-if="props.distance > 3530"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                Fuel stop</li>
+                               {{ getFuelStop(3530)}} Fuel stop</li>
                         </ul>
                     </div>
                     <div class="jet-type-footer">
@@ -298,17 +298,18 @@
         emitter.emit('updateSearch', {data : selectedTypes, path : 'selected-result', from : 'jettype'});
         // window.scrollBy(0, -200);
         setTimeout(function(){
-
              window.scrollTo({
                 top: document.getElementById('selectedJetType').scrollHeight * 1.4,
                 left: 0,
                 behavior: "smooth",
             });
+        },200);       
+    }
 
-
-
-        },200);
-       
+    function getFuelStop(range){
+        // if(range > props.distance )
+        
+        return parseInt(props.distance / range);
     }
 
     function selectType(e, value){

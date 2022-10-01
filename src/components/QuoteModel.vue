@@ -125,7 +125,7 @@
             if(e.target.name == 'name')
                 name_error.value = '';
             if(e.target.name == 'email'){
-                if(phonevalnumber(e.target.value)){
+                if(validateEmail(e.target.value)){
                     email_error.value = '';
                 }else{
                     email_error.value = 'Please enter this field';
