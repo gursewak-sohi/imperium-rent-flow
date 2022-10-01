@@ -127,7 +127,16 @@
             allDetails.at = value.data.dt;
             allDetails.dt = value.data.at;
 
+        }else if(value.from =='selected-jet'){
+             setTimeout(function(){
+                window.scrollTo({
+                    top: document.getElementById('chooseJetType').scrollHeight -100,
+                    left: 0,
+                    behavior: "smooth",
+                });
+            },500);
         }
+
 
         data_copy.value = allDetails;
 
