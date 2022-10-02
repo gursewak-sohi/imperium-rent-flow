@@ -657,6 +657,13 @@
     margin-top: 32px;
     border-top: 1px solid $gray-200;
     position: relative;
+    &>h4 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: $gray-500;
+        margin-top: 32px;
+    }
 }
 
 .selected-jet-block {

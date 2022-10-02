@@ -119,7 +119,7 @@
             }
             if(e.target.name == 'phone_number')
                 phone_number_error.value = 'Please enter this field';
-// 
+
         }else{
 
             if(e.target.name == 'name')

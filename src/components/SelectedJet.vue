@@ -1,5 +1,6 @@
 <template>
     <div class="selected-jet-wrapper">
+        <h4>Please review your charter request details. You can specify departure and arrival times:</h4>
         <div class="selected-jet-block">
             <div class="selected-jet-image light-gallery-wrapper">
                 <swiper
