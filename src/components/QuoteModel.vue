@@ -34,7 +34,7 @@
                 </div>
                 <div class="agree-mails">
                     <div class="checkbox-unit">
-                        <input id="agreeMails" type="checkbox" />
+                        <input id="agreeMails" type="checkbox" v-model="marketing_laterials" @click="checkthis($event)"/>
                         <label for="agreeMails">
                             <span>
                                 <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,6 +68,7 @@
     let phone_number_error = ref('');
     let message_error = ref('');
     let inProgress = ref(false);
+    let marketing_laterials = ref(false);
 
     
     
@@ -81,11 +82,15 @@
     function closeModal(){
          toggleModel.value = false;
     }
+
+    function checkthis(e){
+        marketing_laterials.value = e.target.checked;
+    }
     function submitForm(){
         inProgress.value = true;
         gError.value = "";
         if(name.value != '' && email.value != '' && validateEmail(email.value) && phone_number.value != ''){
-            emitter.emit('updateSearch', {data : {name : name.value, email : email.value, phone_number : phone_number.value, message : message.value }, path : '', from : 'quoteModel'});
+            emitter.emit('updateSearch', {data : {name : name.value, email : email.value, phone_number : phone_number.value, message : message.value, marketing_laterials : marketing_laterials.value }, path : '', from : 'quoteModel'});
         } else{
             inProgress.value = false;
             if(name.value == '')

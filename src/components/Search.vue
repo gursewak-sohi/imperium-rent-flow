@@ -58,6 +58,7 @@
         pax:'',
         at:'',
         dt:'',
+        marketing_materials : 'No',
         origin_details :{},
         destination_details :{},
 
@@ -105,6 +106,7 @@
             allDetails.email = value.data.email;
             allDetails.phone = value.data.phone_number;
             allDetails.msg = value.data.message;
+           allDetails.marketing_materials = value.data.marketing_laterials ? 'Yes' : 'No';
 
              axios.post('https://api.impjets.com/v1/ext.charter/request', allDetails, {
                 headers: {
