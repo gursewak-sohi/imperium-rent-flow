@@ -68,7 +68,7 @@
                     <div class="jet-type-footer">
                         <ul class="jet-details">
                             <li>Sample Aircraft
-                                <span>PC-12</span>
+                                <span>King Air 250, PC-12</span>
                             </li>
                              
                             <li>Max Nm Range

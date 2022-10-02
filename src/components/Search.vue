@@ -106,7 +106,7 @@
             allDetails.phone = value.data.phone_number;
             allDetails.msg = value.data.message;
 
-             axios.post('https://test.api.impjets.com/v1/ext.charter/request', allDetails, {
+             axios.post('https://api.impjets.com/v1/ext.charter/request', allDetails, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
