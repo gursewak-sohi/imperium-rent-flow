@@ -15,8 +15,8 @@
                             <img alt="Image" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                         </div>
                         <div class="gallery-text">
-                            <h5>King Air 250</h5>
-                            <p>7 Passengers
+                            <h5>PC-12</h5>
+                            <p>6-8 Passengers
                                 <span>&bull;</span>
                                 Turbo Prop</p>
                         </div>
@@ -27,7 +27,7 @@
                         </div>
                         <div class="gallery-text">
                             <h5>Citation XLS</h5>
-                            <p>8 Passengers
+                            <p>8-10 Passengers
                                 <span>&bull;</span>
                                 Light - Super-midsize jets</p>
                         </div>
@@ -37,8 +37,8 @@
                             <img alt="Image" src="/assets/images/aircraft/3-heavy/front.webp"/>
                         </div>
                         <div class="gallery-text">
-                            <h5>Hawker 1000</h5>
-                            <p>9 Passengers
+                            <h5>Gulfstream G500</h5>
+                            <p>12-15 Passengers
                                 <span>&bull;</span>
                                 Heavy jets</p>
                         </div>
