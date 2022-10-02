@@ -28,25 +28,25 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/main.jpeg"
+                                href="/charter/assets/images/aircraft/1-turbo/main.jpeg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery1" alt="" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside1.png"
+                                href="/charter/assets/images/aircraft/1-turbo/inside1.png"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/inside1.png"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside2.png"
+                                href="/charter/assets/images/aircraft/1-turbo/inside2.png"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/inside2.png"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/back.jpeg"
+                                href="/charter/assets/images/aircraft/1-turbo/back.jpeg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/back.jpeg"/>
                             </a>
@@ -68,7 +68,7 @@
                     <div class="jet-type-footer">
                         <ul class="jet-details">
                             <li>Sample Aircraft
-                                <span>King Air 250, PC-12</span>
+                                <span>PC-12</span>
                             </li>
                              
                             <li>Max Nm Range
@@ -116,37 +116,37 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery2" alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"
+                                href="/charter/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/main.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/Citation-CJ2/main.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/main.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/1.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/Citation-CJ2/1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/2.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/Citation-CJ2/2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/2.jpg"/>
                             </a>
@@ -215,19 +215,19 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/front.webp"
+                                href="/charter/assets/images/aircraft/3-heavy/front.webp"
                                 data-lg-size="1200-857">
                                 <img ref="gallery3" alt="" src="/assets/images/aircraft/3-heavy/front.webp"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/inside-1.webp"
+                                href="/charter/assets/images/aircraft/3-heavy/inside-1.webp"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/inside-1.webp"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/inside-2.jpg"
+                                href="/charter/assets/images/aircraft/3-heavy/inside-2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/inside-2.jpg"/>
                             </a>
@@ -253,14 +253,14 @@
                             
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
-                                <span>3,530 Miles</span>
+                                <span>3,530 miles</span>
                             </li>
                             
                             <li>Cruising Speed
                                 <span>517 mph</span>
                             </li>
                             <li>Cruising Altitude
-                                <span>7,008 Miles</span>
+                                <span>7,008 miles</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">

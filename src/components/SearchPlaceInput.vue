@@ -102,7 +102,7 @@
             if(searchTerm.value.length < 2)
              return;
 
-           await axios.post('https://test.api.impjets.com/v1/ext.charter/airport', {
+           await axios.post('https://api.impjets.com/v1/ext.charter/airport', {
                 srcterms: searchTerm.value
             }, {
                 headers: {

@@ -11,7 +11,7 @@
             <p>Please check your email inbox to review your estimated quote. A representative will contact you shortly to provide any additional help needed!</p>
             <div class="contact-info">
                 <p>You can always contact us</p>
-                <a href="tel: +1.310.817.2621 ">+1.310.817.2621 </a>
+                <!-- <a href="tel: +1.310.817.2621 ">+1.310.817.2621 </a> -->
                 <a href="mailto:support@bytheseat.com">Support@bytheseat.com</a>
             </div>
             <div class="modal-btns">
