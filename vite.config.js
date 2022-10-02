@@ -6,6 +6,6 @@ import vue from '@vitejs/plugin-vue'
 // imperium-rent-flow/
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '',
+    base: '/imperium-rent-flow/',
     plugins: [vue()],
 })

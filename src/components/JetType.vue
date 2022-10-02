@@ -28,25 +28,25 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/1-turbo/main.jpeg"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/main.jpeg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery1" alt="" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/1-turbo/inside1.png"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside1.png"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/inside1.png"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/1-turbo/inside2.png"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside2.png"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/inside2.png"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/1-turbo/back.jpeg"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/back.jpeg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/back.jpeg"/>
                             </a>
@@ -58,29 +58,29 @@
                     <div class="jet-type-body">
                         <h4>Turbo Prop</h4>
                         <ul>
-                            <li>7 Passengers</li>
-                            <li  v-if="props.distance > 1742"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                 Fuel stop</li>
-                                 <!-- {{ getFuelStop(1742)}} -->
+                            <li>6-8 Passengers</li>
+                            <li  v-if="props.distance > 2031"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                 {{ getFuelStop(2031)}} Fuel stop</li>
+                                
                         </ul>
                         
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
                             <li>Sample Aircraft
-                                <span>King Air 250, PC-12</span>
+                                <span>PC-12</span>
                             </li>
                              
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
-                                <span>1,742 miles</span>
+                                <span>2,031 miles</span>
                             </li>
                              
                             <li>Cruising Speed
-                                <span>420 km/h</span>
+                                <span>330 mph</span>
                             </li>
                             <li>Cruising Altitude
-                                <span>9,144 miles</span>
+                                <span>30,000 ft</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
@@ -116,40 +116,40 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery2" alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside1.webp"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-XLS/inside2.jpg"/>
                             </a>
-                            <a
+                            <!-- <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/Citation-CJ2/main.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/main.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/main.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/Citation-CJ2/1.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/Citation-CJ2/2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/Citation-CJ2/2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/Citation-CJ2/2.jpg"/>
-                            </a>
+                            </a> -->
                         </lightgallery>
                         <button @click="gallery2.click()" class="btn play-gallery">
                             <img src="/assets/images/svg/gallery-btn.svg" alt="icon"/>
@@ -158,28 +158,28 @@
                     <div class="jet-type-body">
                         <h4>Light - Super-midsize jets</h4>
                         <ul>
-                            <li>8 Passengers</li>
-                            <li  v-if="props.distance > 1350"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                Fuel stop</li>
-                                <!-- {{ getFuelStop(1350)}} -->
+                            <li>8-10 Passengers</li>
+                            <li  v-if="props.distance > 2415"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                               {{ getFuelStop(2415)}} Fuel stop</li>
+                                
                         </ul>
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
                             <li>Sample Aircraft
-                                <span>Citation CJ2, Citation XLS</span>
+                                <span>Citation XLS</span>
                             </li>
                              
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
-                                <span>1,350 miles</span>
+                                <span>2,415 miles</span>
                             </li>
                              
                             <li>Cruising Speed
-                                <span>445 mph</span>
+                                <span>507 mph</span>
                             </li>
                             <li>Cruising Altitude
-                                <span>8,500 miles</span>
+                                <span>45,000 ft</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
@@ -198,7 +198,7 @@
                     <div class="jet-type-head light-gallery-wrapper">
                         <div class="result-gallery-top light-gallery">  
                             <div class="result-image">
-                                <img alt="Image" src="/assets/images/aircraft/3-heavy/front.webp"/>
+                                <img alt="Image" src="/assets/images/aircraft/3-heavy/Gulfstream-G550/front1.jpg"/>
                             </div>
                         </div>
                         <lightgallery
@@ -215,21 +215,39 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/3-heavy/front.webp"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/Gulfstream-G550/front1.jpg"
                                 data-lg-size="1200-857">
-                                <img ref="gallery3" alt="" src="/assets/images/aircraft/3-heavy/front.webp"/>
+                                <img ref="gallery3" alt="" src="/assets/images/aircraft/3-heavy/Gulfstream-G550/front1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/3-heavy/inside-1.webp"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy//Gulfstream-G550/front2.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="" src="/assets/images/aircraft/3-heavy/inside-1.webp"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy//Gulfstream-G550/front2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/3-heavy/inside-2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy//Gulfstream-G550/inside1.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="" src="/assets/images/aircraft/3-heavy/inside-2.jpg"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy//Gulfstream-G550/inside1.jpg"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy//Gulfstream-G550/inside2.jpg"
+                                data-lg-size="1200-857">
+                                <img alt="" src="/assets/images/aircraft/3-heavy//Gulfstream-G550/inside2.jpg"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy//Gulfstream-G550/inside3.jpg"
+                                data-lg-size="1200-857">
+                                <img alt="" src="/assets/images/aircraft/3-heavy//Gulfstream-G550/inside3.jpg"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy//Gulfstream-G550/back.jpg"
+                                data-lg-size="1200-857">
+                                <img alt="" src="/assets/images/aircraft/3-heavy//Gulfstream-G550/back.jpg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery3.click()" class="btn play-gallery">
@@ -239,28 +257,28 @@
                     <div class="jet-type-body">
                         <h4>Heavy jets</h4>
                         <ul>
-                            <li>9 Passengers</li>
-                            <li v-if="props.distance > 3530"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                Fuel stop</li>
-                                <!-- {{ getFuelStop(3530)}} -->
+                            <li>12-15 Passengers</li>
+                            <li v-if="props.distance > 6100"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                {{ getFuelStop(6100)}} Fuel stop</li>
+                               
                         </ul>
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
                             <li>Sample Aircraft
-                                <span>Hawker 1000</span>
+                                <span>Gulfstream G500</span>
                             </li>
                             
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
-                                <span>3,530 miles</span>
+                                <span>6,100 miles</span>
                             </li>
                             
                             <li>Cruising Speed
-                                <span>517 mph</span>
+                                <span>575 mph</span>
                             </li>
                             <li>Cruising Altitude
-                                <span>7,008 miles</span>
+                                <span>51,000 ft</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
