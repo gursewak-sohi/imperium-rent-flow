@@ -59,8 +59,8 @@
                         <h4>Turboprop</h4>
                         <ul>
                             <li>6-8 Passengers</li>
-                            <li  v-if="props.distance > 2031"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                 {{ getFuelStop(2031)}} Fuel stop</li>
+                            <li  v-if="props.distance > 1765"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                 {{ getFuelStop(1765)}} Fuel stop</li>
                                 
                         </ul>
                         
@@ -73,11 +73,11 @@
                              
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
-                                <span>2,031 miles</span>
+                                <span>1,765 miles</span>
                             </li>
                              
                             <li>Cruising Speed
-                                <span>285 kts</span>
+                                <span>290 kts</span>
                             </li>
                             <li>Cruising Altitude
                                 <span>30,000 ft</span>
@@ -159,8 +159,8 @@
                         <h4>Light - Super-midsize jets</h4>
                         <ul>
                             <li>8-10 Passengers</li>
-                            <li  v-if="props.distance > 2415"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                               {{ getFuelStop(2415)}} Fuel stop</li>
+                            <li  v-if="props.distance > 2100"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                               {{ getFuelStop(2100)}} Fuel stop</li>
                                 
                         </ul>
                     </div>
@@ -172,11 +172,11 @@
                              
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
-                                <span>2,415 miles</span>
+                                <span>2,100 miles</span>
                             </li>
                              
                             <li>Cruising Speed
-                                <span>441 kts</span>
+                                <span>433 kts</span>
                             </li>
                             <li>Cruising Altitude
                                 <span>45,000 ft</span>
@@ -258,8 +258,8 @@
                         <h4>Heavy jets</h4>
                         <ul>
                             <li>12-15 Passengers</li>
-                            <li v-if="props.distance > 6100"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                {{ getFuelStop(6100)}} Fuel stop</li>
+                            <li v-if="props.distance > 3800"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                {{ getFuelStop(3800)}} Fuel stop</li>
                                
                         </ul>
                     </div>
@@ -271,11 +271,11 @@
                             
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
-                                <span>6,100 miles</span>
+                                <span>3,800 miles</span>
                             </li>
                             
                             <li>Cruising Speed
-                                <span>516 kts</span>
+                                <span>566 kts</span>
                             </li>
                             <li>Cruising Altitude
                                 <span>51,000 ft</span>

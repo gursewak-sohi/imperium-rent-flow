@@ -143,8 +143,8 @@
     var tt = 0;
     var ap = [' AM', ' PM'];
     let aircraft = ['Turbo','Light','Heavy'];
-    let speed = [285,441,516];
-    let range = [2031,2415,6100];
+    let speed = [290,433,566];
+    let range = [1765,2100,3800];
     let travelTime = 0;
 
     for (var i=0;tt<24*60; i++) {
