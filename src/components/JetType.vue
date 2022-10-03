@@ -73,7 +73,7 @@
                              
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
-                                <span>1,765 miles</span>
+                                <span>1,765 nmiles</span>
                             </li>
                              
                             <li>Cruising Speed
@@ -172,7 +172,7 @@
                              
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
-                                <span>2,100 miles</span>
+                                <span>2,100 nmiles</span>
                             </li>
                              
                             <li>Cruising Speed
@@ -271,7 +271,7 @@
                             
                             <li>Max Nm Range
                                 <!-- <span>{{props.distance}} miles</span> -->
-                                <span>3,800 miles</span>
+                                <span>3,800 nmiles</span>
                             </li>
                             
                             <li>Cruising Speed
