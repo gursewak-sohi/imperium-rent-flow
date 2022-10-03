@@ -7,7 +7,8 @@
     @focusout="handleFocusOut"
         type="text"
         placeholder="Select or search airport"
-        v-model="searchTerm"
+        :value="searchTerm" 
+        @input="e => searchTerm = e.target.value"
         @click="initialize()"
         @keyup="searchOrigin()"/>
         <ul class="airport-listing" v-if="typeof list != 'undefined' && list.length  && showList">
