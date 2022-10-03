@@ -122,8 +122,6 @@
             }, (error) => {
                 console.log(error);
             });
-            //   emitter.emit('openQuoteMOdel', false);
-            //     emitter.emit('openConfirmModel', true);
 
         }else if(value.from =='selected-jet-data'){
             allDetails.at = value.data.dt;
@@ -131,24 +129,10 @@
 
         }else if(value.from =='selected-jet'){
              setTimeout(function(){
-                // window.scrollTo({
-                //     top: document.getElementById('chooseJetType').scrollHeight -100,
-                //     left: 0,
-                //     behavior: "smooth",
-                // });
                 document.getElementById('chooseJetType').scrollIntoView({behavior: "smooth", block: "start"});
-                
             },500);
         }
-
-
         data_copy.value = allDetails;
-
-
-        // Make Api Call....
-
-        
-            
     });   
 
     function calcCrow(lat1, lon1, lat2, lon2) 
@@ -157,7 +141,6 @@
         let $pointA = {'lat': lat1, 'lng':lon1 };
         let $pointB = {'lat':lat2, 'lng':lon2};
 
-        // let d = calc_distance(lat1, lat2,lon1, lon2);
         let d = impapi_distance($pointA, $pointB);
         console.log(d, 'New  Distnce')
         distance.value = d.toFixed(2);
@@ -195,6 +178,5 @@
         return Value * Math.PI / 180;
     }
 
-    
     
 </script>

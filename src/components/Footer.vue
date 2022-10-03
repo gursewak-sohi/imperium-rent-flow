@@ -85,7 +85,6 @@
                     </div>
                 </div>
                 <ul class="footer-companies">
-                    <!-- <li><img src="/assets/images/home/companies/bbb.svg" width="116" height="43" alt="bbb"></li> -->
                     <li>
                         <a class="frhzbus" target="_blank"
                             href="https://www.bbb.org/us/ca/los-angeles/profile/aviation-services/imperium-jets-inc-1216-

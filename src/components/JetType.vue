@@ -28,25 +28,25 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/main.jpeg"
+                                href="/charter/assets/images/aircraft/1-turbo/main.jpeg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery1" alt="" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside1.jpg"
+                                href="/charter/assets/images/aircraft/1-turbo/inside1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/inside1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside2.jpg"
+                                href="/charter/assets/images/aircraft/1-turbo/inside2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/inside2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside3.jpeg"
+                                href="/charter/assets/images/aircraft/1-turbo/inside3.jpeg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/inside3.jpeg"/>
                             </a>
@@ -73,7 +73,6 @@
                             </li>
                              
                             <li>Max Nm Range
-                                <!-- <span>{{props.distance}} miles</span> -->
                                 <span>1,765 nmiles</span>
                             </li>
                              
@@ -117,37 +116,37 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/front.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/front.jpg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery2" alt="" src="/assets/images/aircraft/2-light-mid/front.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/inside1.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/inside1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/inside1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/inside2.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/inside2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/inside2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/inside3.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/inside3.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/inside3.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/inside4.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/inside4.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/inside4.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/inside5.jpg"
+                                href="/charter/assets/images/aircraft/2-light-mid/inside5.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/inside5.jpg"/>
                             </a>
@@ -173,7 +172,6 @@
                             </li>
                              
                             <li>Max Nm Range
-                                <!-- <span>{{props.distance}} miles</span> -->
                                 <span>2,100 nmiles</span>
                             </li>
                              
@@ -217,43 +215,43 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/main.jpg"
+                                href="/charter/assets/images/aircraft/3-heavy/heavy/main.jpg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery3" alt="" src="/assets/images/aircraft/3-heavy/heavy/main.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/back.jpg"
+                                href="/charter/assets/images/aircraft/3-heavy/heavy/back.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/back.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside1.jpg"
+                                href="/charter/assets/images/aircraft/3-heavy/heavy/inside1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside2.jpg"
+                                href="/charter/assets/images/aircraft/3-heavy/heavy/inside2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside3.jpg"
+                                href="/charter/assets/images/aircraft/3-heavy/heavy/inside3.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside3.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside4.jpg"
+                                href="/charter/assets/images/aircraft/3-heavy/heavy/inside4.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside4.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside5.jpg"
+                                href="/charter/assets/images/aircraft/3-heavy/heavy/inside5.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside5.jpg"/>
                             </a>
@@ -278,7 +276,6 @@
                             </li>
                             
                             <li>Max Nm Range
-                                <!-- <span>{{props.distance}} miles</span> -->
                                 <span>3,800 nmiles</span>
                             </li>
                             
@@ -320,7 +317,6 @@
             distance: String,
     })
 
-    
 
 
     function goToNext() {
@@ -328,17 +324,11 @@
         emitter.emit('updateSearch', {data : selectedTypes, path : 'selected-result', from : 'jettype'});
         // window.scrollBy(0, -200);
         setTimeout(function(){
-            //  window.scrollTo({
-            //     top: document.getElementById('selectedJetType').scrollHeight * 1.4,
-            //     left: 0,
-            //     behavior: "smooth",
-            // });
             document.getElementById('selectedJetType').scrollIntoView({behavior: "smooth", block: "start"});
         },200);       
     }
 
     function getFuelStop(range){
-        // if(range > props.distance )
         return parseInt(props.distance / range);
     }
 

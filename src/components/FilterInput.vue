@@ -220,32 +220,9 @@
             togglePassangerCount.value = false;
             buttonType.value = 'change';
             emitter.emit('updateSearch', {data : searchRequest, path : 'filter-result', from: 'search'});
-            //  window.scrollTo({
-            //     top: document.getElementById('chooseJetType').offsetTop,
-            //     left: 0,
-            //     behavior: "smooth",
-            // });
+            
             setTimeout(function(){
-                // window.scrollTo({
-                //     top: document.getElementById('chooseJetType').scrollHeight,
-                //     left: 0,
-                //     behavior: "smooth",
-                // });
                 document.getElementById('chooseJetType').scrollIntoView({behavior: "smooth", block: "start"});
-                
-                
-                // var node = document.getElementById('chooseJetType');
-                // var yourHeight = 75;
-
-                // // scroll to your element
-                // node.scrollIntoView(true);
-
-                // // now account for fixed header
-                // var scrolledY = window.scrollY;
-
-                // if(scrolledY){
-                //     window.scroll(0, scrolledY - yourHeight);
-                // }
             },500);
              
         }

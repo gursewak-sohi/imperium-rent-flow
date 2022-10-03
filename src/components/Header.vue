@@ -23,7 +23,7 @@
                             Call
                             <span>support center</span>
                         </a> -->
-                        <a class="btn-link" href="mailto:support@bytheseat.com">support@bytheseat.com </a>
+                        <a class="btn-link" href="mailto:support@impjets.com">support@impjets.com </a>
                         <!-- <a class="btn-link" href="tel:+13108172621">+1.310.817.2621  </a> -->
                     </div>
                 </div>
