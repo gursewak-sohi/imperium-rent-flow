@@ -4,7 +4,7 @@
             <!-- Home Header -->
             <nav class="header-nav">
                 <a class="logo" target="_blank" href="https://www.bytheseat.com/">
-                    <img src="/assets/images/logo.png" width="132" height="51" alt="icon"/>
+                    <img src="/assets/images/imp-charter-blue.png" width="132" height="51" alt="icon"/>
                 </a>
 
                 <div class="header-toggle-items">

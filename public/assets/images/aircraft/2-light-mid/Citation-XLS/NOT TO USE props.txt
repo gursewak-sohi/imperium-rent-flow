@@ -1,8 +1,0 @@
-
-Mid size jet
-sample aircraft: Citation XLS
-price: $4,300 / Hour
-max Pax: 10
-Cruising speed: 486 mph
-Range: 1,687 Miles
-Altitude: 13,716 Miles

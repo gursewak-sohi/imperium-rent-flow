@@ -23,7 +23,7 @@
                     </SwiperSlide>
                     <SwiperSlide v-if="props.data.aircraft.indexOf(2) != -1" data-no="2">
                         <div class="result-image">
-                            <img alt="Image" src="/assets/images/aircraft/2-light-mid/Citation-XLS/front.jpg"/>
+                            <img alt="Image" src="/assets/images/aircraft/2-light-mid/front.jpg"/>
                         </div>
                         <div class="gallery-text">
                             <h5>Citation XLS</h5>
