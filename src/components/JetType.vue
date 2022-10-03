@@ -56,7 +56,7 @@
                         </button>
                     </div>
                     <div class="jet-type-body">
-                        <h4>Turbo Prop</h4>
+                        <h4>Turboprop</h4>
                         <ul>
                             <li>6-8 Passengers</li>
                             <li  v-if="props.distance > 2031"><img src="/assets/images/svg/pump.svg" alt="icon"/>

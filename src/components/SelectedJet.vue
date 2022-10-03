@@ -18,7 +18,7 @@
                             <h5>PC-12</h5>
                             <p>6-8 Passengers
                                 <span>&bull;</span>
-                                Turbo Prop</p>
+                                Turboprop</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide v-if="props.data.aircraft.indexOf(2) != -1" data-no="2">
