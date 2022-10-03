@@ -48,8 +48,8 @@ import Search from '../components/Search.vue'
                     </div> -->
                     <div class="support-unit">
                         <h5>Contact us:</h5>
-                        <a class="support-content" href="mailto:support@bytheseat.com">
-                            <img src="/assets/images/svg/emailsvg.svg" alt="icon" />Support@bytheseat.com
+                        <a class="support-content" href="mailto:support@impjets.com">
+                            <img src="/assets/images/svg/emailsvg.svg" alt="icon" />support@impjets.com
                         </a>
                         
                     </div>
