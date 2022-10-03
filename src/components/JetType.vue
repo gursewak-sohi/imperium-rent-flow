@@ -77,7 +77,7 @@
                             </li>
                              
                             <li>Cruising Speed
-                                <span>330 mph</span>
+                                <span>285 kts</span>
                             </li>
                             <li>Cruising Altitude
                                 <span>30,000 ft</span>
@@ -176,7 +176,7 @@
                             </li>
                              
                             <li>Cruising Speed
-                                <span>507 mph</span>
+                                <span>441 kts</span>
                             </li>
                             <li>Cruising Altitude
                                 <span>45,000 ft</span>
@@ -275,7 +275,7 @@
                             </li>
                             
                             <li>Cruising Speed
-                                <span>575 mph</span>
+                                <span>516 kts</span>
                             </li>
                             <li>Cruising Altitude
                                 <span>51,000 ft</span>
@@ -331,7 +331,6 @@
 
     function getFuelStop(range){
         // if(range > props.distance )
-        
         return parseInt(props.distance / range);
     }
 
