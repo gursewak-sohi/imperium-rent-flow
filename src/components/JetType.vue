@@ -34,22 +34,23 @@
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside1.png"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside1.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="" src="/assets/images/aircraft/1-turbo/inside1.png"/>
+                                <img alt="" src="/assets/images/aircraft/1-turbo/inside1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside2.png"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside2.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="" src="/assets/images/aircraft/1-turbo/inside2.png"/>
+                                <img alt="" src="/assets/images/aircraft/1-turbo/inside2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/back.jpeg"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside3.jpeg"
                                 data-lg-size="1200-857">
-                                <img alt="" src="/assets/images/aircraft/1-turbo/back.jpeg"/>
+                                <img alt="" src="/assets/images/aircraft/1-turbo/inside3.jpeg"/>
                             </a>
+                             
                         </lightgallery>
                         <button @click="gallery1.click()" class="btn play-gallery">
                             <img src="/assets/images/svg/gallery-btn.svg" alt="icon"/>
@@ -198,7 +199,7 @@
                     <div class="jet-type-head light-gallery-wrapper">
                         <div class="result-gallery-top light-gallery">  
                             <div class="result-image">
-                                <img alt="Image" src="/assets/images/aircraft/3-heavy/Gulfstream-G550/front1.jpg"/>
+                                <img alt="Image" src="/assets/images/aircraft/3-heavy/heavy/main.jpg"/>
                             </div>
                         </div>
                         <lightgallery
@@ -215,39 +216,45 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/Gulfstream-G550/front1.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/main.jpg"
                                 data-lg-size="1200-857">
-                                <img ref="gallery3" alt="" src="/assets/images/aircraft/3-heavy/Gulfstream-G550/front1.jpg"/>
+                                <img ref="gallery3" alt="" src="/assets/images/aircraft/3-heavy/heavy/main.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy//Gulfstream-G550/front2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/back.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="" src="/assets/images/aircraft/3-heavy//Gulfstream-G550/front2.jpg"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy/heavy/back.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy//Gulfstream-G550/inside1.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside1.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="" src="/assets/images/aircraft/3-heavy//Gulfstream-G550/inside1.jpg"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy//Gulfstream-G550/inside2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside2.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="" src="/assets/images/aircraft/3-heavy//Gulfstream-G550/inside2.jpg"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy//Gulfstream-G550/inside3.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside3.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="" src="/assets/images/aircraft/3-heavy//Gulfstream-G550/inside3.jpg"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside3.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy//Gulfstream-G550/back.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside4.jpg"
                                 data-lg-size="1200-857">
-                                <img alt="" src="/assets/images/aircraft/3-heavy//Gulfstream-G550/back.jpg"/>
+                                <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside4.jpg"/>
+                            </a>
+                            <a
+                                class="result-image"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside5.jpg"
+                                data-lg-size="1200-857">
+                                <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside5.jpg"/>
                             </a>
                         </lightgallery>
                         <button @click="gallery3.click()" class="btn play-gallery">

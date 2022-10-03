@@ -34,7 +34,7 @@
                     </SwiperSlide>
                     <SwiperSlide v-if="props.data.aircraft.indexOf(3) != -1" data-no="3">
                         <div class="result-image">
-                            <img alt="Image" src="/assets/images/aircraft/3-heavy/front.webp"/>
+                            <img alt="Image" src="/assets/images/aircraft/3-heavy/heavy/main.jpg"/>
                         </div>
                         <div class="gallery-text">
                             <h5>Gulfstream G500</h5>
