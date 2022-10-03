@@ -143,7 +143,7 @@
     var tt = 0;
     var ap = [' AM', ' PM'];
     let aircraft = ['Turbo','Light','Heavy'];
-    let speed = [330,507,575];
+    let speed = [285,441,516];
     let range = [2031,2415,6100];
     let travelTime = 0;
 
@@ -188,12 +188,12 @@
             if(props.distance > range[all[key] - 1]){
                 let extraTimeTaken = props.distance / range[all[key] - 1];
                 extraHour += parseInt(extraTimeTaken);
-                extraHour += extraTimeTaken%1  > 0 ? 0.5 : 0;
+                // extraHour += extraTimeTaken%1  > 0 ? 1 : 0;
 
 
             }
 
-            console.log(extraHour);
+            console.log(extraHour, 'extra hour');
             sum += parseFloat(((props.distance /speed[all[key] - 1]) + extraHour).toFixed(2));
             count++;
         }

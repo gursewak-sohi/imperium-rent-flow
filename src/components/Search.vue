@@ -154,7 +154,12 @@
     function calcCrow(lat1, lon1, lat2, lon2) 
     {
 
-        let d = calc_distance(lat1, lat2,lon1, lon2);
+        let $pointA = {'lat': lat1, 'lng':lon1 };
+        let $pointB = {'lat':lat2, 'lng':lon2};
+
+        // let d = calc_distance(lat1, lat2,lon1, lon2);
+        let d = impapi_distance($pointA, $pointB);
+        console.log(d, 'New  Distnce')
         distance.value = d.toFixed(2);
     }
 
@@ -169,6 +174,18 @@
         Math.sin(Δλ/2) * Math.sin(Δλ/2);
         const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         return (c * R * 0.000621371);
+    }
+
+    function impapi_distance($pointA, $pointB){
+        const $R = 6371e3; // metres
+        let M_PI = Math.PI;
+        let $x1 = $pointA['lat'] * M_PI/180; // φ, λ in radians
+        let $x2 = $pointB['lat'] * M_PI/180;
+        let $dx = ($pointA['lat'] - $pointB['lat']) * M_PI/180;
+        let $dy = ($pointB['lng'] - $pointA['lng']) * M_PI/180;
+        let $a = Math.sin($dx/2)* Math.sin($dx/2) + Math.cos($x1) * Math.cos($x2) * Math.sin($dy/2) * Math.sin($dy/2);
+        let $c = 2 * Math.atan2(Math.sqrt($a), Math.sqrt(1-$a));
+        return ($c * $R *  0.000621371) * 0.868976;
     }
 
 
