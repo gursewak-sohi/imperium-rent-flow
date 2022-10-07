@@ -23,10 +23,10 @@
                     <img src="/assets/images/svg/depart.svg" alt="icon"/>Depart
                 </div>
                
-                <DatePicker class="single-input"   v-model="date" :columns="1" :min-date="new Date()" @dayclick="onDayClick(event)" :is-required="true" ref="calendar" >
-                    <template #default="{ inputValue ,togglePopover }">
+                <DatePicker  is-range class="single-input"   v-model="date" :columns="1" :min-date="new Date()" @dayclick="onDayClick(event)" :is-required="true" ref="calendar" >
+                    <template #default="{ range ,togglePopover }">
                           
-                        <input @click="togglePopover()" id="datepicker" readonly  :value="inputValue" />
+                        <input @click="togglePopover()" id="datepicker" readonly  :value="range" />
                     </template>
                 </DatePicker>
                 
@@ -99,6 +99,10 @@
     let toggleIcon = ref(false);
 
     let incredecre = ref(false);
+    let range = ref({
+      start: new Date(2020, 0, 1),
+      end: new Date(2020, 0, 5)
+    });
 
 
     let searchRequest = {
