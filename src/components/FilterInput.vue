@@ -1,79 +1,87 @@
 <template>
-    <div data-trip="round" id="roundTripBlock" :class="{'step-3' : buttonType == '', 'step-1' : buttonType != ''}" class="single-trip">
-        <div class="search-box">
-            <div class="search-field">
-                <div class="field-title">
-                    <img src="/assets/images/svg/origin.svg" alt="icon"/>Origin
+    <div data-trip="round" id="roundTripBlock" :class="{'step-3' : buttonType == '', 'step-1' : buttonType != '', 'single-trip':props.tripType != 'multi-trip' , 'mutiple-search-block':props.tripType != 'multi-trip'}" >
+        <div :class="{'mutiple-trips':props.tripType == 'multi-trip', 'step-1' : true}" v-for="(row, index) in allTrip"  :key="row">
+            <h2 v-if="props.tripType == 'multi-trip'">Trip {{index + 1}}</h2>
+            <div class="search-box">
+                <div class="search-field">
+                    <div class="field-title">
+                        <img src="/assets/images/svg/origin.svg" alt="icon"/>Origin
+                    </div>
+                    <SearchPlaceinput type="origin" :defaultData="defaultOrigin"   />
                 </div>
-                <SearchPlaceinput type="origin" :defaultData="defaultOrigin"   />
-            </div>
-            <div class="field-swap" :class="{ 'swapped' : toggleIcon}">
-                <button @click="exchangeOriDest()">
-                    <img src="/assets/images/svg/left-right.svg" alt="icon"/>
-                </button>
-            </div>
-            <div class="search-field">
-                <div class="field-title">
-                    <img src="/assets/images/svg/destination.svg" alt="icon"/>Destination
-                </div>
-                <SearchPlaceinput type="destination"  :defaultValue="defaultDest"/>
-            </div>
-            <div class="search-field">
-                <div class="field-title">
-                    <img src="/assets/images/svg/depart.svg" alt="icon"/>Depart
-                </div>
-               
-                <DatePicker  is-range class="single-input"   v-model="date" :columns="1" :min-date="new Date()" @dayclick="onDayClick(event)" :is-required="true" ref="calendar" >
-                    <template #default="{ range ,togglePopover }">
-                          
-                        <input @click="togglePopover()" id="datepicker" readonly  :value="range" />
-                    </template>
-                </DatePicker>
-                
-                <!-- Code for dater range picker -->
-                <!-- <DatePicker v-model="range" :columns="2" is-range> 
-                    <template v-slot="{ inputValue, inputEvents}">
-                        <div>
-                            <input type="text" id="start" :value="inputValue.start" v-on="inputEvents.start">
-                            <input type="text" id="end" :value="inputValue.end" v-on="inputEvents.end">
-                        </div>
-                    </template>
-                </DatePicker> -->
-            </div>
-            <div class="search-field">
-                <div class="field-title">
-                    <img src="/assets/images/svg/travelers.svg" alt="icon"/>Passengers
-                </div>
-                <div class="dropdown-block">
-                    <button
-                        class="btn-dropdown"
-                        @focusout.self="handleFocusOut"
-                        @click="togglePassangerCountFun()">{{ passangerCount }}
-                        {{ passangerCount > 1 ? 'Passengers' : 'Passenger'}}
+                <div class="field-swap" :class="{ 'swapped' : toggleIcon}">
+                    <button @click="exchangeOriDest()">
+                        <img src="/assets/images/svg/left-right.svg" alt="icon"/>
                     </button>
-                    <div
-                        v-bind:class="['dropdown', { 'active' : togglePassangerCount }]"
-                        class="">
-                        <div class="counter">
-                            <button
-                                class="btn btn-counter"
-                                @focusout.self="handleFocusOut"
-                                @click.stop.prevent="changeCount($event,'decrement')">-</button>
-                            <div class="count">{{  passangerCount }}</div>
-                            <button class="btn btn-counter" @focusout.self="handleFocusOut" @click.stop.prevent="changeCount($event,'increment')">+</button>
+                </div>
+                <div class="search-field">
+                    <div class="field-title">
+                        <img src="/assets/images/svg/destination.svg" alt="icon"/>Destination
+                    </div>
+                    <SearchPlaceinput type="destination"  :defaultValue="defaultDest"/>
+                </div>
+                <div class="search-field">
+                    <div class="field-title">
+                        <img src="/assets/images/svg/depart.svg" alt="icon"/>Depart
+                    </div>
+
+
+                    <DatePicker v-if="props.tripType !== 'one-way'" is-range class="single-input"   v-model="range" :columns="1" :min-date="new Date()" @dayclick="onDayClick(event)" :is-required="true" ref="calendar" >
+                        <template #default="{ range ,togglePopover }">
+                            
+                            <input @click="togglePopover()" id="datepicker" readonly  :value="range" />
+                        </template>
+                    </DatePicker>
+                
+                    <DatePicker v-if="props.tripType === 'one-way'" class="single-input"   v-model="date" :columns="1" :min-date="new Date()" @dayclick="onDayClick(event)" :is-required="true" ref="calendar" >
+                        <template #default="{ date ,togglePopover }">
+                            
+                            <input @click="togglePopover()" id="datepicker" readonly  :value="date" />
+                        </template>
+                    </DatePicker>
+                </div>
+                <div class="search-field">
+                    <div class="field-title">
+                        <img src="/assets/images/svg/travelers.svg" alt="icon"/>Passengers
+                    </div>
+                    <div class="dropdown-block">
+                        <button
+                            class="btn-dropdown"
+                            @focusout.self="handleFocusOut"
+                            @click="togglePassangerCountFun()">{{ passangerCount }}
+                            {{ passangerCount > 1 ? 'Passengers' : 'Passenger'}}
+                        </button>
+                        <div
+                            v-bind:class="['dropdown', { 'active' : togglePassangerCount }]"
+                            class="">
+                            <div class="counter">
+                                <button
+                                    class="btn btn-counter"
+                                    @focusout.self="handleFocusOut"
+                                    @click.stop.prevent="changeCount($event,'decrement')">-</button>
+                                <div class="count">{{  passangerCount }}</div>
+                                <button class="btn btn-counter" @focusout.self="handleFocusOut" @click.stop.prevent="changeCount($event,'increment')">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="search-button">
-                <button class="btn btn-primary" @click="search()" v-if="buttonType === 'next'">
-                    Next
-                    <img src="/assets/images/svg/next.svg" alt="icon"/>
+                <button data-btn="remove" class="btn btn-remove" type="button" v-if="props.tripType == 'multi-trip'" @click="removeTrip(index)">
+                    <img src="assets/images/svg/delete-row.svg" alt="remove"/>
                 </button>
-                <button class="btn btn-primary" @click="search()" v-if="buttonType === 'change'">
-                    Change
-                </button>
+                <div class="search-button" v-if="props.tripType != 'multi-trip'">
+                    <button class="btn btn-primary" @click="search()" v-if="buttonType === 'next'">
+                        Next
+                        <img src="/assets/images/svg/next.svg" alt="icon"/>
+                    </button>
+                    <button class="btn btn-primary" @click="search()" v-if="buttonType === 'change'">
+                        Change
+                    </button>
+                </div>
             </div>
+        </div>
+        <div class="mutiple-search-button" v-if="props.tripType == 'multi-trip'">
+            <button class="btn btn-md btn-dark-outline btn-iconed-lg" @click="addTrip()"><img src="assets/images/svg/plus.svg" alt="icon"  > Add trip</button>
+            <button id="searchMultiTrip" class="btn btn-md btn-primary btn-iconed-lg">Next <img src="assets/images/svg/next.svg" alt="icon"/></button>
         </div>
     </div>
 </template>
@@ -85,7 +93,14 @@
     import { DatePicker } from 'v-calendar';
     import 'v-calendar/dist/style.css';
     import {ref, reactive} from 'vue'
+
+    const props = defineProps({
+            tripType: String,
+    })
     const picked = ref(new Date())
+    let allTrip = ref([1]);
+
+    
     const togglePassangerCount = ref(false);
     const passangerCount = ref(1);
     const date = ref(new Date());
@@ -100,9 +115,25 @@
 
     let incredecre = ref(false);
     let range = ref({
-      start: new Date(2020, 0, 1),
-      end: new Date(2020, 0, 5)
+      start: new Date(),
+      end: new Date()
     });
+
+    function addTrip(){
+        let arr = allTrip.value;
+        let last = arr[arr.length -1];
+        arr.push(++last);
+        console.log(arr);
+    }
+
+    function removeTrip(index){
+        let arr = allTrip.value;
+        arr.splice(index, 1);
+        console.log(arr);
+
+    }
+
+    
 
 
     let searchRequest = {
@@ -135,13 +166,33 @@
        buttonType.value = 'next';
     });
 
+    function dateToYMD(date) {
+        var d = date.getDate();
+        var m = date.getMonth() + 1; //Month from 0 to 11
+        var y = date.getFullYear();
+        return ''+ (d <= 9 ? '0' + d : d) + '/' + (m<=9 ? '0' + m : m) + '/'   + y ;
+    }
+    // if(props.tripType === 'one-way'){
+    //         document.getElementById('datepicker').placeholder = dateToYMD(date.value);
+    //    }else{
+    //         document.getElementById('datepicker').placeholder = dateToYMD(range.value.start) + '-'+ dateToYMD(range.value.end);
+
+    //    }
+
 
     function onDayClick(e){
-        if(!date.value)
-        date.value = lastDay;
-        console.log(date.value, 'My Date Value');
-        emitter.emit('focuInput', {type : 'passengerCount'});
 
+
+       if(props.tripType === 'one-way'){
+            if(!date.value)
+                date.value = lastDay;
+            emitter.emit('focuInput', {type : 'passengerCount'});
+            document.getElementById('datepicker').placeholder = dateToYMD(date.value);
+       }else{
+            document.getElementById('datepicker').placeholder = dateToYMD(range.value.start) + '-'+ dateToYMD(range.value.end);
+            date.value = dateToYMD(range.value.start) + '-'+ dateToYMD(range.value.end);
+
+       }
     }
     // 
     

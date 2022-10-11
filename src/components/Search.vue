@@ -4,26 +4,26 @@
                 <div class="mega-search">
                     <div id="searchTypeBlock" class="radio-options">
                         <div class="radio-unit">
-                            <input id="oneWay" type="radio" value="one-way" name="flight-type" checked />
+                            <input id="oneWay" type="radio" @click="chageTripType('one-way')" value="one-way" name="flight-type" checked />
                             <label for="oneWay">
                                 <span></span>One way
                         </label>
                         </div> 
                          <div class="radio-unit">
-                            <input id="roundTrip" type="radio" value="round-trip" name="flight-type" />
+                            <input id="roundTrip" type="radio" @click="chageTripType('round-trip')" value="round-trip" name="flight-type" />
                             <label for="roundTrip">
                                 <span></span>Round trip
                             </label>
                         </div>
                         <div class="radio-unit">
-                            <input id="multiTrip" type="radio" value="multi-trip" name="flight-type" />
+                            <input id="multiTrip" type="radio" @click="chageTripType('multi-trip')" value="multi-trip" name="flight-type" />
                             <label for="multiTrip">
                                 <span></span>Multi trip
                             </label>
                         </div>
                     </div>
                     <!-- Round Trip -->
-                    <FilterInput />
+                    <FilterInput :tripType="tripType"/>
                     <!-- Jet Type -->
                     <JetType v-if="step == 'filter-result'" :distance="distance"/>
                     <!-- Selected Jet  -->
@@ -45,6 +45,9 @@
 
     let step = ref('initial');  
     let distance = ref('Not Found.');
+
+    let tripType = ref('one-way');
+    let dataArray = ref([]);
     
     let allDetails = {
         name : '' ,
@@ -97,6 +100,7 @@
                 allDetails.origin_details.coords_long, 
                 allDetails.destination_details.coords_lat, 
                 allDetails.destination_details.coords_long);
+            dataArray.push(allDetails);
             setTimeout(function(){step.value = value.path;},400)
 
         }else if(value.from == 'jettype'){
@@ -169,6 +173,11 @@
         let $a = Math.sin($dx/2)* Math.sin($dx/2) + Math.cos($x1) * Math.cos($x2) * Math.sin($dy/2) * Math.sin($dy/2);
         let $c = 2 * Math.atan2(Math.sqrt($a), Math.sqrt(1-$a));
         return ($c * $R *  0.000621371) * 0.868976;
+    }
+
+    function chageTripType(type){
+        tripType.value = type;
+
     }
 
 
