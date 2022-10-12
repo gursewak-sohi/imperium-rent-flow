@@ -154,6 +154,13 @@
                         background-color: #ffeded;
                     }
                 }
+                & .help-text {
+                    color: $primary;
+                    font-size: 12px;
+                    line-height: 1.5;
+                    display: block;
+                    margin-top: 6px;
+                }
                 & .counter {
                     position: absolute;
                     font-weight: 400;

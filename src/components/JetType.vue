@@ -361,7 +361,8 @@
     }
 
     function getFuelStop(range){
-        return parseInt(props.distance / range);
+        let distance =  props.tripType == 'round-trip' ? props.distance * 2 :  props.distance;
+        return parseInt(distance / range);
     }
 
     function selectType(e, value){
