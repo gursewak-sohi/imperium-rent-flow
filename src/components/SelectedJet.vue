@@ -178,10 +178,8 @@
     function getAircraftSpeed(val){
         
         let all = val.split(',');
-        console.log( props.distance, 'distance');
-         
-         let distance = props.distance;
-         distance = props.tripType == 'round-trip' ? props.distance * 2 :  props.distance;
+        let distance = props.distance;
+        distance = props.tripType == 'round-trip' ? props.distance * 2 :  props.distance;
         
 
         let sum = 0;
@@ -193,8 +191,6 @@
                 let extraTimeTaken = distance / range[all[key] - 1];
                 extraHour += parseInt(extraTimeTaken);
                 // extraHour += extraTimeTaken%1  > 0 ? 1 : 0;
-
-
             }
 
             console.log(extraHour, 'extra hour');

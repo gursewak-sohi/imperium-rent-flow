@@ -177,6 +177,9 @@
 
     function chageTripType(type){
         tripType.value = type;
+        step.value = 'initial';
+        emitter.emit('updateButtonType', {value :'next'});
+        emitter.emit('reset');
 
     }
 
