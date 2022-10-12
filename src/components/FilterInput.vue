@@ -172,12 +172,17 @@
         var y = date.getFullYear();
         return ''+ (d <= 9 ? '0' + d : d) + '/' + (m<=9 ? '0' + m : m) + '/'   + y ;
     }
-    // if(props.tripType === 'one-way'){
-    //         document.getElementById('datepicker').placeholder = dateToYMD(date.value);
-    //    }else{
-    //         document.getElementById('datepicker').placeholder = dateToYMD(range.value.start) + '-'+ dateToYMD(range.value.end);
 
-    //    }
+    setTimeout(function(){
+        if(props.tripType === 'one-way'){
+            document.getElementById('datepicker').placeholder = dateToYMD(date.value);
+       }else{
+            document.getElementById('datepicker').placeholder = dateToYMD(range.value.start) + '-'+ dateToYMD(range.value.end);
+
+       }
+
+    },1000);
+    
 
 
     function onDayClick(e){

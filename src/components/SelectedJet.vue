@@ -127,7 +127,8 @@
     let departure_time = ref('');
     const props = defineProps({
         data: Object,
-        distance:String
+        distance:String,
+         tripType: String,
         })
     let flight_type = ref(0);
     let net_speed = ref(0);
@@ -178,6 +179,9 @@
         
         let all = val.split(',');
         console.log( props.distance, 'distance');
+         
+         let distance = props.distance;
+         distance = props.tripType == 'round-trip' ? props.distance * 2 :  props.distance;
         
 
         let sum = 0;
@@ -185,8 +189,8 @@
         for(const key in all){
             console.log( range[all[key] - 1], 'distance');
             let extraHour = 0;
-            if(props.distance > range[all[key] - 1]){
-                let extraTimeTaken = props.distance / range[all[key] - 1];
+            if(distance > range[all[key] - 1]){
+                let extraTimeTaken = distance / range[all[key] - 1];
                 extraHour += parseInt(extraTimeTaken);
                 // extraHour += extraTimeTaken%1  > 0 ? 1 : 0;
 
@@ -194,7 +198,7 @@
             }
 
             console.log(extraHour, 'extra hour');
-            sum += parseFloat(((props.distance /speed[all[key] - 1]) + extraHour).toFixed(2));
+            sum += parseFloat(((distance /speed[all[key] - 1]) + extraHour).toFixed(2));
             count++;
         }
         travelTime = sum / count;

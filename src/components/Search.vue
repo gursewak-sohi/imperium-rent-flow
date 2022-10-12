@@ -25,9 +25,9 @@
                     <!-- Round Trip -->
                     <FilterInput :tripType="tripType"/>
                     <!-- Jet Type -->
-                    <JetType v-if="step == 'filter-result'" :distance="distance"/>
+                    <JetType v-if="step == 'filter-result'" :distance="distance" :tripType="tripType"/>
                     <!-- Selected Jet  -->
-                    <SelectedJet v-if="step === 'selected-result'" :data="data_copy" :distance="distance"/>
+                    <SelectedJet v-if="step === 'selected-result'" :data="data_copy" :distance="distance" :tripType="tripType"/>
                 </div>
             </div>
         </section>

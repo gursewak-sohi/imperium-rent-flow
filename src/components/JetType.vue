@@ -71,6 +71,13 @@
                             <li>Sample Aircraft
                                 <span>PC-12</span>
                             </li>
+                            <li>Est. Flight Distance
+                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }}</span>
+                            </li>
+                            <li>Est. Flight Time
+                                <!-- <span>{{    (Math.round((props.distance/290) * 100) / 100)}}</span> -->
+                                 <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/290) * 100) / 100) * 2 :  (Math.round((props.distance/290) * 100) / 100) }}</span>
+                            </li>
                              
                             <li>Max Nm Range
                                 <span>1,765 nmiles</span>
@@ -169,6 +176,18 @@
                         <ul class="jet-details">
                             <li>Sample Aircraft
                                 <span>Citation XLS</span>
+                            </li>
+                            <!-- <li>Est. Flight Distance
+                                <span>{{ props.distance  }}</span>
+                            </li>
+                             <li>Est. Flight Time
+                                <span>{{    Math.round((props.distance/433) * 100) / 100}}</span>
+                            </li> -->
+                             <li>Est. Flight Distance
+                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }}</span>
+                            </li>
+                            <li>Est. Flight Time
+                                 <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/433) * 100) / 100) * 2 :  (Math.round((props.distance/433) * 100) / 100) }}</span>
                             </li>
                              
                             <li>Max Nm Range
@@ -274,6 +293,18 @@
                             <li>Sample Aircraft
                                 <span>Gulfstream G500</span>
                             </li>
+                            <!-- <li>Est. Flight Distance
+                                <span>{{ props.distance  }}</span>
+                            </li>
+                             <li>Est. Flight Time
+                                <span>{{    Math.round((props.distance/566) * 100) / 100}}</span>
+                            </li> -->
+                             <li>Est. Flight Distance
+                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }}</span>
+                            </li>
+                            <li>Est. Flight Time
+                                 <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/566) * 100) / 100) * 2 :  (Math.round((props.distance/566) * 100) / 100) }}</span>
+                            </li>
                             
                             <li>Max Nm Range
                                 <span>3,800 nmiles</span>
@@ -315,6 +346,7 @@
    
     const props = defineProps({
             distance: String,
+            tripType: String,
     })
 
 
