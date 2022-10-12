@@ -72,7 +72,7 @@
                                 <span>PC-12</span>
                             </li>
                             <li>Est. Flight Distance
-                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }}</span>
+                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span>
                             </li>
                             <li>Est. Flight Time
                                 <span>{{ getFlightTime(290, 1765) }}</span>
@@ -184,7 +184,7 @@
                                 <span>{{    Math.round((props.distance/433) * 100) / 100}}</span>
                             </li> -->
                              <li>Est. Flight Distance
-                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }}</span>
+                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span>
                             </li>
                             <li>Est. Flight Time
                                 <span>{{ getFlightTime(433, 2100) }}</span>
@@ -301,7 +301,7 @@
                                 <span>{{    Math.round((props.distance/566) * 100) / 100}}</span>
                             </li> -->
                              <li>Est. Flight Distance
-                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }}</span>
+                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span>
                             </li>
                             <li>Est. Flight Time
                                 <span>{{ getFlightTime(566, 3800) }}</span>
@@ -363,7 +363,8 @@
     }
 
     function getFuelStop(range){
-        return parseInt(props.distance / range);
+        let distance =  props.tripType == 'round-trip' ? props.distance * 2 :  props.distance;
+        return parseInt(distance / range);
     }
 
     function getFlightTime(speed, range){

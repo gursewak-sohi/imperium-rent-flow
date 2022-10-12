@@ -5,7 +5,7 @@
                 <img src="/assets/images/svg/close.svg" alt="icon">
             </button>
             <h4>Get An Immediate Quote!</h4>
-            <p>Fill in your contact detail and receive an immediate quote directly to your inbox.</p>
+            <p>Fill in your contact details and receive an immediate quote directly to your phone via SMS/text message.</p>
 
             <form class="modal-form" action="">
                 <div class="modal-field">
@@ -22,7 +22,7 @@
                 <div class="modal-field">
                     <label>*Phone number</label>
                     <input type="tel" autocomplete="off" placeholder="+1" name="phone_number" :class="{'error' : phone_number_error != '' ? true:false }" v-model="phone_number" required  @keyup="checkError($event)"/>
-                    
+                    <span class="help-text">Quotes are constantly updated. Enter your phone number to receive the latest quotes for your flight in real time.</span>
                 </div>
                 <div class="modal-field">
                     <label>Additional message (optional)</label>

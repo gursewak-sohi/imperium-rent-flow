@@ -74,8 +74,8 @@
     box-shadow: 0px 4px 12px rgba(163, 163, 163, 0.4);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(24px);
-    // background: rgba(253, 253, 253, 0.17);
-    background-color: $white;
+    background: rgba(253, 253, 253, 0.17);
+    // background-color: $white;
     border-radius: 6px;
     @include tablet {
         padding: 32px 24px;
@@ -131,6 +131,7 @@
             border-right: none;
             height: 48px;
             background-color: $white;
+            color: $gray-900;
             @include tablet {
                 border-radius: 4px;
                 border-right: 1px solid $gray-200;
@@ -144,6 +145,18 @@
             }
             &::-ms-input-placeholder {
                 color: $gray-600;
+            }
+            &#datepicker {
+                &::placeholder {
+                    color: $gray-900;
+                    opacity: 1;
+                }
+                &:-ms-input-placeholder {
+                    color: $gray-600;
+                }
+                &::-ms-input-placeholder {
+                    color: $gray-600;
+                }
             }
         }
         &:first-child input {
@@ -313,25 +326,9 @@
 
 .single-trip {
     position: relative;
-    // margin-top: 32px;
+    margin-top: 32px;
     @include tablet {
-        // margin-top: 24px;
-    }
-    &.step-1 {
-        & [data-btn="next"] {
-            display: flex;
-        }
-        & [data-btn="change"] {
-            display: none;
-        }
-    }
-    &.step-2 {
-        & [data-btn="next"] {
-            display: none;
-        }
-        & [data-btn="change"] {
-            display: flex;
-        }
+        margin-top: 24px;
     }
     &.step-3 {
         & .search-box {
