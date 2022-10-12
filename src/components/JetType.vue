@@ -72,11 +72,11 @@
                                 <span>PC-12</span>
                             </li>
                             <li>Est. Flight Distance
-                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }}</span>
+                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span>
                             </li>
                             <li>Est. Flight Time
                                 <!-- <span>{{    (Math.round((props.distance/290) * 100) / 100)}}</span> -->
-                                 <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/290) * 100) / 100) * 2 :  (Math.round((props.distance/290) * 100) / 100) }}</span>
+                                 <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/290) * 100) / 100) * 2 :  (Math.round((props.distance/290) * 100) / 100) }} hrs</span>
                             </li>
                              
                             <li>Max Nm Range
@@ -184,10 +184,10 @@
                                 <span>{{    Math.round((props.distance/433) * 100) / 100}}</span>
                             </li> -->
                              <li>Est. Flight Distance
-                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }}</span>
+                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span>
                             </li>
                             <li>Est. Flight Time
-                                 <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/433) * 100) / 100) * 2 :  (Math.round((props.distance/433) * 100) / 100) }}</span>
+                                 <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/433) * 100) / 100) * 2 :  (Math.round((props.distance/433) * 100) / 100) }} hrs</span>
                             </li>
                              
                             <li>Max Nm Range
@@ -300,10 +300,10 @@
                                 <span>{{    Math.round((props.distance/566) * 100) / 100}}</span>
                             </li> -->
                              <li>Est. Flight Distance
-                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }}</span>
+                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span>
                             </li>
                             <li>Est. Flight Time
-                                 <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/566) * 100) / 100) * 2 :  (Math.round((props.distance/566) * 100) / 100) }}</span>
+                                 <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/566) * 100) / 100) * 2 :  (Math.round((props.distance/566) * 100) / 100) }} hrs</span>
                             </li>
                             
                             <li>Max Nm Range
