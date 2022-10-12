@@ -100,7 +100,7 @@
                 allDetails.origin_details.coords_long, 
                 allDetails.destination_details.coords_lat, 
                 allDetails.destination_details.coords_long);
-            dataArray.push(allDetails);
+            // dataArray.push(allDetails);
             setTimeout(function(){step.value = value.path;},400)
 
         }else if(value.from == 'jettype'){
