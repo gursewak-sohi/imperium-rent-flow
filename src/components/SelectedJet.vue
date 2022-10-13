@@ -185,15 +185,12 @@
         let sum = 0;
         let count = 0;
         for(const key in all){
-            console.log( range[all[key] - 1], 'distance');
             let extraHour = 0;
             if(distance > range[all[key] - 1]){
                 let extraTimeTaken = distance / range[all[key] - 1];
                 extraHour += parseInt(extraTimeTaken);
                 // extraHour += extraTimeTaken%1  > 0 ? 1 : 0;
             }
-
-            console.log(extraHour, 'extra hour');
             sum += parseFloat(((distance /speed[all[key] - 1]) + extraHour).toFixed(2));
             count++;
         }
