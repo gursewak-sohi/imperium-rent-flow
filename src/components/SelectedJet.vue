@@ -181,7 +181,6 @@
         let distance = props.distance;
         distance = props.tripType == 'round-trip' ? props.distance * 2 :  props.distance;
         
-
         let sum = 0;
         let count = 0;
         for(const key in all){
@@ -202,18 +201,15 @@
         return hour;
     }
 
-
     const onSlideChange = (s) =>{
         let all = props.data.aircraft.split(',');
         flight_type.value = aircraft[all[s.activeIndex]-1];
         net_speed.value = (props.distance / speed[all[s.activeIndex]-1]).toFixed(2);
-        
     }
 
     function goToPre(){
-
-         emitter.emit('updateButtonType', {value :'change'});
-         emitter.emit('updateSearch', {
+        emitter.emit('updateButtonType', {value :'change'});
+        emitter.emit('updateSearch', {
             data: {},
             path: 'filter-result', 
             from : 'selected-jet'
@@ -229,19 +225,15 @@
         emitter.emit('openQuoteMOdel', true);
     }
 
-    function getTime(){
-        
+    function getTime(){        
     }
 
-     function updateTime(type){
+    function updateTime(type){
 
-        // travelTime = 1;
-        // hourDiff = 9;
-
-      
+        if(props.tripType === 'round-trip')
+            return;
 
         if(type === 'origin'){
-
             let time = origin_time.value;
             time = time.split(':');
             let type = time[1].indexOf('AM') == -1? 'PM':'AM';
@@ -257,12 +249,10 @@
             let tt =("0" + (newtime)).slice(-2) + ':00 '+newampm ;
             departure_time.value = tt;
             // let time = hourDiff + travelTime;
-
         }
 
         if(type === 'destination'){
             // let time = hourDiff + travelTime;
-
             let time = departure_time.value;
             time = time.split(':');
             let type = time[1].indexOf('AM') == -1? 'PM':'AM';
@@ -277,14 +267,11 @@
             newtime = newtime == 0 ? 12 : newtime;
             let tt =("0" + (newtime)).slice(-2) + ':00 '+newampm ;
             origin_time.value = tt;
-
         }
     }
 
     function getHourDiference(s, d){
-
-        let td = 0;
-        
+        let td = 0;        
         // case 1 both are
         if(s > 0 && d > 0){
             if(s > d)
