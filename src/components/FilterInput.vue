@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <button data-btn="remove" class="btn btn-remove" type="button" v-if="props.tripType == 'multi-trip'" @click="removeTrip(index)">
-                    <img src="assets/images/svg/delete-row.svg" alt="remove"/>
+                    <img src="/assets/images/svg/delete-row.svg" alt="remove"/>
                 </button>
                 <div class="search-button" v-if="props.tripType != 'multi-trip'">
                     <button class="btn btn-primary" @click="search()" v-if="buttonType === 'next'">
@@ -80,8 +80,8 @@
             </div>
         </div>
         <div class="mutiple-search-button" v-if="props.tripType == 'multi-trip'">
-            <button class="btn btn-md btn-dark-outline btn-iconed-lg" @click="addTrip()"><img src="assets/images/svg/plus.svg" alt="icon"  > Add trip</button>
-            <button id="searchMultiTrip" class="btn btn-md btn-primary btn-iconed-lg">Next <img src="assets/images/svg/next.svg" alt="icon"/></button>
+            <button class="btn btn-md btn-dark-outline btn-iconed-lg" @click="addTrip()"><img src="/assets/images/svg/plus.svg" alt="icon"  > Add trip</button>
+            <button id="searchMultiTrip" class="btn btn-md btn-primary btn-iconed-lg">Next <img src="/assets/images/svg/next.svg" alt="icon"/></button>
         </div>
     </div>
 </template>
