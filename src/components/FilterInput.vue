@@ -27,7 +27,7 @@
 
 
                     <DatePicker v-if="props.tripType !== 'one-way'" is-range class="single-input"   v-model="range" :columns="1" :min-date="new Date()" @dayclick="onDayClick(event)" :is-required="true" ref="calendar" >
-                        <template #default="{ range ,togglePopover }">
+                        <template #default="{ range ,togglePopover, updateValue }">
                             
                             <input @click="togglePopover()" id="datepicker" readonly  :value="range" />
                         </template>
@@ -167,12 +167,12 @@
                 document.getElementById('datepicker').placeholder = dateToYMD(new Date());
                 date.value = new Date();
         }else{
-                range.value.start = new Date();
-                range.value.end = new Date();
+                range.value ={start : new Date(), end : new Date()};
+                // range.value.end = new Date();
                 document.getElementById('datepicker').placeholder = dateToYMD(new Date()) + '-'+ dateToYMD(new Date());             
                 date.value = dateToYMD(new Date()) + '-'+ dateToYMD(new Date());
         }
-        },1000);
+        },400);
        buttonType.value = 'next';
     });
 
