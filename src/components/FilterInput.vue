@@ -163,14 +163,16 @@
     emitter
     .on('dateRest', function () {
          setTimeout(function(){
-        if(props.tripType === 'one-way'){
-            document.getElementById('datepicker').placeholder = dateToYMD(new Date());
-            date.value = new Date();
-       }else{
-            document.getElementById('datepicker').placeholder = dateToYMD(new Date()) + '-'+ dateToYMD(new Date());
-            date.value = dateToYMD(new Date()) + '-'+ dateToYMD(new Date());
-       }
-        },300);
+            if(props.tripType === 'one-way'){
+                document.getElementById('datepicker').placeholder = dateToYMD(new Date());
+                date.value = new Date();
+        }else{
+                range.value.start = new Date();
+                range.value.end = new Date();
+                document.getElementById('datepicker').placeholder = dateToYMD(new Date()) + '-'+ dateToYMD(new Date());             
+                date.value = dateToYMD(new Date()) + '-'+ dateToYMD(new Date());
+        }
+        },1000);
        buttonType.value = 'next';
     });
 
