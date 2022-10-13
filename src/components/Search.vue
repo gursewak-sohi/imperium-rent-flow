@@ -181,7 +181,7 @@
         tripType.value = type;
         step.value = 'initial';
         allDetails = emptyVal;
-        emitter.emit('updateButtonType', {value :'next'});
+        // emitter.emit('updateButtonType', {value :'next'});
         emitter.emit('reset');
 
     }

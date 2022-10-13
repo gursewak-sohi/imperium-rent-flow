@@ -163,9 +163,18 @@
     emitter
     .on('reset', function () {
        date.value = new Date();
-       searchRequest = copySearchRequest;
+       searchRequest = {
+        origin: '',
+        dest: '',
+        date: picked.value,
+        pax: passangerCount.value,
+        origin_details :{},
+        destination_details :{},
+    };
        passangerCount.value = 1;
        buttonType.value = 'next';
+
+    //    alert('123');
     });
 
     function dateToYMD(date) {
@@ -228,7 +237,7 @@
         searchRequest.dest = org;
         emitter.emit('exchangeInputField', {type : 'origin', value :searchRequest.origin} );
         emitter.emit('exchangeInputField', {type : 'destination', value :searchRequest.dest} );
-         emitter.emit('exchangeInput');
+        emitter.emit('exchangeInput');
     }
 
     emitter
