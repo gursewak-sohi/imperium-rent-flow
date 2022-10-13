@@ -29,6 +29,7 @@
     import axios from 'axios'
     import {ref} from "vue";
     import emitter from 'tiny-emitter/instance'
+    const base_url = import.meta.env.VITE_BASE_URL;
     
     const props = defineProps({type: String, defaultData : Array, defaultValue:String})
 
@@ -103,7 +104,7 @@
             if(searchTerm.value.length < 2)
              return;
 
-           await axios.post('https://api.impjets.com/v1/ext.charter/airport', {
+           await axios.post(base_url+'ext.charter/airport', {
                 srcterms: searchTerm.value
             }, {
                 headers: {

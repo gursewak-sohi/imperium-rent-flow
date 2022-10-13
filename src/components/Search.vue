@@ -36,6 +36,7 @@
 
 <script setup>
 
+    
     import FilterInput from './FilterInput.vue'
     import JetType from './JetType.vue'
     import SelectedJet from './SelectedJet.vue'
@@ -43,6 +44,7 @@
     import {ref} from "vue";
     import axios from 'axios'
 
+    const base_url = import.meta.env.VITE_BASE_URL;
     let step = ref('initial');  
     let distance = ref('Not Found.');
 
@@ -112,7 +114,7 @@
             allDetails.msg = value.data.message;
            allDetails.marketing_materials = value.data.marketing_laterials ? 'Yes' : 'No';
 
-             axios.post('https://api.impjets.com/v1/ext.charter/request', allDetails, {
+             axios.post(base_url + 'ext.charter/request', allDetails, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

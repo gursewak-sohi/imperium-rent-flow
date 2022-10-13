@@ -130,6 +130,8 @@
     let email_error = ref('');
     let mailSent = ref(false);
     let inProgress = ref(false);
+
+    const base_url = import.meta.env.VITE_BASE_URL;
     let subscribe = (e) => {
         // e.preventDefault();
         if(email.value != '' && validateEmail(email.value)){
@@ -140,7 +142,7 @@
             email : email.value,
             msg : 'User has subscribed to email.'
         };
-            axios.post('https://api.impjets.com/v1/ext.charter/contact', detail, {
+            axios.post(base_url + 'ext.charter/contact', detail, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
