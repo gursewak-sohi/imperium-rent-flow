@@ -44,17 +44,28 @@ export const  default_list =[
 		hours_diff : "-4.00",
 		id : "6559",
 		name : "Opa-locka Executive Airport"
+		
 	},
 	{
-		address:"Teterboro, NJ, United States",
-		code:"KTEB",
-		code_ata:"TEB",
-		coords_lat:"40.850101",
-		coords_long:"-74.060799",
-		hours_diff:"-5.00",
-		id:"7039",
-		location_distance:"0.6755915498754811",
-		name:"Teterboro Airport",
+		// address:"Teterboro, NJ, United States",
+		// code:"KTEB",
+		// code_ata:"TEB",
+		// coords_lat:"40.850101",
+		// coords_long:"-74.060799",
+		// hours_diff:"-5.00",
+		// id:"7039",
+		// location_distance:"0.6755915498754811",
+		// name:"Teterboro Airport",
+
+		
+			id: "7039",
+			name: "Teterboro Airport",
+			address: "Teterboro, NJ, United States",
+			coords_lat: "40.850101",
+			coords_long: "-74.060799",
+			code: "KTEB",
+			code_ata: "TEB"
+		
 	},
 	{
 		address : "St Michael, AK, United States",
@@ -79,13 +90,24 @@ export const  default_list =[
 		name:"Miami International Airport"
 	},
 	{
-		address: "Van Nuys, CA, USA",
-		code: "KVNY",
-		code_ata: "KVNY",
-		coords_lat: "34.2096",
-		coords_long: "118.4896",
-		hours_diff : "-4.00",
-		name: "Van Nuys Airport",
+		// address: "Van Nuys, CA, USA",
+		// code: "KVNY",
+		// code_ata: "KVNY",
+		// coords_lat: "34.2096",
+		// coords_long: "118.4896",
+		// hours_diff : "-4.00",
+		// name: "Van Nuys Airport",
+
+
+		
+			id: "7187",
+			name: "Van Nuys Airport",
+			address: "Van Nuys, CA, United States",
+			coords_lat: "34.209801",
+			coords_long: "-118.489998",
+			code: "KVNY",
+			code_ata: "VNY"
+		
 	},{
 		address: "Oakland, CA, USA",
 		code: "KOAK",
