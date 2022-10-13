@@ -59,6 +59,7 @@
     emitter
     .on('reset', function () {
        searchTerm.value = '';
+       list.value = defaultData.value;
     });
 
     emitter
