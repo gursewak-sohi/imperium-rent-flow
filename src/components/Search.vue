@@ -93,9 +93,9 @@
             allDetails.pax = value.data.pax;
             allDetails.origin_details = value.data.origin_details;
             allDetails.destination_details = value.data.destination_details;
-            let d = new Date(value.data.date);
-            let datestring = (d.getMonth()+1)  + "/" + d.getDate() + "/" + d.getFullYear();
-            allDetails.date = datestring;
+            // let d = new Date(value.data.date);
+            // let datestring = (d.getMonth()+1)  + "/" + d.getDate() + "/" + d.getFullYear();
+            allDetails.date = value.data.date;
 
             calcCrow(
                 allDetails.origin_details.coords_lat, 
@@ -113,6 +113,9 @@
             allDetails.phone = value.data.phone_number;
             allDetails.msg = value.data.message;
            allDetails.marketing_materials = value.data.marketing_laterials ? 'Yes' : 'No';
+
+
+           console.log(allDetails, 'poipoipoi');
 
              axios.post(base_url + 'ext.charter/request', allDetails, {
                 headers: {
@@ -180,9 +183,9 @@
     function chageTripType(type){
         tripType.value = type;
         step.value = 'initial';
-        allDetails = emptyVal;
+        // allDetails = emptyVal;
         // emitter.emit('updateButtonType', {value :'next'});
-        emitter.emit('reset');
+        emitter.emit('dateRest');
 
     }
 

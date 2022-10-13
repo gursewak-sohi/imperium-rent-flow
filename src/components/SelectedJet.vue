@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Arrival Time</label>
+                        <label> {{  props.tripType == 'round-trip' ? 'Return Departure Time' :  'Arrival Time' }}</label>
                         <div class="select-unit">
                              <select name="" id="" required="" v-model="departure_time"  @change="updateTime('destination')">
                                 <option value="" disabled="" selected="" hidden="">12:00 AM</option>
@@ -126,9 +126,9 @@
     let origin_time = ref('');
     let departure_time = ref('');
     const props = defineProps({
-        data: Object,
-        distance:String,
-         tripType: String,
+            data: Object,
+            distance:String,
+            tripType: String,
         })
     let flight_type = ref(0);
     let net_speed = ref(0);
