@@ -123,18 +123,12 @@
         let arr = allTrip.value;
         let last = arr[arr.length -1];
         arr.push(++last);
-        console.log(arr);
     }
 
     function removeTrip(index){
         let arr = allTrip.value;
         arr.splice(index, 1);
-        console.log(arr);
-
     }
-
-    
-
 
     let searchRequest = {
         origin: '',
@@ -144,9 +138,16 @@
         origin_details :{},
         destination_details :{},
     };
+    let copySearchRequest =  {
+        origin: '',
+        dest: '',
+        date: picked.value,
+        pax: passangerCount.value,
+        origin_details :{},
+        destination_details :{},
+    };;
 
     function forceRender1() {
-        console.log('ref');
     }
     let timeoutVar;
     function togglePassangerCountFun(){
@@ -162,6 +163,7 @@
     emitter
     .on('reset', function () {
        date.value = new Date();
+       searchRequest = copySearchRequest;
        passangerCount.value = 1;
        buttonType.value = 'next';
     });
@@ -231,8 +233,6 @@
 
     emitter
         .on('updateInput', function (type, value) {
-
-            console.log(type, value, '-----');
             if (type === 'origin') {
                 // this.$refs.origin.$el.focus()
                 searchRequest.origin = value.name;
@@ -270,6 +270,8 @@
     }
 
     function search() {
+
+        console.log(searchRequest, 'Search Result');
         if(searchRequest.origin == ''){
              emitter.emit('focuInput', {type : 'origin'});
         }else if(searchRequest.dest == ''){
