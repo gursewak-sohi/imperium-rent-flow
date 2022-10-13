@@ -28,25 +28,25 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/1-turbo/main.jpeg"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/main.jpeg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery1" alt="" src="/assets/images/aircraft/1-turbo/main.jpeg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/1-turbo/inside1.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/inside1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/1-turbo/inside2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/inside2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/1-turbo/inside3.jpeg"
+                                href="/imperium-rent-flow/assets/images/aircraft/1-turbo/inside3.jpeg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/1-turbo/inside3.jpeg"/>
                             </a>
@@ -123,37 +123,37 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/front.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/front.jpg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery2" alt="" src="/assets/images/aircraft/2-light-mid/front.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/inside1.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/inside1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/inside1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/inside2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/inside2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/inside2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/inside3.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/inside3.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/inside3.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/inside4.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/inside4.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/inside4.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/2-light-mid/inside5.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/2-light-mid/inside5.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/2-light-mid/inside5.jpg"/>
                             </a>
@@ -235,43 +235,43 @@
                             :onInit="onInit">
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/3-heavy/heavy/main.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/main.jpg"
                                 data-lg-size="1200-857">
                                 <img ref="gallery3" alt="" src="/assets/images/aircraft/3-heavy/heavy/main.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/3-heavy/heavy/back.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/back.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/back.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/3-heavy/heavy/inside1.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside1.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside1.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/3-heavy/heavy/inside2.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside2.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside2.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/3-heavy/heavy/inside3.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside3.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside3.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/3-heavy/heavy/inside4.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside4.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside4.jpg"/>
                             </a>
                             <a
                                 class="result-image"
-                                href="/charter/assets/images/aircraft/3-heavy/heavy/inside5.jpg"
+                                href="/imperium-rent-flow/assets/images/aircraft/3-heavy/heavy/inside5.jpg"
                                 data-lg-size="1200-857">
                                 <img alt="" src="/assets/images/aircraft/3-heavy/heavy/inside5.jpg"/>
                             </a>
