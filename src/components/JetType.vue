@@ -72,7 +72,8 @@
                                 <span>PC-12</span>
                             </li>
                             <li>Est. Flight Distance
-                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span>
+                                <span>{{ getFlightDistance() }} nmiles</span>
+                                <!-- <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span> -->
                             </li>
                             <li>Est. Flight Time
                                 <span>{{ getFlightTime(290, 1765) }}</span>
@@ -184,7 +185,8 @@
                                 <span>{{    Math.round((props.distance/433) * 100) / 100}}</span>
                             </li> -->
                              <li>Est. Flight Distance
-                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span>
+                                <span>{{ getFlightDistance() }} nmiles</span>
+                                <!-- <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span> -->
                             </li>
                             <li>Est. Flight Time
                                 <span>{{ getFlightTime(433, 2100) }}</span>
@@ -301,7 +303,8 @@
                                 <span>{{    Math.round((props.distance/566) * 100) / 100}}</span>
                             </li> -->
                              <li>Est. Flight Distance
-                                <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span>
+                                <span>{{ getFlightDistance() }} nmiles</span>
+                                <!-- <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span> -->
                             </li>
                             <li>Est. Flight Time
                                 <span>{{ getFlightTime(566, 3800) }}</span>
@@ -367,10 +370,15 @@
         return parseInt(distance / range);
     }
 
+    function getFlightDistance(){
+        let distance = props.tripType == 'round-trip' ? props.distance * 2 :  props.distance;
+        distance +=  distance%1  > 0 ? 1 : 0
+        return Math.round(distance);
+    }
+
     function getFlightTime(speed, range){
         let distance = props.distance;
         distance = props.tripType == 'round-trip' ? props.distance * 2 :  props.distance;
-        
 
         let sum = 0;
         let count = 0;
@@ -389,7 +397,7 @@
         let remining_minute = travelTime % 1;
         hour = parseInt(hour) + parseInt(remining_minute > 0 ? 1 : 0);
         travelTime =hour;
-        return hour;
+        return hour + ' hours';
 
     }
 

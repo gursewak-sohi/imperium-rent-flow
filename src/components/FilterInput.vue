@@ -161,6 +161,20 @@
     }
 
     emitter
+    .on('dateRest', function () {
+         setTimeout(function(){
+        if(props.tripType === 'one-way'){
+            document.getElementById('datepicker').placeholder = dateToYMD(new Date());
+            date.value = new Date();
+       }else{
+            document.getElementById('datepicker').placeholder = dateToYMD(new Date()) + '-'+ dateToYMD(new Date());
+            date.value = dateToYMD(new Date()) + '-'+ dateToYMD(new Date());
+       }
+        },300);
+       buttonType.value = 'next';
+    });
+
+    emitter
     .on('reset', function () {
        date.value = new Date();
        searchRequest = {
@@ -173,8 +187,6 @@
     };
        passangerCount.value = 1;
        buttonType.value = 'next';
-
-    //    alert('123');
     });
 
     function dateToYMD(date) {
@@ -186,13 +198,15 @@
 
     setTimeout(function(){
         if(props.tripType === 'one-way'){
-            document.getElementById('datepicker').placeholder = dateToYMD(date.value);
+            document.getElementById('datepicker').placeholder = dateToYMD( new Date());
+            date.value = dateToYMD( new Date());
        }else{
-            document.getElementById('datepicker').placeholder = dateToYMD(range.value.start) + '-'+ dateToYMD(range.value.end);
+            document.getElementById('datepicker').placeholder = dateToYMD( new Date()) + '-'+ dateToYMD( new Date());
+             date.value = dateToYMD( new Date()) + '-'+ dateToYMD( new Date());
 
        }
 
-    },1000);
+    },200);
     
 
 
@@ -200,13 +214,14 @@
 
 
        if(props.tripType === 'one-way'){
-            if(!date.value)
-                date.value = lastDay;
+            // if(!date.value)
+                
             emitter.emit('focuInput', {type : 'passengerCount'});
             document.getElementById('datepicker').placeholder = dateToYMD(date.value);
+            date.value = dateToYMD(date.value);
        }else{
             document.getElementById('datepicker').placeholder = dateToYMD(range.value.start) + '-'+ dateToYMD(range.value.end);
-            date.value = dateToYMD(range.value.start) + '-'+ dateToYMD(range.value.end);
+            date.value = dateToYMD(range.value.start) +'-'+ dateToYMD(range.value.end);
 
        }
     }
