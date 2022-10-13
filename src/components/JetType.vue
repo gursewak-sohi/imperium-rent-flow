@@ -372,7 +372,10 @@
 
     function getFlightDistance(){
         let distance = props.tripType == 'round-trip' ? props.distance * 2 :  props.distance;
-        distance +=  distance%1  > 0 ? 1 : 0
+        console.log(distance, 'full val');
+        let ex=  distance%1  > 0 ? 1 : 0;
+        console.log(distance%1, 'rem');
+        distance = parseInt(distance) + parseInt(ex);
         return Math.round(distance);
     }
 
