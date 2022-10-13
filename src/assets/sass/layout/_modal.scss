@@ -173,4 +173,59 @@
             }
         }
     }
+    & .modal-about {
+        margin-top: auto;
+        margin-bottom: auto;
+        background: $white;
+        box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.1), 0px 8px 10px -6px rgba(16, 24, 40, 0.1);
+        border-radius: 8px;
+        padding: 48px;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        position: relative;
+        transition: 0.3s all ease;
+        transform: translateY(32px);
+        @include tablet {
+            padding: 24px;
+        }
+        & .btn-close {
+            background-color: transparent;
+            border: none;
+            top: 24px;
+            right: 24px;
+            position: absolute;
+            @include tablet {
+                top: 12px;
+                right: 12px;
+            }
+        }
+        & .modal-icon {
+            margin-bottom: 16px;
+        }
+        & h2 {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 36px;
+            color: $gray-900;
+            margin-bottom: 16px;
+            @include tablet {
+                font-size: 30px;
+                line-height: 42px;
+            }
+        }
+        &>p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 16px;
+            color: #6B7280;
+        }
+        & li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
 }

@@ -15,12 +15,12 @@
                                 <span></span>Round trip
                             </label>
                         </div>
-                        <div class="radio-unit">
+                        <!-- <div class="radio-unit">
                             <input id="multiTrip" type="radio" @click="chageTripType('multi-trip')" value="multi-trip" name="flight-type" />
                             <label for="multiTrip">
                                 <span></span>Multi trip
                             </label>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- Round Trip -->
                     <FilterInput :tripType="tripType"/>
