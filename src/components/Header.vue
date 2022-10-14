@@ -42,7 +42,7 @@
                             Call
                             <span>support center</span>
                         </a> -->
-                        <a @click="toggleModel = true;" class="btn-link" href="javascript:;">About Imperium Full Charter </a>
+                        <a @click="toggleModel = true;" class="btn-link" href="javascript:;">About <span>Imperium Full Charter</span></a>
                         <a class="btn-link" href="mailto:support@impjets.com">support@impjets.com </a>
                        
                     </div>
