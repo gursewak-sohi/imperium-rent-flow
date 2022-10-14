@@ -115,7 +115,7 @@
            allDetails.marketing_materials = value.data.marketing_laterials ? 'Yes' : 'No';
 
 
-           console.log(allDetails, 'poipoipoi');
+        //    console.log(allDetails, 'poipoipoi');
 
              axios.post(base_url + 'ext.charter/request', allDetails, {
                 headers: {
@@ -151,7 +151,7 @@
         let $pointB = {'lat':lat2, 'lng':lon2};
 
         let d = impapi_distance($pointA, $pointB);
-        console.log(d, 'New  Distnce')
+        // console.log(d, 'New  Distnce')
         distance.value = d.toFixed(2);
     }
 
