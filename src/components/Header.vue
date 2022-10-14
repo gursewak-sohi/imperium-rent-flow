@@ -1,15 +1,15 @@
 <template>
-     <section class="modal" :class="{'active': toggleModel}">
-        <div class="modal-block modal-about">
+     <section class="modal" :class="{'active': toggleModel}" @click="toggleModel = false;" @keydown.esc="toggleModel = false" tabindex=0>
+        <div class="modal-block modal-about" @click.stop="">
             <button class="btn btn-close" @click="toggleModel = false;">
                 <img src="/assets/images/svg/close.svg" alt="icon">
             </button>
-            <h2>Imperium Jets Charter</h2>
+            <h2>Imperium Full Charter</h2>
             <p>Imperium Jets Charter is one of the fastest-growing private jet charter companies specializing in VIP and executive flights. With our unparalleled experience in the industry, we have been delivering the world’s finest private jet charter solutions since 2019. <br/>Our extensive aviation experience and commitment to safety, convenience, and discretion, allow anyone of our satisfied customers to fly in complete confidence. <br/>FAR Part 135 or 121 airlines or foreign equivalent provides operational control of all charter flights. We commit to providing an exceptional customer experience and adapting private aviation services to your needs.  </p>
             <p>
             Our team is dedicated to providing an exceptional customer experience. We tailor our private aviation services to meet each client’s needs and remain committed to providing the most competitive prices in the industry. <br/> Pricing offers are constantly updated. Our representatives will contact you by phone for the hottest quotes in real time.</p>
             <p>Our experts are always available to answer your questions.</p>
-            <p>Ready for takeoff?</p>
+            <p><b>Ready for takeoff?</b></p>
             <ul>
                 <li><b>Step 1:</b> Enter flight details and aircraft type.</li>
                 <li><b>Step 2:</b> Set contact details.</li>
@@ -42,9 +42,8 @@
                             Call
                             <span>support center</span>
                         </a> -->
-                        <a @click="toggleModel = true;" class="btn-link" href="javascript:;">About Imperium Full Charter </a>
+                        <a @click="toggleModel = true;" class="btn-link" href="javascript:;">About <span>Imperium Full Charter</span></a>
                         <a class="btn-link" href="mailto:support@impjets.com">support@impjets.com </a>
-                       
                     </div>
                 </div>
             </nav>
@@ -53,19 +52,20 @@
 </template>
 <script setup>
     import {ref} from 'vue'
-    let toggleModel = ref(false);
+    
 </script>
 <script>
     import Lightgallery from 'lightgallery/vue';
     import lgThumbnail from 'lightgallery/plugins/thumbnail';
     import lgZoom from 'lightgallery/plugins/zoom';
-
+    let toggleModel = ref(false);
 
     export default {
         name : 'App',
         components : {
-            Lightgallery
+            Lightgallery, 
         },
+        
         data : () => ({
             plugins: [lgZoom, lgThumbnail]
         }),
@@ -81,7 +81,11 @@
         },
         created() {
             window.addEventListener('scroll', this.handleScroll);
-
+            document.addEventListener('keyup', function (evt) {
+                if (evt.keyCode === 27) {
+                    toggleModel.value = false;
+                }
+            });
         },
         destroyed() {
             window.removeEventListener('scroll', this.handleScroll);

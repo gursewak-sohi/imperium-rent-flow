@@ -88,8 +88,15 @@
         }
         & .btn-link {
             color: $white;
-            @include tablet {
-                display: none;
+            & span {
+                @include tablet {
+                    display: none;
+                }
+            }
+            &:nth-child(2) {
+                @include tablet {
+                    display: none;
+                }
             }
         }
     }
