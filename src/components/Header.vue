@@ -13,7 +13,7 @@
             <ul>
                 <li><b>Step 1:</b> Enter flight details and aircraft type.</li>
                 <li><b>Step 2:</b> Set contact details.</li>
-                <li><b>Step 3:</b> Book, your flight.</li>
+                <li><b>Step 3:</b> Receive an immediate quote.</li>
             </ul>
         </div>
     </section>
