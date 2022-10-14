@@ -8,7 +8,7 @@
             <div class="modal-icon">
                 <img width="135" height="135" src="/assets/images/svg/sms.svg" alt="icon" />
             </div>
-            <p>Please check your phone to review your estimated qoute (text message from Charter-IMP). A representative will contact you shortly to provide any additional help needed!</p>
+            <p>Please check your phone to review your estimated quote (text message from Charter-IMP). <br/> A representative will contact you shortly to provide any additional help needed!</p>
             <div class="contact-info">
                 <p>You can always contact us</p>
                 <!-- <a href="tel: +1.310.817.2621 ">+1.310.817.2621 </a> -->
@@ -25,7 +25,7 @@
 <script setup>
     import emitter from 'tiny-emitter/instance'
     import {ref} from 'vue'
-    let toggleModel = ref(false);
+    let toggleModel = ref(true);
     emitter.on('openConfirmModel', function (val) {
         toggleModel.value = val;       
     });
