@@ -6,9 +6,9 @@
             </button>
             <h4>Quote has been Sent!</h4>
             <div class="modal-icon">
-                <img src="/assets/images/svg/confirm.svg" alt="icon" />
+                <img width="135" height="135" src="/assets/images/svg/sms.svg" alt="icon" />
             </div>
-            <p>Please check your email inbox to review your estimated quote. A representative will contact you shortly to provide any additional help needed!</p>
+            <p>Please check your phone to review your estimated qoute (text message from Charter-IMP). A representative will contact you shortly to provide any additional help needed!</p>
             <div class="contact-info">
                 <p>You can always contact us</p>
                 <!-- <a href="tel: +1.310.817.2621 ">+1.310.817.2621 </a> -->
