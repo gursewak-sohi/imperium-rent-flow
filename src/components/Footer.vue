@@ -5,7 +5,7 @@
                 <div class="footer-unit">
                     <h4>DISCLAIMER</h4>
                     <p>Imperium Jets Inc is not an Air Carrier nor an Operator. Imperium Jets does not own or operate any aircraft. Operational control of all charter flights is provided by FAR Part 135 or 121 air carriers or the foreign equivalent. All
-                        services are subject to the <a target="_blank" href="https://bytheseat.com/terms">terms and conditions</a>.</p>
+                        services are subject to the <a target="_blank" href="https://bytheseat.com/terms">terms of Use</a>.</p>
                 </div>
                 <div class="footer-unit">
                     <h4>SUPPORT</h4>

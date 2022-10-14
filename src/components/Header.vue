@@ -1,6 +1,6 @@
 <template>
-     <section class="modal" :class="{'active': toggleModel}">
-        <div class="modal-block modal-about">
+     <section class="modal" :class="{'active': toggleModel}" @click="toggleModel = false;" @keydown.esc="toggleModel = false" tabindex=0>
+        <div class="modal-block modal-about" @click.stop="">
             <button class="btn btn-close" @click="toggleModel = false;">
                 <img src="/assets/images/svg/close.svg" alt="icon">
             </button>
@@ -44,7 +44,6 @@
                         </a> -->
                         <a @click="toggleModel = true;" class="btn-link" href="javascript:;">About <span>Imperium Full Charter</span></a>
                         <a class="btn-link" href="mailto:support@impjets.com">support@impjets.com </a>
-                       
                     </div>
                 </div>
             </nav>
@@ -53,19 +52,20 @@
 </template>
 <script setup>
     import {ref} from 'vue'
-    let toggleModel = ref(false);
+    
 </script>
 <script>
     import Lightgallery from 'lightgallery/vue';
     import lgThumbnail from 'lightgallery/plugins/thumbnail';
     import lgZoom from 'lightgallery/plugins/zoom';
-
+    let toggleModel = ref(false);
 
     export default {
         name : 'App',
         components : {
-            Lightgallery
+            Lightgallery, 
         },
+        
         data : () => ({
             plugins: [lgZoom, lgThumbnail]
         }),
@@ -81,7 +81,11 @@
         },
         created() {
             window.addEventListener('scroll', this.handleScroll);
-
+            document.addEventListener('keyup', function (evt) {
+                if (evt.keyCode === 27) {
+                    toggleModel.value = false;
+                }
+            });
         },
         destroyed() {
             window.removeEventListener('scroll', this.handleScroll);
