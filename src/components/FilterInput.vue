@@ -169,8 +169,8 @@
         }else{
                 range.value ={start : new Date(), end : new Date()};
                 // range.value.end = new Date();
-                document.getElementById('datepicker').placeholder = dateToYMD(new Date()) + '-'+ dateToYMD(new Date());             
-                date.value = dateToYMD(new Date()) + '-'+ dateToYMD(new Date());
+                document.getElementById('datepicker').placeholder = dateToYMD(new Date()) + ' - '+ dateToYMD(new Date());             
+                date.value = dateToYMD(new Date()) + ' - '+ dateToYMD(new Date());
         }
         },400);
        buttonType.value = 'next';
@@ -203,8 +203,8 @@
             document.getElementById('datepicker').placeholder = dateToYMD( new Date());
             date.value = dateToYMD( new Date());
        }else{
-            document.getElementById('datepicker').placeholder = dateToYMD( new Date()) + '-'+ dateToYMD( new Date());
-             date.value = dateToYMD( new Date()) + '-'+ dateToYMD( new Date());
+            document.getElementById('datepicker').placeholder = dateToYMD( new Date()) + ' - '+ dateToYMD( new Date());
+             date.value = dateToYMD( new Date()) + ' - '+ dateToYMD( new Date());
 
        }
 
@@ -222,8 +222,8 @@
             document.getElementById('datepicker').placeholder = dateToYMD(date.value);
             date.value = dateToYMD(date.value);
        }else{
-            document.getElementById('datepicker').placeholder = dateToYMD(range.value.start) + '-'+ dateToYMD(range.value.end);
-            date.value = dateToYMD(range.value.start) +'-'+ dateToYMD(range.value.end);
+            document.getElementById('datepicker').placeholder = dateToYMD(range.value.start) + ' - '+ dateToYMD(range.value.end);
+            date.value = dateToYMD(range.value.start) +' - '+ dateToYMD(range.value.end);
 
        }
     }
