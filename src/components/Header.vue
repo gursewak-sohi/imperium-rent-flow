@@ -4,12 +4,12 @@
             <button class="btn btn-close" @click="toggleModel = false;">
                 <img src="/assets/images/svg/close.svg" alt="icon">
             </button>
-            <h2>Imperium Jets Charter</h2>
+            <h2>Imperium Full Charter</h2>
             <p>Imperium Jets Charter is one of the fastest-growing private jet charter companies specializing in VIP and executive flights. With our unparalleled experience in the industry, we have been delivering the world’s finest private jet charter solutions since 2019. <br/>Our extensive aviation experience and commitment to safety, convenience, and discretion, allow anyone of our satisfied customers to fly in complete confidence. <br/>FAR Part 135 or 121 airlines or foreign equivalent provides operational control of all charter flights. We commit to providing an exceptional customer experience and adapting private aviation services to your needs.  </p>
             <p>
             Our team is dedicated to providing an exceptional customer experience. We tailor our private aviation services to meet each client’s needs and remain committed to providing the most competitive prices in the industry. <br/> Pricing offers are constantly updated. Our representatives will contact you by phone for the hottest quotes in real time.</p>
             <p>Our experts are always available to answer your questions.</p>
-            <p>Ready for takeoff?</p>
+            <p><b>Ready for takeoff?</b></p>
             <ul>
                 <li><b>Step 1:</b> Enter flight details and aircraft type.</li>
                 <li><b>Step 2:</b> Set contact details.</li>

@@ -181,7 +181,7 @@
         border-radius: 8px;
         padding: 48px;
         width: 100%;
-        max-width: 600px;
+        max-width: 720px;
         display: flex;
         flex-direction: column;
         text-align: left;
@@ -212,9 +212,12 @@
             line-height: 36px;
             color: $gray-900;
             margin-bottom: 16px;
+            text-align: center;
+            width: 100%;
             @include tablet {
-                font-size: 30px;
-                line-height: 42px;
+                font-size: 24px;
+                line-height: 32px;
+                text-align: left;
             }
         }
         &>p {
@@ -223,6 +226,9 @@
             line-height: 24px;
             margin-bottom: 16px;
             color: #6B7280;
+            & b {
+                color: $gray-900;
+            }
         }
         & li:not(:last-child) {
             margin-bottom: 10px;
