@@ -9,7 +9,7 @@
                 </div>
                 <div class="footer-unit">
                     <h4>SUPPORT</h4>
-                    <p><a href="mailto:support@impjets.com">support@impjets.com</a> <br> 3705 W Pico Blvd (#591),<br> Los Angeles, CA <br/> <a href="https://www.google.com/maps/place/3705+W+Pico+Blvd,+Los+Angeles,+CA+90019,+USA/@34.0475447,-118.3237152,17z" target="_blank">Map</a></p>
+                    <p><a href="mailto:support@impjets.com">support@impjets.com</a> <br>  6390 De Longpre Ave,<br> Los Angeles, CA 90028,<br> United States<br/> <a href="https://www.google.com/maps/place/6390+De+Longpre+Ave,+Los+Angeles,+CA+90028,+USA/@34.0960972,-118.3304818,17z" target="_blank">Map</a></p>
                 </div>
                 <div class="footer-content">
                     <a class="logo" target="_blank" href="https://www.bytheseat.com/">
