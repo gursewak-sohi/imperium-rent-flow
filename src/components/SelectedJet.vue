@@ -121,6 +121,7 @@
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import {ref, reactive} from 'vue'
     import 'swiper/css';
+    import { allJetData } from "./DefaultData"
 
     import 'swiper/css';
     let origin_time = ref('');
@@ -144,8 +145,8 @@
     var tt = 0;
     var ap = [' AM', ' PM'];
     let aircraft = ['Turbo','Light','Heavy'];
-    let speed = [290,433,566];
-    let range = [1765,2100,3800];
+    let speed = [allJetData['turoJet']['crusingSpeed'],allJetData['ligtJet']['crusingSpeed'],allJetData['heaveJet']['crusingSpeed']];
+    let range = [allJetData['turoJet']['maxNmRange'],allJetData['ligtJet']['maxNmRange'],allJetData['heaveJet']['maxNmRange']];
     let travelTime = 0;
 
     for (var i=0;tt<24*60; i++) {

@@ -55,9 +55,9 @@ import Search from '../components/Search.vue'
                     </div>
                     <div class="support-unit">
                         <h5>Our office:</h5>
-                        <a class="support-content" target="_blank" href="https://www.google.com/maps/place/3705+W+Pico+Blvd,+Los+Angeles,+CA+90019,+USA/@34.0475447,-118.3237152,17z">
+                        <a class="support-content" target="_blank" href="https://www.google.com/maps/place/6390+De+Longpre+Ave,+Los+Angeles,+CA+90028,+USA/@34.0960972,-118.3304818,17z">
                             <img src="/assets/images/svg/place.svg" alt="icon" />
-                            <p>3705 W Pico Blvd (#591), Los Angeles, CA, 90019-3451</p>
+                            <p>6390 De Longpre Ave, Los Angeles, CA 90028, United States</p>
                         </a>
                     </div>
                 </div>

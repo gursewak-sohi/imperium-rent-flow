@@ -59,35 +59,32 @@
                         <h4>Turboprop</h4>
                         <ul>
                             <li>6-8 Passengers</li>
-                            <li  v-if="props.distance > 1765"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                 {{ getFuelStop(1765)}} Fuel stop</li>
-                                
+                            <li  v-if="props.distance > allJetData['turoJet']['maxNmRange'] "><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                 {{ getFuelStop(allJetData['turoJet']['maxNmRange'] )}} Fuel stop</li>
                         </ul>
                         
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
                             <li>Sample Aircraft
-                                <span>PC-12</span>
+                                <span>{{ allJetData['turoJet']['sampleAitcraft'] }}</span>
                             </li>
                             <li>Est. Flight Distance
-                                <span>{{ getFlightDistance() }} nmiles</span>
-                                <!-- <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span> -->
+                                <span>{{ numberWithCommas(getFlightDistance()) }} nmiles</span>
                             </li>
                             <li>Est. Flight Time
-                                <span>{{ getFlightTime(290, 1765) }}</span>
-                                 <!-- <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/290) * 100) / 100) * 2 :  (Math.round((props.distance/290) * 100) / 100) }}</span> -->
+                                <span>{{ getFlightTime(allJetData['turoJet']['crusingSpeed'], allJetData['turoJet']['maxNmRange']) }}</span>
                             </li>
                              
                             <li>Max Nm Range
-                                <span>1,765 nmiles</span>
+                                <span>{{ numberWithCommas(allJetData['turoJet']['maxNmRange']) }} nmiles</span>
                             </li>
                              
                             <li>Cruising Speed
-                                <span>290 kts</span>
+                                <span>{{allJetData['turoJet']['crusingSpeed']}} kts</span>
                             </li>
                             <li>Cruising Altitude
-                                <span>30,000 ft</span>
+                                <span>{{allJetData['turoJet']['crusingAltitude']}}</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
@@ -167,40 +164,32 @@
                         <h4>Light - Super-midsize jets</h4>
                         <ul>
                             <li>8-10 Passengers</li>
-                            <li  v-if="props.distance > 2100"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                               {{ getFuelStop(2100)}} Fuel stop</li>
+                            <li  v-if="props.distance > allJetData['ligtJet']['maxNmRange']"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                               {{ getFuelStop(allJetData['ligtJet']['maxNmRange'])}} Fuel stop</li>
                                 
                         </ul>
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
                             <li>Sample Aircraft
-                                <span>Citation XLS</span>
+                                <span>{{ allJetData['ligtJet']['sampleAitcraft'] }}</span>
                             </li>
-                            <!-- <li>Est. Flight Distance
-                                <span>{{ props.distance  }}</span>
-                            </li>
-                             <li>Est. Flight Time
-                                <span>{{    Math.round((props.distance/433) * 100) / 100}}</span>
-                            </li> -->
                              <li>Est. Flight Distance
-                                <span>{{ getFlightDistance() }} nmiles</span>
-                                <!-- <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span> -->
+                                <span>{{ numberWithCommas(getFlightDistance()) }} nmiles</span>
                             </li>
                             <li>Est. Flight Time
-                                <span>{{ getFlightTime(433, 2100) }}</span>
-                                 <!-- <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/433) * 100) / 100) * 2 :  (Math.round((props.distance/433) * 100) / 100) }}</span> -->
+                                <span>{{ getFlightTime(allJetData['ligtJet']['crusingSpeed'], allJetData['ligtJet']['maxNmRange']) }}</span>
                             </li>
                              
                             <li>Max Nm Range
-                                <span>2,100 nmiles</span>
+                                <span>{{ numberWithCommas(allJetData['ligtJet']['maxNmRange']) }} nmiles</span>
                             </li>
                              
                             <li>Cruising Speed
-                                <span>433 kts</span>
+                                <span>{{ allJetData['ligtJet']['crusingSpeed'] }} kts</span>
                             </li>
                             <li>Cruising Altitude
-                                <span>45,000 ft</span>
+                                <span>{{ allJetData['ligtJet']['crusingAltitude'] }} </span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
@@ -285,40 +274,30 @@
                         <h4>Heavy jets</h4>
                         <ul>
                             <li>12-15 Passengers</li>
-                            <li v-if="props.distance > 3800"><img src="/assets/images/svg/pump.svg" alt="icon"/>
-                                {{ getFuelStop(3800)}} Fuel stop</li>
+                            <li v-if="props.distance > allJetData['heaveJet']['maxNmRange']"><img src="/assets/images/svg/pump.svg" alt="icon"/>
+                                {{ getFuelStop(allJetData['heaveJet']['maxNmRange'])}} Fuel stop</li>
                                
                         </ul>
                     </div>
                     <div class="jet-type-footer">
                         <ul class="jet-details">
                             <li>Sample Aircraft
-                                <span>Gulfstream G500</span>
+                                <span>{{ allJetData['heaveJet']['sampleAitcraft'] }}</span>
                             </li>
-                            <!-- <li>Est. Flight Distance
-                                <span>{{ props.distance  }}</span>
-                            </li>
-                             <li>Est. Flight Time
-                                <span>{{    Math.round((props.distance/566) * 100) / 100}}</span>
-                            </li> -->
                              <li>Est. Flight Distance
-                                <span>{{ getFlightDistance() }} nmiles</span>
-                                <!-- <span>{{ props.tripType == 'round-trip' ? props.distance * 2 :  props.distance }} nmiles</span> -->
+                                <span>{{ numberWithCommas(getFlightDistance()) }} nmiles</span>
                             </li>
                             <li>Est. Flight Time
-                                <span>{{ getFlightTime(566, 3800) }}</span>
-                                 <!-- <span>{{ props.tripType == 'round-trip' ? (Math.round((props.distance/566) * 100) / 100) * 2 :  (Math.round((props.distance/566) * 100) / 100) }}</span> -->
+                                <span>{{ getFlightTime(allJetData['heaveJet']['crusingSpeed'] , allJetData['heaveJet']['maxNmRange']) }}</span>
                             </li>
-                            
                             <li>Max Nm Range
-                                <span>3,800 nmiles</span>
+                                <span>{{ numberWithCommas(allJetData['heaveJet']['maxNmRange']) }} nmiles</span>
                             </li>
-                            
                             <li>Cruising Speed
-                                <span>566 kts</span>
+                                <span>{{ allJetData['heaveJet']['crusingSpeed'] }} kts</span>
                             </li>
                             <li>Cruising Altitude
-                                <span>51,000 ft</span>
+                                <span>{{ allJetData['heaveJet']['crusingAltitude'] }}</span>
                             </li>
                         </ul>
                         <ul class="jet-animities">
@@ -342,6 +321,7 @@
 <script setup>
     import emitter from 'tiny-emitter/instance'
     import { ref } from 'vue'
+    import { allJetData } from "./DefaultData"
     const gallery1 = ref(null)
     const gallery2 = ref(null)
     const gallery3 = ref(null)
@@ -352,6 +332,10 @@
             distance: String,
             tripType: String,
     })
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
 
 

@@ -25,7 +25,7 @@
 <script setup>
     import emitter from 'tiny-emitter/instance'
     import {ref} from 'vue'
-    let toggleModel = ref(true);
+    let toggleModel = ref(false);
     emitter.on('openConfirmModel', function (val) {
         toggleModel.value = val;       
     });
