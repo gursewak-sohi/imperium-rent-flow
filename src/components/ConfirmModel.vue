@@ -32,7 +32,13 @@
     function closeModal(){
          toggleModel.value = false;
     }
-
+    
+    setTimeout(function(){
+        const iframe = document.createElement("iframe");
+        iframe.style.height = "1px";
+        iframe.src = 'thankyou.html';
+        document.body.appendChild(iframe);
+    },500)
 
     function goHome(event){
         event.preventDefault();
