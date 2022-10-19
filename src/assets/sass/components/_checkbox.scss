@@ -8,9 +8,9 @@
         cursor: pointer;
         transition: 0.2s all ease;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        color: #737373;
+        font-size: 12px;
+        line-height: 16px;
+        color: #999999;
         text-align: left;
         & span {
             border: 1.5px solid #D4D4D4;
@@ -23,8 +23,8 @@
             flex-shrink: 0;
             align-items: center;
             justify-content: center;
-            margin-right: 12px;
-            margin-top: 3px;
+            margin-right: 8px;
+            margin-top: 1px;
             position: relative;
             & svg {
                 transform: scale(1);

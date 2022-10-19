@@ -11,13 +11,10 @@
                 <div class="modal-field">
                     <label>*Full name</label>                     
                     <input type="text" autocomplete="off" placeholder="e.g. John" v-model="name" name="name" :class="{ 'error' : name_error != '' ? true:false }" required @keyup="checkError($event)"/>
-                    
                 </div>
-               
                 <div class="modal-field">
                     <label>*Email address</label>
                     <input type="email" autocomplete="off" placeholder="e.g. john.dowry@example.com" :class="{'error' : email_error != '' ? true:false }" name="email" v-model="email" required  @keyup="checkError($event)"/>
-                   
                 </div>
                 <div class="modal-field">
                     <label>*Phone number</label>
@@ -25,12 +22,22 @@
                     <span class="help-text">Quotes are constantly updated. Enter your phone number to receive the latest quotes for your flight in real time.</span>
                 </div>
                 <div class="modal-field">
+                    <label>Call me at</label>
+                    <select name="" id="">
+                        <option value="">Immediately</option>
+                        <option value="">Morning</option>
+                        <option value="">Noon</option>
+                        <option value="">Afternoon</option>
+                        <option value="">Evening</option>
+                        <option value="">Tomorrow</option>
+                    </select>
+                </div>
+                <div class="modal-field">
                     <label>Additional message (optional)</label>
                     <textarea maxlength="300" class="count-area" name="message" id="" v-model="message" cols="30" rows="10" placeholder="Type a message here..."  ></textarea>
                     <div class="counter">
                         <span class="count">0</span>/300
                     </div>
-
                 </div>
                 <div class="agree-mails">
                     <div class="checkbox-unit">
