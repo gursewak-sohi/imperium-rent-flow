@@ -23,13 +23,14 @@
                 </div>
                 <div class="modal-field">
                     <label>Call me at</label>
-                    <select name="" id="">
-                        <option value="">Immediately</option>
-                        <option value="">Morning</option>
-                        <option value="">Noon</option>
-                        <option value="">Afternoon</option>
-                        <option value="">Evening</option>
-                        <option value="">Tomorrow</option>
+                    <select name="" id="" v-model="callmeat" placeholder="Select Preferred Time">
+                        <option value='' selected>Select Preferred Time</option>
+                        <option value="now">Immediately</option>
+                        <option value="morning">Morning</option>
+                        <option value="noon">Noon</option>
+                        <option value="after">Afternoon</option>
+                        <option value="evening">Evening</option>
+                        <option value="tomorrow">Tomorrow</option>
                     </select>
                 </div>
                 <div class="modal-field">
@@ -66,6 +67,7 @@
     let email = ref('');
     let phone_number = ref('');
     let message = ref('');
+    let callmeat = ref('');
     let toggleModel = ref(false);
     let gError = ref('');
 
@@ -87,6 +89,7 @@
        inProgress.value = false;      
     });
     function closeModal(){
+        hj('event', 'frustration');
          toggleModel.value = false;
     }
 
@@ -97,7 +100,7 @@
         inProgress.value = true;
         gError.value = "";
         if(name.value != '' && email.value != '' && validateEmail(email.value) && phone_number.value != ''){
-            emitter.emit('updateSearch', {data : {name : name.value, email : email.value, phone_number : phone_number.value, message : message.value, marketing_laterials : marketing_laterials.value }, path : '', from : 'quoteModel'});
+            emitter.emit('updateSearch', {data : {name : name.value, email : email.value, phone_number : phone_number.value, message : message.value, marketing_laterials : marketing_laterials.value, callmeat : callmeat.value }, path : '', from : 'quoteModel'});
         } else{
             inProgress.value = false;
             if(name.value == '')

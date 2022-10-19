@@ -63,6 +63,7 @@
         pax:'',
         at:'',
         dt:'',
+        callmeat : '',
         marketing_materials : 'No',
         origin_details :{},
         destination_details :{},
@@ -112,17 +113,18 @@
             allDetails.email = value.data.email;
             allDetails.phone = value.data.phone_number;
             allDetails.msg = value.data.message;
+            allDetails.callmeat = value.data.callmeat;
            allDetails.marketing_materials = value.data.marketing_laterials ? 'Yes' : 'No';
 
-
-        //    console.log(allDetails, 'poipoipoi');
+           console.log(allDetails, 'poipoipoi');
 
              axios.post(base_url + 'ext.charter/request', allDetails, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             }).then((response) => {
-                 emitter.emit('requestIsDone');
+                hj('event', 'conversion');
+                emitter.emit('requestIsDone');
                 allDetails = emptyVal;
                 emitter.emit('openQuoteMOdel', false);
                 emitter.emit('openConfirmModel', true);

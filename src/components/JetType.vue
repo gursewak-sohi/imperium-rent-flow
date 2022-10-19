@@ -340,6 +340,7 @@
 
 
     function goToNext() {
+        hj('event', 'success');
         emitter.emit('updateButtonType', {value :''});
         emitter.emit('updateSearch', {data : selectedTypes, path : 'selected-result', from : 'jettype'});
         // window.scrollBy(0, -200);

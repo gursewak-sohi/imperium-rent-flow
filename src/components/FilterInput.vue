@@ -296,7 +296,7 @@
     }
 
     function search() {
-
+        hj('event', 'success');
         // console.log(searchRequest, 'Search Result');
         if(searchRequest.origin == ''){
              emitter.emit('focuInput', {type : 'origin'});
