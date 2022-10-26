@@ -390,9 +390,8 @@
 }
 
 .support-block {
-    display: grid;
-    // grid-template-columns: 200px 301px 281px;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    column-gap: 80px;
     justify-content: space-between;
     background-color: #FAFAFE;
     border-radius: 8px;
@@ -400,7 +399,6 @@
     margin: 0 auto;
     padding: 48px 32px;
     @include tablet {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }

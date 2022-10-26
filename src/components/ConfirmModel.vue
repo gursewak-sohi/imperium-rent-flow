@@ -11,8 +11,9 @@
             <p>Please check your phone to review your estimated quote (text message from Charter-IMP). <br/> A representative will contact you shortly to provide any additional help needed!</p>
             <div class="contact-info">
                 <p>You can always contact us</p>
-                <!-- <a href="tel: +1.310.817.2621 ">+1.310.817.2621 </a> -->
-                <a href="mailto:support@impjets.com">support@impjets.com</a>
+                
+                <a href="mailto:support@impjets.com">support@impjets.com</a> <br/>
+                <a href="tel:+18443325701">+1.844.332.5701</a>
             </div>
             <div class="modal-btns">
                 <button type="button" class="btn btn-primary btn-md" @click="goHome($event)">

@@ -28,7 +28,8 @@
 
                 <div class="header-toggle-items">
                     <div class="buttons">
-                        <!-- <a href="tel:+13108172621" class="btn btn-primary btn-sm btn-iconed">
+                        <a @click="toggleModel = true;" class="btn-link" href="javascript:;">About <span>Imperium Full Charter</span></a>
+                        <a href="tel:+18443325701" class="btn btn-primary btn-sm btn-iconed">
                             <svg
                                 width="25"
                                 height="25"
@@ -41,8 +42,7 @@
                             </svg>
                             Call
                             <span>support center</span>
-                        </a> -->
-                        <a @click="toggleModel = true;" class="btn-link" href="javascript:;">About <span>Imperium Full Charter</span></a>
+                        </a>
                         <a class="btn-link" href="mailto:support@impjets.com">support@impjets.com </a>
                     </div>
                 </div>
